@@ -81,26 +81,26 @@ Log every significant change: what, when, why.
 - For smaller decisions: make the best choice and note it in CHANGES.md
 - Never ask for information already in BRIEF.md
 
-## Bug prevention rules
+## Hibamegelőzési szabályok
 
-### Social media icons
-- NEVER import Facebook, Instagram, Youtube, Twitter icons from lucide-react
-- These do not exist in lucide-react — will cause build errors
-- Use inline SVG or react-icons/fa instead
-- Example: `import { FaFacebook } from "react-icons/fa"`
+### Közösségi média ikonok
+- SOHA ne importálj Facebook, Instagram, Youtube, Twitter ikonokat a lucide-react-ból
+- Ezek nem léteznek a lucide-react-ban — build hibát okoznak
+- Használj inline SVG-t vagy react-icons/fa-t helyette
+- Példa: `import { FaFacebook } from "react-icons/fa"`
 
-### Server vs Client components
-- Any component using onMouseEnter, onMouseLeave, onClick, useState, useEffect
-  MUST have `"use client"` directive at the top of the file
-- If a page has `metadata` export AND needs event handlers,
-  extract the interactive part into a separate client component
+### Server vs Client komponensek
+- Minden komponens, amely onMouseEnter, onMouseLeave, onClick, useState, useEffect-et használ,
+  KÖTELEZŐEN tartalmazza a `"use client"` direktívát a fájl tetején
+- Ha egy oldalon van `metadata` export ÉS eseménykezelő is kell,
+  emeld ki az interaktív részt egy külön client komponensbe
 
-### Scroll behavior (Next.js 16)
-- In layout.tsx add BOTH:
-  - CSS: `scroll-behavior: smooth` on html element
-  - Attribute: `data-scroll-behavior="smooth"` on `<html>` tag
+### Scroll viselkedés (Next.js 16)
+- A layout.tsx-ben MINDKETTŐT add hozzá:
+  - CSS: `scroll-behavior: smooth` a html elemen
+  - Attribútum: `data-scroll-behavior="smooth"` a `<html>` tagen
 
 ### Sitemap
-- Use ONLY `app/sitemap.ts` — never create `public/sitemap.xml`
-- They conflict — sitemap.ts takes priority but public/sitemap.xml causes confusion
-- Delete public/sitemap.xml if it exists
+- CSAK `app/sitemap.ts`-t használj — soha ne hozz létre `public/sitemap.xml`-t
+- Ütköznek egymással — a sitemap.ts prioritást élvez, de a public/sitemap.xml zavart okoz
+- Ha létezik public/sitemap.xml, töröld ki
