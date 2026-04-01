@@ -2,6 +2,11 @@
 
 # CLAUDE.md — Starter Project Instructions
 
+## Project setup (run first after copying from starter)
+Update package.json "name" field to match the project name:
+e.g. "felepitjuk-hu", "pinter-tanya", "kovacs-villany"
+Never leave it as "nextjs-starter-hu"
+
 ## Source of truth
 - Read BRIEF.md before starting any work
 - BRIEF.md contains all business details, design direction, 
