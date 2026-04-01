@@ -80,3 +80,27 @@ Log every significant change: what, when, why.
 - Only ask Viktor before major architectural decisions
 - For smaller decisions: make the best choice and note it in CHANGES.md
 - Never ask for information already in BRIEF.md
+
+## Bug prevention rules
+
+### Social media icons
+- NEVER import Facebook, Instagram, Youtube, Twitter icons from lucide-react
+- These do not exist in lucide-react — will cause build errors
+- Use inline SVG or react-icons/fa instead
+- Example: `import { FaFacebook } from "react-icons/fa"`
+
+### Server vs Client components
+- Any component using onMouseEnter, onMouseLeave, onClick, useState, useEffect
+  MUST have `"use client"` directive at the top of the file
+- If a page has `metadata` export AND needs event handlers,
+  extract the interactive part into a separate client component
+
+### Scroll behavior (Next.js 16)
+- In layout.tsx add BOTH:
+  - CSS: `scroll-behavior: smooth` on html element
+  - Attribute: `data-scroll-behavior="smooth"` on `<html>` tag
+
+### Sitemap
+- Use ONLY `app/sitemap.ts` — never create `public/sitemap.xml`
+- They conflict — sitemap.ts takes priority but public/sitemap.xml causes confusion
+- Delete public/sitemap.xml if it exists
