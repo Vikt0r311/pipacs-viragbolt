@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Az oldal nem található | Virág Gábor Építő Bt.",
+  title: "Az oldal nem található | Cégnév",
 };
 
 export default function NotFound() {
@@ -15,7 +14,7 @@ export default function NotFound() {
       <div className="container-site max-w-2xl text-center">
         <div
           className="text-8xl font-black mb-6 select-none"
-          style={{ color: "rgba(212,147,42,0.15)", letterSpacing: "-0.04em" }}
+          style={{ color: "rgba(37,99,235,0.1)", letterSpacing: "-0.04em" }}
         >
           404
         </div>
@@ -35,8 +34,8 @@ export default function NotFound() {
           webcímet, vagy használja az alábbi linkeket.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center mb-10">
-          <Link href="/" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-amber">
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link href="/" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
             Vissza a főoldalra
           </Link>
           <Link
@@ -47,15 +46,6 @@ export default function NotFound() {
             Kapcsolat
           </Link>
         </div>
-
-        <a
-          href="tel:+36306857901"
-          className="inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-          style={{ color: "var(--color-primary)" }}
-        >
-          <Phone size={16} />
-          06-30/685-7901
-        </a>
       </div>
     </section>
   );

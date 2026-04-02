@@ -1,42 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ConcretePoLine from "@/components/ConcretePoLine";
+import { readdirSync } from "fs";
+import { join } from "path";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata: Metadata = {
-  title: "Galéria — Vasbeton Szerkezeteink Veszprémben",
+  title: "Galéria | Cégnév",
   description:
-    "Vasbeton szerkezeteink galériája — födémek, falak, lépcsők Veszprémben és a Balaton-felvidéken | Virág Gábor Építő Bt.",
+    "Munkáink galériája — elvégzett projektek képei. Cégnév, Városnév.",
   openGraph: {
-    title: "Galéria | Virág Gábor Építő Bt.",
-    description:
-      "Vasbeton szerkezeteink galériája — födémek, falak, lépcsők Veszprémben és a Balaton-felvidéken.",
+    title: "Galéria | Cégnév",
+    description: "Munkáink galériája — elvégzett projektek képei.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/galeria",
+    url: "https://www.example.hu/galeria",
   },
 };
 
-// Generate all image paths: Image01–Image09, Image10–Image207
-function generateImagePaths(): string[] {
-  const paths: string[] = [];
-  for (let i = 1; i <= 207; i++) {
-    const name = i < 10 ? `Image0${i}` : `Image${i}`;
-    paths.push(`/galeria/${name}.webp`);
+function getGalleryImages(): string[] {
+  try {
+    const galeriaDir = join(process.cwd(), "public", "galeria");
+    const files = readdirSync(galeriaDir);
+    return files
+      .filter((f) => /\.(webp|jpg|jpeg|png)$/i.test(f))
+      .map((f) => `/galeria/${f}`);
+  } catch {
+    return [];
   }
-  return paths;
 }
 
-const images = generateImagePaths();
-
 export default function GaleriaPage() {
+  const images = getGalleryImages();
+
   return (
     <>
       {/* Page Hero */}
       <section
         className="section-py-sm flex items-end"
         style={{
-          background: "#1C1C1C",
+          background: "var(--color-bg-subtle)",
           borderBottom: "1px solid var(--color-border)",
           paddingTop: "6rem",
         }}
@@ -52,25 +54,40 @@ export default function GaleriaPage() {
               lineHeight: 1.05,
             }}
           >
-            Vasbeton Munkáink Galériája —{" "}
-            <span style={{ color: "var(--color-primary)" }}>Veszprém és Balaton-felvidék</span>
+            Munkáink{" "}
+            <span style={{ color: "var(--color-primary)" }}>Galériája</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            {images.length} kép elvégzett munkáinkról — monolit vasbeton födémek, falak, lépcsők és egyéb szerkezetek.
+            {images.length > 0
+              ? `${images.length} kép elvégzett munkáinkról.`
+              : "Képek hamarosan — a galéria feltöltése folyamatban."}
           </p>
         </div>
       </section>
 
-      <ConcretePoLine />
-
       {/* Gallery */}
       <section style={{ background: "var(--color-bg)" }} className="section-py">
         <div className="container-site">
-          <GalleryGrid images={images} />
+          {images.length > 0 ? (
+            <GalleryGrid images={images} />
+          ) : (
+            <div
+              className="rounded-xl flex flex-col items-center justify-center gap-4 py-24"
+              style={{
+                background: "var(--color-bg-subtle)",
+                border: "1px solid var(--color-border)",
+              }}
+            >
+              <p className="text-base font-semibold" style={{ color: "var(--color-text-muted)" }}>
+                Még nincsenek galéria képek
+              </p>
+              <p className="text-sm" style={{ color: "var(--color-text-light)" }}>
+                Adjon hozzá képeket a <code>/public/galeria/</code> mappához.
+              </p>
+            </div>
+          )}
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* CTA */}
       <section style={{ background: "var(--color-bg-subtle)" }} className="section-py">
@@ -89,10 +106,10 @@ export default function GaleriaPage() {
               <span style={{ color: "var(--color-primary)" }}>hasonló projekt?</span>
             </h2>
             <p className="text-base mb-8" style={{ color: "var(--color-text-muted)" }}>
-              Veszprémben és a Balaton-felvidéken vállalunk monolit vasbeton munkákat. Kérjen ingyenes ajánlatot!
+              Városban és a környező területeken vállalunk munkákat. Kérjen ingyenes ajánlatot!
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-amber">
+              <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
                 Ajánlatot kérek
               </Link>
               <Link

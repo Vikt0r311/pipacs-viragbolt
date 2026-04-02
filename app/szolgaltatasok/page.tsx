@@ -1,106 +1,91 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import ConcretePoLine from "@/components/ConcretePoLine";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Vasbeton Szerkezetek Kivitelezése Veszprém Megyében",
+  title: "Szolgáltatások Városban | Cégnév",
   description:
-    "Vasbeton szerkezetek kivitelezése Veszprém megyében. Monolit födémek, falak, koszorúk, lépcsők zsaluzása, vasalása és betonozása. Virág Gábor Építő Bt. | 06-30/685-7901",
+    "Cégnév szolgáltatásai Városban és környékén. TODO: Rövid leírás a főbb szolgáltatásokról.",
   openGraph: {
-    title: "Vasbeton Szerkezetek Kivitelezése Veszprém Megyében | Virág Gábor Építő Bt.",
-    description:
-      "Monolit vasbeton szerkezetek: födémek, falak, koszorúk, lépcsők zsaluzása, vasalása, betonozása Veszprém és Balaton-felvidéken.",
+    title: "Szolgáltatások | Cégnév",
+    description: "TODO: Rövid leírás a főbb szolgáltatásokról.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/szolgaltatasok",
+    url: "https://www.example.hu/szolgaltatasok",
   },
 };
 
+// TODO: Replace with real services
 const services = [
   {
-    id: "fodem",
-    title: "Monolit Vasbeton Födém",
-    subtitle: "Zsaluzás · Vasalás · Betonozás",
-    image: "/galeria/Image165.webp",
-    imageAlt: "Monolit vasbeton födém betonozása Veszprémben — Virág Gábor Építő Bt.",
+    id: "szolgaltatas-1",
+    title: "Szolgáltatás 1 neve",
+    subtitle: "Altípus · Kulcsszó · Kulcsszó",
     paragraphs: [
-      "A monolit vasbeton födém a modern építészet egyik legmegbízhatóbb megoldása. Panelzsaluzattal dolgozunk, amely lehetővé teszi, hogy bármilyen alaprajzi geometriához tökéletesen illeszkedő felső tömeget alkossunk — legyen szó szabálytalan alaprajzú Balaton-felvidéki nyaralóról, veszprémi társasházról vagy ipari csarnokról.",
-      "A monolit technológia fő előnyei az előregyártott megoldásokkal szemben: nincs szükség utólagos vakolásra, kiemelkedő akusztikai és hőszigetelési tulajdonságokat kínál, és tökéletesen beilleszthető bármilyen épületgeometriába. A helyszínen öntött beton egységes, szünetmentes szerkezetet alkot.",
+      "TODO: Első bekezdés a szolgáltatásról. Mi ez, hogyan működik, mikor van rá szükség.",
+      "TODO: Második bekezdés — mik az előnyök, miért érdemes ezt választani, mi különbözteti meg a versenytársaktól.",
     ],
     specs: [
-      "Tömör vasbeton és bordás (alibi) födémek",
-      "Panelzsaluzat és hagyományos deszkazsaluzat",
-      "Statikai terv szerinti vasalás",
-      "C20/25 – C30/37 betonminőség",
+      "Jellemző / előny 1",
+      "Jellemző / előny 2",
+      "Jellemző / előny 3",
+      "Jellemző / előny 4",
     ],
   },
   {
-    id: "falak",
-    title: "Vasbeton Falak",
-    subtitle: "Zsaluzás · Vasalás · Betonozás",
-    image: "/galeria/Image200.webp",
-    imageAlt: "Vasbeton fal panelzsaluzat Veszprém megye — Virág Gábor Építő Bt.",
+    id: "szolgaltatas-2",
+    title: "Szolgáltatás 2 neve",
+    subtitle: "Altípus · Kulcsszó · Kulcsszó",
     paragraphs: [
-      "A monolit vasbeton teherhordó falak kivitelezése nagy panelzsaluzattal történik. A zsaluzati rendszer precíz beállításával biztosítjuk a falak tökéletes síkját és egyenességét — ami különösen fontos a belső burkolatokhoz.",
-      "A vasbeton fal vékonyabb lehet, mint a hagyományos tégla- vagy blokkfal, miközben lényegesen nagyobb terhet visel el. Ez azt jelenti, hogy ugyanakkora külső méret mellett 5–6%-kal több hasznos belső alapterület érhető el. Veszprém-vidéki nyaralóknál és társasházoknál ez komoly értéknövelő tényező.",
+      "TODO: Első bekezdés a szolgáltatásról.",
+      "TODO: Második bekezdés.",
     ],
     specs: [
-      "Egyoldali és kétoldali panelzsaluzat",
-      "Falvastagság: 15–40 cm",
-      "Pillérek és falak integrált kialakítása",
-      "Nyílások pontos kialakítása zsaluzattal",
+      "Jellemző / előny 1",
+      "Jellemző / előny 2",
+      "Jellemző / előny 3",
+      "Jellemző / előny 4",
     ],
   },
   {
-    id: "koszoru",
-    title: "Koszorú Készítés",
-    subtitle: "Vasalás · Zsaluzás · Betonozás",
-    image: "/galeria/Image125.webp",
-    imageAlt: "Koszorú vasalás Veszprém környékén — Virág Gábor Építő Bt.",
+    id: "szolgaltatas-3",
+    title: "Szolgáltatás 3 neve",
+    subtitle: "Altípus · Kulcsszó · Kulcsszó",
     paragraphs: [
-      "A koszorú a falszerkezet \"kapcsa\" — a teherhordó falak felső részén körbe futó vasbeton gerendaelem, amely összefogja a falakat és egyenletesen elosztja a tetőszerkezet terhét.",
-      "Veszprém-vidéki és Balaton-felvidéki építkezéseken rendszeresen végzünk koszorúbetonozást. A koszorú kialakítása precíz zsaluzatot és gondos vasalást igényel — ezeket garantáljuk minden projektnél.",
+      "TODO: Első bekezdés a szolgáltatásról.",
+      "TODO: Második bekezdés.",
     ],
     specs: [
-      "Peremgerendás és talpas koszorúk",
-      "Integrálás meglévő falszerkezetbe",
-      "Statikai terv alapján",
-      "Egyedi méretek szerint",
+      "Jellemző / előny 1",
+      "Jellemző / előny 2",
+      "Jellemző / előny 3",
     ],
   },
   {
-    id: "lepcsok",
-    title: "Vasbeton Lépcsők",
-    subtitle: "Zsaluzás · Vasalás · Betonozás",
-    image: "/galeria/Image155.webp",
-    imageAlt: "Vasbeton lépcső zsaluzat Veszprémben — Virág Gábor Építő Bt.",
+    id: "szolgaltatas-4",
+    title: "Szolgáltatás 4 neve",
+    subtitle: "Altípus · Kulcsszó · Kulcsszó",
     paragraphs: [
-      "A helyszínen öntött monolit vasbeton lépcső az egyetlen megoldás, amely tökéletes geometriát biztosít bármilyen alaprajzi elrendezéshez. Egyenes, L-alakú, U-alakú, íves vagy egyedi formájú lépcsőket kivitelezünk — a statikai terv szerint, precíz zsaluzattal.",
-      "Az előregyártott lépcsőelemekkel ellentétben a monolit lépcső egységesen kapcsolódik a szomszédos szerkezetekhez, így nincs repedési veszély az illesztéseknél. Tartóssága páratlan — évtizedekig tart értékvesztés nélkül.",
+      "TODO: Első bekezdés a szolgáltatásról.",
+      "TODO: Második bekezdés.",
     ],
     specs: [
-      "Egyenes, L-, U-alakú és íves lépcsők",
-      "Fogadópihenős és fogadógerendás megoldások",
-      "Mindenféle korlát-rögzítési megoldáshoz alkalmas",
-      "Csúszásgátló felület kialakítható",
+      "Jellemző / előny 1",
+      "Jellemző / előny 2",
+      "Jellemző / előny 3",
     ],
   },
   {
-    id: "egyeb",
-    title: "Egyéb Vasbeton Szerkezetek",
-    subtitle: "Pillérek · Gerendák · Támfalak · Alapozás",
-    image: "/galeria/Image35.webp",
-    imageAlt: "Vasbeton pillér alapozás Veszprém megye — Virág Gábor Építő Bt.",
+    id: "szolgaltatas-5",
+    title: "Szolgáltatás 5 neve",
+    subtitle: "Altípus · Kulcsszó · Kulcsszó",
     paragraphs: [
-      "Veszprém megye és a Balaton-felvidék építkezésein számos egyéb vasbeton szerkezeti elem kivitelezésére van szükség. Ezeket is teljes körűen vállaljuk: pillérek, gerendák, áthidalók, támfalak, sávos és lemezes alapozás, garázsmedencék és egyedi szerkezetek.",
-      "Az egyedi megoldásoknál különösen fontos a zsaluzat kialakításának pontossága. Több évnyi tapasztalattal rendelkezünk ipari csarnokok, lakóépületek és Balaton-parti nyaralók egyedi vasbeton megoldásainak kivitelezésében.",
+      "TODO: Első bekezdés a szolgáltatásról.",
+      "TODO: Második bekezdés.",
     ],
     specs: [
-      "Oszlopok és pillérek",
-      "Vasbeton gerendák és áthidalók",
-      "Sávos és lemezes alapozás",
-      "Vasbeton támfalak",
+      "Jellemző / előny 1",
+      "Jellemző / előny 2",
+      "Jellemző / előny 3",
     ],
   },
 ];
@@ -112,7 +97,7 @@ export default function SzolgaltatasokPage() {
       <section
         className="section-py-sm flex items-end"
         style={{
-          background: "#1C1C1C",
+          background: "var(--color-bg-subtle)",
           borderBottom: "1px solid var(--color-border)",
           paddingTop: "6rem",
         }}
@@ -128,92 +113,89 @@ export default function SzolgaltatasokPage() {
               lineHeight: 1.05,
             }}
           >
-            Vasbeton Szerkezetek Kivitelezése{" "}
-            <span style={{ color: "var(--color-primary)" }}>Veszprém Megyében</span>
+            Szolgáltatásaink{" "}
+            <span style={{ color: "var(--color-primary)" }}>Városban</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            Monolit födémek, falak, koszorúk, lépcsők és egyéb szerkezetek szakszerű zsaluzása, vasalása és betonozása — Szentkirályszabadján és az egész Balaton-felvidéken.
+            TODO: Rövid leírás a főbb szolgáltatásokról és a szolgáltatási területről.
           </p>
         </div>
       </section>
 
       {/* Services */}
       {services.map((service, i) => (
-        <div key={service.id}>
-          <section
-            className="section-py"
-            style={{ background: i % 2 === 0 ? "var(--color-bg)" : "var(--color-bg-subtle)" }}
-          >
-            <div className="container-site">
-              <div className={`grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start`}>
-                {/* Text — 7 cols, alternating order */}
-                <AnimateOnScroll
-                  className={`md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}
+        <section
+          key={service.id}
+          className="section-py"
+          style={{ background: i % 2 === 0 ? "var(--color-bg)" : "var(--color-bg-subtle)" }}
+        >
+          <div className="container-site">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
+              {/* Text — 7 cols, alternating order */}
+              <AnimateOnScroll
+                className={`md:col-span-7 ${i % 2 === 1 ? "md:order-2" : ""}`}
+              >
+                <p
+                  className="text-xs font-semibold uppercase tracking-widest mb-3"
+                  style={{ color: "var(--color-primary)" }}
                 >
+                  {service.subtitle}
+                </p>
+                <h2
+                  className="font-bold mb-5"
+                  style={{
+                    fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                    color: "var(--color-text)",
+                    lineHeight: 1.15,
+                  }}
+                >
+                  {service.title}
+                </h2>
+                {service.paragraphs.map((para, j) => (
                   <p
-                    className="text-xs font-semibold uppercase tracking-widest mb-3"
-                    style={{ color: "var(--color-primary)" }}
+                    key={j}
+                    className="text-sm md:text-base leading-relaxed mb-4"
+                    style={{ color: "var(--color-text-muted)" }}
                   >
-                    {service.subtitle}
+                    {para}
                   </p>
-                  <h2
-                    className="font-bold mb-5"
-                    style={{
-                      fontSize: "clamp(1.4rem, 3vw, 2rem)",
-                      color: "var(--color-text)",
-                      lineHeight: 1.15,
-                    }}
-                  >
-                    {service.title}
-                  </h2>
-                  {service.paragraphs.map((para, j) => (
-                    <p
-                      key={j}
-                      className="text-sm md:text-base leading-relaxed mb-4"
-                      style={{ color: "var(--color-text-muted)" }}
-                    >
-                      {para}
-                    </p>
+                ))}
+                <div className="mt-6 flex flex-col gap-2.5">
+                  {service.specs.map((spec, j) => (
+                    <div key={j} className="flex items-center gap-3">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ background: "var(--color-primary)" }}
+                      />
+                      <span className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                        {spec}
+                      </span>
+                    </div>
                   ))}
-                  <div className="mt-6 flex flex-col gap-2.5">
-                    {service.specs.map((spec, j) => (
-                      <div key={j} className="flex items-center gap-3">
-                        <span
-                          className="w-1.5 h-1.5 rounded-full shrink-0"
-                          style={{ background: "var(--color-primary)" }}
-                        />
-                        <span className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                          {spec}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </AnimateOnScroll>
+                </div>
+              </AnimateOnScroll>
 
-                {/* Service image — 5 cols */}
-                <AnimateOnScroll
-                  className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : ""}`}
-                  delay={0.15}
+              {/* Image placeholder — 5 cols */}
+              <AnimateOnScroll
+                className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : ""}`}
+                delay={0.15}
+              >
+                <div
+                  className="w-full rounded-md flex items-center justify-center"
+                  style={{
+                    aspectRatio: "4/3",
+                    background: "var(--color-bg-subtle)",
+                    border: "1px solid var(--color-border)",
+                  }}
                 >
-                  <div
-                    className="w-full rounded-md img-hover-scale overflow-hidden"
-                    style={{ aspectRatio: "4/3", border: "1px solid var(--color-border)" }}
-                  >
-                    <Image
-                      src={service.image}
-                      alt={service.imageAlt}
-                      width={800}
-                      height={600}
-                      className="w-full h-full object-cover"
-                      unoptimized
-                    />
-                  </div>
-                </AnimateOnScroll>
-              </div>
+                  <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
+                    Kép helye — /public/galeria/
+                  </p>
+                </div>
+              </AnimateOnScroll>
             </div>
-          </section>
-          <ConcretePoLine />
-        </div>
+          </div>
+        </section>
       ))}
 
       {/* CTA */}
@@ -242,18 +224,18 @@ export default function SzolgaltatasokPage() {
                 <span style={{ color: "var(--color-primary)" }}>Kérjen ajánlatot!</span>
               </h2>
               <p className="text-base mb-8 max-w-xl" style={{ color: "var(--color-text-muted)" }}>
-                Veszprémben, Balatonalmádiban, Balatonfűzfőn és a Balaton-felvidék minden területén vállalunk vasbeton munkákat.
+                Városban és a környező területeken vállalunk munkákat.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-amber">
+                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
                   Ajánlatot kérek
                 </Link>
                 <a
-                  href="tel:+36306857901"
+                  href="tel:+36XXXXXXXXX"
                   className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                   style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}
                 >
-                  06-30/685-7901
+                  +36 XX XXX XXXX
                 </a>
               </div>
             </div>

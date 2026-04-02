@@ -1,43 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Target, Shield, Award } from "lucide-react";
-import ConcretePoLine from "@/components/ConcretePoLine";
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Rólunk — Monolit Vasbeton Kivitelezés Szentkirályszabadja",
+  title: "Rólunk | Cégnév",
   description:
-    "Virág Gábor Építő Bt. — monolit vasbeton szerkezetépítés Szentkirályszabadján. 2021 óta szolgáljuk ki Veszprém megye építkezéseit precíz, minőségi munkával.",
+    "Rövid leírás a cégről, a csapatról és a küldetésről. Városban és környéke.",
   openGraph: {
-    title: "Rólunk | Virág Gábor Építő Bt.",
-    description:
-      "Virág Gábor Építő Bt. — monolit vasbeton szerkezetépítés Szentkirályszabadján. 2021 óta Veszprém és Balaton-felvidéken.",
+    title: "Rólunk | Cégnév",
+    description: "Rövid leírás a cégről és a csapatról.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/rolunk",
+    url: "https://www.example.hu/rolunk",
   },
 };
 
+// TODO: Replace with real values
 const values = [
   {
     icon: Target,
     title: "Precizitás",
-    description:
-      "Kétszer mérünk, egyszer betonozunk. Minden zsaluzat milliméterre pontos — mert az alap pontossága meghatározza az egész szerkezet minőségét.",
-    wide: true,
+    description: "TODO: Leírás arról, hogyan közelítik meg a munkát, mi a minőségi garancia.",
   },
   {
     icon: Shield,
     title: "Megbízhatóság",
-    description:
-      "A határidők szentek. Amit elvállalunk, azt pontosan és időre teljesítjük — Veszprémben éppúgy, mint Balatonalmádiban.",
-    wide: false,
+    description: "TODO: Leírás a határidők betartásáról, az ügyfél-kommunikációról.",
   },
   {
     icon: Award,
     title: "Minőség",
-    description:
-      "Minden vasbeton szerkezet megfelel a legszigorúbb statikai és kivitelezési szabványoknak. Erre 2021 óta adunk garanciát.",
-    wide: false,
+    description: "TODO: Leírás a minőségi standardokról, esetleges tanúsítványokról.",
   },
 ];
 
@@ -48,7 +41,7 @@ export default function RolunkPage() {
       <section
         className="section-py-sm flex items-end"
         style={{
-          background: "#1C1C1C",
+          background: "var(--color-bg-subtle)",
           borderBottom: "1px solid var(--color-border)",
           paddingTop: "6rem",
         }}
@@ -64,16 +57,14 @@ export default function RolunkPage() {
               lineHeight: 1.05,
             }}
           >
-            Virág Gábor Építő Bt. —{" "}
-            <span style={{ color: "var(--color-primary)" }}>Szentkirályszabadja</span>
+            Rólunk —{" "}
+            <span style={{ color: "var(--color-primary)" }}>Városban</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            Monolit vasbeton szerkezetépítés 2021 óta. Kis csapat, nagy pontossággal.
+            TODO: Rövid bevezető a cégről. Mikor alapult, mi a fő profil, hol dolgoznak.
           </p>
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* Company Story */}
       <section style={{ background: "var(--color-bg)" }} className="section-py">
@@ -95,56 +86,54 @@ export default function RolunkPage() {
                   lineHeight: 1.15,
                 }}
               >
-                Szakemberek Veszprém szívéből
+                TODO: Alcím a cégtörténethez
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                A Virág Gábor Építő Bt.-t 2021-ben alapítottuk Szentkirályszabadján — egy kis, de annál elszántabb csapattal. Szakterületünk a monolit vasbeton szerkezetek kivitelezése: födémek, falak, koszorúk, lépcsők, pillérek zsaluzása, vasalása és betonozása.
+                TODO: Első bekezdés a cégről — mikor alapult, ki alapította, mi volt az eredeti misszió.
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Székhelyünk Szentkirályszabadján van, Veszprém és Balatonalmádi szomszédságában — mindkét várostól alig 5 km-re. Ez ideális pozíció a Veszprém–Balaton-felvidék régió kiszolgálásához: könnyen elérjük Balatonfűzfőt, Litért, Csopakot, Balatonfüredet, Hajmáskért és a Bakony-aljai falvakat is.
-              </p>
-              <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Kis csapatként személyes figyelmet tudunk fordítani minden projektünkre. Nem vagyunk névtelen nagyvállalat — az ügyfeleink ismerik a nevünket, és mi ismerjük az ő építkezésük minden részletét. A Veszprém-vidéki talajviszonyok, az ottani építési előírások és a helyi anyagellátás ismerete komoly előny minden munkánknál.
+                TODO: Második bekezdés — hol tevékenykednek, milyen területen, mi a fő erősségük.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Büszkék vagyunk arra, hogy minden elkészített vasbeton szerkezetünk az előírt statikai tervek alapján, pontosan és határidőre készül el.
+                TODO: Harmadik bekezdés — miben különböznek a versenytársaktól, miért érdemes őket választani.
               </p>
             </AnimateOnScroll>
 
-            {/* Image placeholder — 5 cols */}
+            {/* Sidebar — 5 cols */}
             <AnimateOnScroll className="md:col-span-5" delay={0.15}>
+              {/* Image placeholder */}
               <div
-                className="w-full rounded-md"
+                className="w-full rounded-md mb-4"
                 style={{
                   aspectRatio: "3/4",
-                  background: "linear-gradient(160deg, #2A2A2A, #303030)",
+                  background: "var(--color-bg-subtle)",
                   border: "1px solid var(--color-border)",
                 }}
               >
                 <div className="w-full h-full flex flex-col items-center justify-center gap-3 rounded-md">
                   <div
                     className="text-6xl font-black select-none"
-                    style={{ color: "rgba(212,147,42,0.12)", letterSpacing: "-0.04em" }}
+                    style={{ color: "rgba(37,99,235,0.1)", letterSpacing: "-0.04em" }}
                   >
-                    VG
+                    XX
                   </div>
                   <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
-                    Csapatfotó hamarosan
+                    Csapatfotó / logó helye
                   </p>
                 </div>
               </div>
 
               {/* Quick facts */}
               <div
-                className="mt-4 p-5 rounded-md"
+                className="p-5 rounded-md"
                 style={{ background: "var(--color-bg-subtle)", border: "1px solid var(--color-border)" }}
               >
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { label: "Alapítva", value: "2021" },
-                    { label: "Telephely", value: "Szentkirályszabadja" },
-                    { label: "Csapat", value: "~4 fő" },
-                    { label: "Terület", value: "Veszprém megye" },
+                    { label: "Alapítva", value: "TODO" },
+                    { label: "Telephely", value: "TODO" },
+                    { label: "Csapat", value: "TODO" },
+                    { label: "Terület", value: "TODO" },
                   ].map((fact, i) => (
                     <div key={i}>
                       <div className="text-xs" style={{ color: "var(--color-text-light)" }}>
@@ -161,8 +150,6 @@ export default function RolunkPage() {
           </div>
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* Values */}
       <section style={{ background: "var(--color-bg-subtle)" }} className="section-py">
@@ -183,87 +170,42 @@ export default function RolunkPage() {
                 lineHeight: 1.1,
               }}
             >
-              Amire <span style={{ color: "var(--color-primary)" }}>büszkék vagyunk</span>
+              Amire{" "}
+              <span style={{ color: "var(--color-primary)" }}>büszkék vagyunk</span>
             </h2>
           </AnimateOnScroll>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* First value — 5 cols (wider) */}
-            <StaggerItem className="md:col-span-5">
-              <div
-                className="h-full p-8 rounded-xl"
-                style={{
-                  background: "var(--color-bg)",
-                  border: "1px solid var(--color-border)",
-                }}
-              >
-                <div
-                  className="w-12 h-12 flex items-center justify-center rounded-md mb-5"
-                  style={{ background: "rgba(212,147,42,0.12)", color: "var(--color-primary)" }}
-                >
-                  <Target size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--color-text)" }}>
-                  Precizitás
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                  Kétszer mérünk, egyszer betonozunk. Minden zsaluzat milliméterre pontos — mert az alap pontossága meghatározza az egész szerkezet minőségét. A veszprémi és Balaton-vidéki építkezéseken nincs helye a kompromisszumoknak.
-                </p>
-              </div>
-            </StaggerItem>
-
-            {/* Second value — 4 cols */}
-            <StaggerItem className="md:col-span-4">
-              <div
-                className="h-full p-8 rounded-xl"
-                style={{
-                  background: "var(--color-bg)",
-                  border: "1px solid var(--color-border)",
-                }}
-              >
-                <div
-                  className="w-12 h-12 flex items-center justify-center rounded-md mb-5"
-                  style={{ background: "rgba(212,147,42,0.12)", color: "var(--color-primary)" }}
-                >
-                  <Shield size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--color-text)" }}>
-                  Megbízhatóság
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                  A határidők szentek. Amit elvállalunk, azt pontosan és időre teljesítjük. Az ügyfeleink tudják, hogy mi nem ígérünk olyat, amit nem tudunk tartani.
-                </p>
-              </div>
-            </StaggerItem>
-
-            {/* Third value — 3 cols */}
-            <StaggerItem className="md:col-span-3">
-              <div
-                className="h-full p-8 rounded-xl"
-                style={{
-                  background: "var(--color-bg)",
-                  border: "1px solid var(--color-border)",
-                }}
-              >
-                <div
-                  className="w-12 h-12 flex items-center justify-center rounded-md mb-5"
-                  style={{ background: "rgba(212,147,42,0.12)", color: "var(--color-primary)" }}
-                >
-                  <Award size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--color-text)" }}>
-                  Minőség
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                  Minden szerkezet megfelel a legszigorúbb statikai szabványoknak. Erre 2021 óta adunk garanciát.
-                </p>
-              </div>
-            </StaggerItem>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value, i) => {
+              const Icon = value.icon;
+              return (
+                <StaggerItem key={i}>
+                  <div
+                    className="h-full p-8 rounded-xl"
+                    style={{
+                      background: "var(--color-bg)",
+                      border: "1px solid var(--color-border)",
+                    }}
+                  >
+                    <div
+                      className="w-12 h-12 flex items-center justify-center rounded-md mb-5"
+                      style={{ background: "rgba(37,99,235,0.1)", color: "var(--color-primary)" }}
+                    >
+                      <Icon size={24} />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3" style={{ color: "var(--color-text)" }}>
+                      {value.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
+                      {value.description}
+                    </p>
+                  </div>
+                </StaggerItem>
+              );
+            })}
           </StaggerContainer>
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* CTA */}
       <section style={{ background: "var(--color-bg)" }} className="section-py">
@@ -291,10 +233,10 @@ export default function RolunkPage() {
                 <span style={{ color: "var(--color-primary)" }}>Kérjen ajánlatot!</span>
               </h2>
               <p className="text-base mb-8 max-w-xl" style={{ color: "var(--color-text-muted)" }}>
-                Veszprémben, Balatonalmádiban és a Balaton-felvidéken vállalunk vasbeton munkákat. Kérjen ingyenes árajánlatot!
+                Városban és a környező területeken vállalunk munkákat. Kérjen ingyenes árajánlatot!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-amber">
+                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
                   Ajánlatot kérek
                 </Link>
                 <Link

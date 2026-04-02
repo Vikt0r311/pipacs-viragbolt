@@ -3,11 +3,12 @@
 import { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 
+// TODO: Replace with real stats
 const stats = [
-  { value: 2021, suffix: "", label: "Alapítás éve", description: "Szakmai tapasztalat azóta" },
-  { value: 50, suffix: "+", label: "Elvégzett projekt", description: "Veszprém és Balaton-felvidéken" },
-  { value: 15, suffix: " km", label: "Körzeten belül", description: "Veszprém és Balatonalmádi" },
-  { value: 4, suffix: " fő", label: "Szakképzett csapat", description: "Dedikált, megbízható szakemberek" },
+  { value: 10, suffix: "+", label: "Stat neve 1", description: "Rövid leírás" },
+  { value: 50, suffix: "+", label: "Stat neve 2", description: "Rövid leírás" },
+  { value: 5, suffix: " év", label: "Stat neve 3", description: "Rövid leírás" },
+  { value: 100, suffix: "%", label: "Stat neve 4", description: "Rövid leírás" },
 ];
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
@@ -47,20 +48,6 @@ export default function StatsSection() {
       className="section-py relative overflow-hidden"
       style={{ background: "var(--color-bg-subtle)" }}
     >
-      {/* Subtle texture */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 40px,
-            rgba(212,147,42,0.03) 40px,
-            rgba(212,147,42,0.03) 41px
-          )`,
-        }}
-      />
-
       <div className="container-site relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, i) => (

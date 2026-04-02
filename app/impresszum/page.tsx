@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impresszum",
-  description:
-    "Virág Gábor Építő Bt. impresszuma — céges adatok, tárhelyszolgáltató, ügyvezető.",
+  title: "Impresszum | Cégnév",
+  description: "Cégnév impresszuma — céges adatok, tárhelyszolgáltató, ügyvezető.",
   openGraph: {
-    title: "Impresszum",
+    title: "Impresszum | Cégnév",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/impresszum",
+    url: "https://www.example.hu/impresszum",
   },
 };
 
+// TODO: Replace all TODO values with real company data
 const rows = [
-  { label: "Cégnév", value: "Virág Gábor Építő Betéti Társaság" },
-  { label: "Rövid név", value: "Virág Gábor Építő Bt." },
-  { label: "Székhely", value: "8225 Szentkirályszabadja, Gárdonyi utca 5." },
-  { label: "Adószám", value: "29217731-2-19" },
-  { label: "Cégjegyzékszám", value: "19-06-510279" },
-  { label: "Bejegyző bíróság", value: "Veszprémi Törvényszék Cégbírósága" },
-  { label: "Alapítás dátuma", value: "2021. április 27." },
-  { label: "Ügyvezető", value: "Virágné Mátyás Mónika" },
-  { label: "Telefon", value: "06-30/685-7901" },
-  { label: "E-mail", value: "viraggabi23@gmail.com" },
-  { label: "TEÁOR", value: "4100 – Lakó- és nem lakóépület építése" },
+  { label: "Cégnév", value: "TODO Betéti Társaság / Kft. / Zrt." },
+  { label: "Rövid név", value: "TODO Bt. / Kft." },
+  { label: "Székhely", value: "TODO irányítószám Városnév, Utca neve 1." },
+  { label: "Adószám", value: "TODO-TODO-TODO" },
+  { label: "Cégjegyzékszám", value: "TODO-TODO-TODO" },
+  { label: "Bejegyző bíróság", value: "TODO Törvényszék Cégbírósága" },
+  { label: "Alapítás dátuma", value: "TODO" },
+  { label: "Ügyvezető", value: "TODO Név" },
+  { label: "Telefon", value: "+36 XX XXX XXXX" },
+  { label: "E-mail", value: "info@example.hu" },
+  { label: "TEÁOR", value: "TODO – TODO tevékenység neve" },
   {
     label: "Tárhelyszolgáltató",
     value: "Netlify Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA",

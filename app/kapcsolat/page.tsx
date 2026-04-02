@@ -1,46 +1,44 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { FaFacebook } from "react-icons/fa";
 import ContactForm from "@/components/ContactForm";
-import ConcretePoLine from "@/components/ConcretePoLine";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Kapcsolat — Vasbeton Szerkezetépítés Veszprémben",
+  title: "Kapcsolat | Cégnév",
   description:
-    "Kapcsolat — Virág Gábor Építő Bt., Szentkirályszabadja. Kérjen ingyenes ajánlatot vasbeton munkákra Veszprém és környékén! Tel: 06-30/685-7901",
+    "Kapcsolat — Cégnév, Városnév. Kérjen ingyenes ajánlatot! Tel: +36 XX XXX XXXX",
   openGraph: {
-    title: "Kapcsolat | Virág Gábor Építő Bt.",
-    description:
-      "Kérjen ingyenes ajánlatot vasbeton munkákra Veszprém és környékén! Tel: 06-30/685-7901",
+    title: "Kapcsolat | Cégnév",
+    description: "Kérjen ingyenes ajánlatot! Városban és környékén.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/kapcsolat",
+    url: "https://www.example.hu/kapcsolat",
   },
 };
 
+// TODO: Replace with real contact info
 const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "06-30/685-7901",
-    href: "tel:+36306857901",
+    value: "+36 XX XXX XXXX",
+    href: "tel:+36XXXXXXXXX",
   },
   {
     icon: Mail,
     label: "E-mail",
-    value: "viraggabi23@gmail.com",
-    href: "mailto:viraggabi23@gmail.com",
+    value: "info@example.hu",
+    href: "mailto:info@example.hu",
   },
   {
     icon: MapPin,
     label: "Cím",
-    value: "8225 Szentkirályszabadja, Gárdonyi utca 5.",
-    href: "https://maps.google.com/?q=Szentkirályszabadja,+Gárdonyi+utca+5",
+    value: "1000 Városnév, Utca neve 1.",
+    href: "https://maps.google.com/?q=Városnév",
   },
   {
     icon: Clock,
     label: "Nyitvatartás",
-    value: "Hétfő–Péntek: 07:00–17:00",
+    value: "Hétfő–Péntek: 08:00–17:00",
     href: null,
   },
 ];
@@ -52,7 +50,7 @@ export default function KapcsolatPage() {
       <section
         className="section-py-sm flex items-end"
         style={{
-          background: "#1C1C1C",
+          background: "var(--color-bg-subtle)",
           borderBottom: "1px solid var(--color-border)",
           paddingTop: "6rem",
         }}
@@ -69,15 +67,13 @@ export default function KapcsolatPage() {
             }}
           >
             Kapcsolat —{" "}
-            <span style={{ color: "var(--color-primary)" }}>Vasbeton Kivitelezés Veszprémben</span>
+            <span style={{ color: "var(--color-primary)" }}>Városnév</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            Kérjen ingyenes ajánlatot! Veszprémben, Balatonalmádiban és az egész Balaton-felvidéken vállalunk vasbeton munkákat.
+            Kérjen ingyenes ajánlatot! Városban és a környező területeken vállalunk munkákat.
           </p>
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* Contact Content */}
       <section style={{ background: "var(--color-bg)" }} className="section-py">
@@ -99,7 +95,7 @@ export default function KapcsolatPage() {
                     <div key={i} className="flex items-start gap-4">
                       <div
                         className="w-10 h-10 flex items-center justify-center rounded-md shrink-0"
-                        style={{ background: "rgba(212,147,42,0.12)", color: "var(--color-primary)" }}
+                        style={{ background: "rgba(37,99,235,0.1)", color: "var(--color-primary)" }}
                       >
                         <Icon size={18} />
                       </div>
@@ -131,40 +127,17 @@ export default function KapcsolatPage() {
                 })}
               </div>
 
-              {/* Social */}
-              <div
-                className="pt-5"
-                style={{ borderTop: "1px solid var(--color-border)" }}
-              >
-                <p
-                  className="text-xs font-semibold uppercase tracking-wider mb-3"
-                  style={{ color: "var(--color-text-light)" }}
-                >
-                  Közösségi média
-                </p>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61550622090357"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-                  style={{ color: "var(--color-primary)" }}
-                >
-                  <FaFacebook size={18} />
-                  Virág Gábor Építő Bt. — Facebook
-                </a>
-              </div>
-
-              {/* Legal */}
+              {/* Legal info placeholder */}
               <div
                 className="mt-8 p-4 rounded-md"
                 style={{ background: "var(--color-bg-subtle)", border: "1px solid var(--color-border)" }}
               >
                 <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
-                  Virág Gábor Építő Betéti Társaság
+                  TODO: Cégnév Kft. / Bt. / Zrt.
                   <br />
-                  Adószám: 29217731-2-19
+                  Adószám: TODO
                   <br />
-                  Cégjegyzékszám: 19-06-510279
+                  Cégjegyzékszám: TODO
                 </p>
               </div>
             </AnimateOnScroll>
@@ -183,25 +156,22 @@ export default function KapcsolatPage() {
         </div>
       </section>
 
-      <ConcretePoLine />
-
-      {/* Google Maps */}
+      {/* Google Maps embed — TODO: Replace with real location */}
       <section style={{ background: "var(--color-bg-subtle)" }}>
         <div className="w-full" style={{ height: "400px" }}>
+          {/* TODO: Replace the src with the real Google Maps embed URL for the business location */}
           <iframe
-            src="https://maps.google.com/maps?q=Szentkir%C3%A1lyszabadja,+G%C3%A1rdonyi+utca+5&output=embed&z=15"
+            src="https://maps.google.com/maps?q=Budapest&output=embed&z=13"
             width="100%"
             height="400"
-            style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.8)" }}
+            style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Virág Gábor Építő Bt. — Szentkirályszabadja, Gárdonyi utca 5."
+            title="Térkép — Cégnév helyszíne"
           />
         </div>
       </section>
-
-      <ConcretePoLine />
 
       {/* Service Area */}
       <section style={{ background: "var(--color-bg)" }} className="section-py">
@@ -215,14 +185,11 @@ export default function KapcsolatPage() {
               <span style={{ color: "var(--color-primary)" }}>Területünk</span>
             </h3>
             <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-              Szentkirályszabadjai székhelyünkről könnyedén elérjük Veszprémet, Balatonalmádit,
-              Balatonfűzfőt, Litért, Királyszentistvánt, Vilonyát, Hajmáskért, Csopakot,
-              Balatonfüredet, Felsőörst, Alsóörst, Berhidát, Papkeszit és a Balaton-felvidék
-              további településeit.
+              TODO: Leírás a szolgáltatási területről — mely városokat, régiókat, kerületeket fednek le.
+              Minimum 5 konkrét helyszín megemlítése ajánlott SEO szempontból.
             </p>
             <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-              Szélesebb körben Veszprém megye egész területén és a Balaton-felvidék régióban is
-              vállalunk vasbeton szerkezetépítési munkákat. Kérje ajánlatunkat — megoldjuk!
+              TODO: Második bekezdés — esetleges kiszállási díj, terület korlátai, stb.
             </p>
           </AnimateOnScroll>
         </div>

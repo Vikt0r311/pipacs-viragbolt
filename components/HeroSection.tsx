@@ -4,35 +4,36 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  badge?: string;
+  headline?: string;
+  subheadline?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+export default function HeroSection({
+  badge = "Városnév · Régió neve",
+  headline = "SZOLGÁLTATÁS NEVE\nVÁROSBAN",
+  subheadline = "Rövid leírás a cégről és a szolgáltatásról. Minőségi munka, megbízható csapat, versenyképes ár.",
+  ctaLabel = "Ajánlatot kérek",
+  ctaHref = "/kapcsolat",
+  secondaryLabel = "Szolgáltatásaink",
+  secondaryHref = "/szolgaltatasok",
+}: HeroSectionProps) {
+  const headlineLines = headline.split("\n");
+
   return (
     <section
       className="relative flex items-center overflow-hidden"
-      style={{ minHeight: "100svh", background: "#1C1C1C" }}
+      style={{
+        minHeight: "100svh",
+        background: "linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-subtle) 100%)",
+      }}
     >
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0 }}
-      >
-        <source src="/hero-opt.mp4" type="video/mp4" />
-      </video>
-
-      {/* Gradient overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(to bottom, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.88) 100%)",
-          zIndex: 1,
-        }}
-      />
-
-      {/* Decorative amber vertical line */}
+      {/* Decorative primary vertical line */}
       <div
         className="absolute left-0 top-0 bottom-0 w-1"
         style={{ background: "var(--color-primary)", opacity: 0.7, zIndex: 2 }}
@@ -55,7 +56,7 @@ export default function HeroSection() {
               className="text-xs font-semibold uppercase tracking-widest"
               style={{ color: "var(--color-primary)" }}
             >
-              Szentkirályszabadja · Veszprém megye
+              {badge}
             </span>
           </motion.div>
 
@@ -72,10 +73,16 @@ export default function HeroSection() {
               lineHeight: 1.05,
             }}
           >
-            MONOLIT VASBETON
-            <br />
-            SZERKEZETEK{" "}
-            <span style={{ color: "var(--color-primary)" }}>VESZPRÉMBEN</span>
+            {headlineLines.map((line, i) => (
+              <span key={i}>
+                {i === headlineLines.length - 1 ? (
+                  <span style={{ color: "var(--color-primary)" }}>{line}</span>
+                ) : (
+                  line
+                )}
+                {i < headlineLines.length - 1 && <br />}
+              </span>
+            ))}
           </motion.h1>
 
           {/* Subtitle */}
@@ -86,8 +93,7 @@ export default function HeroSection() {
             className="text-base md:text-lg leading-relaxed mb-10 max-w-xl"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Födémek, falak, koszorúk, lépcsők zsaluzása, vasalása és betonozása
-            — precízen, határidőre, Veszprém és a Balaton-felvidék teljes területén.
+            {subheadline}
           </motion.p>
 
           {/* CTAs */}
@@ -98,13 +104,13 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <Link
-              href="/kapcsolat"
-              className="px-7 py-3.5 rounded-md font-semibold text-sm btn-amber"
+              href={ctaHref}
+              className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary"
             >
-              Ajánlatot kérek
+              {ctaLabel}
             </Link>
             <Link
-              href="/szolgaltatasok"
+              href={secondaryHref}
               className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
               style={{
                 color: "var(--color-text-muted)",
@@ -112,7 +118,7 @@ export default function HeroSection() {
                 background: "transparent",
               }}
             >
-              Szolgáltatásaink
+              {secondaryLabel}
             </Link>
           </motion.div>
         </div>

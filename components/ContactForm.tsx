@@ -190,7 +190,7 @@ export default function ContactForm() {
           }}
         >
           <AlertCircle size={16} />
-          Hiba történt. Kérjük, próbálja újra vagy hívjon minket: 06-30/685-7901
+          Hiba történt. Kérjük, próbálja újra vagy hívjon minket telefonon.
         </div>
       )}
 

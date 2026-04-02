@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -26,7 +25,7 @@ const defaultItems: NavItem[] = [
 ];
 
 export default function Navigation({
-  siteName = "Virág Gábor Építő Bt.",
+  siteName = "Cégnév",
   items = defaultItems,
   phone,
 }: NavigationProps) {
@@ -56,25 +55,24 @@ export default function Navigation({
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
         height: "var(--nav-height)",
-        background: scrolled ? "rgba(26,26,26,0.97)" : "rgba(26,26,26,0.85)",
+        background: scrolled
+          ? "rgba(255,255,255,0.97)"
+          : "rgba(255,255,255,0.92)",
         backdropFilter: "blur(12px)",
         borderBottom: scrolled
           ? "1px solid var(--color-border)"
           : "1px solid transparent",
-        boxShadow: scrolled ? "0 4px 24px rgb(0 0 0 / 0.5)" : "none",
+        boxShadow: scrolled ? "var(--shadow-md)" : "none",
       }}
     >
       <div className="container-site h-full flex items-center justify-between gap-4">
-        {/* Logo */}
-        <Link href="/" className="shrink-0 transition-opacity hover:opacity-80">
-          <Image
-            src="/logo.png"
-            alt="Virág Gábor Építő Bt."
-            width={150}
-            height={100}
-            className="h-20 w-auto"
-            unoptimized
-          />
+        {/* Logo / Site Name */}
+        <Link
+          href="/"
+          className="shrink-0 font-bold text-lg transition-opacity hover:opacity-80"
+          style={{ color: "var(--color-text)" }}
+        >
+          <span style={{ color: "var(--color-primary)" }}>{siteName}</span>
         </Link>
 
         {/* Desktop nav */}
@@ -115,7 +113,7 @@ export default function Navigation({
           )}
           <Link
             href="/kapcsolat"
-            className="px-4 py-2 rounded-md text-sm font-semibold btn-amber"
+            className="px-4 py-2 rounded-md text-sm font-semibold btn-primary"
           >
             Ajánlatot kérek
           </Link>
@@ -138,9 +136,9 @@ export default function Navigation({
         <div
           className="md:hidden absolute top-full inset-x-0 border-t py-4"
           style={{
-            background: "rgba(26,26,26,0.98)",
+            background: "rgba(255,255,255,0.98)",
             borderColor: "var(--color-border)",
-            boxShadow: "0 12px 40px rgb(0 0 0 / 0.6)",
+            boxShadow: "var(--shadow-lg)",
           }}
         >
           <nav className="container-site flex flex-col gap-1">
@@ -159,7 +157,7 @@ export default function Navigation({
                       ? "var(--color-primary)"
                       : "var(--color-text)",
                     background: isActive
-                      ? "rgba(212,147,42,0.1)"
+                      ? "rgba(37,99,235,0.08)"
                       : "transparent",
                   }}
                 >

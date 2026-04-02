@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Adatvédelmi Tájékoztató",
+  title: "Adatvédelmi Tájékoztató | Cégnév",
   description:
-    "Virág Gábor Építő Bt. adatvédelmi tájékoztatója — GDPR megfelelő adatkezelési tájékoztató.",
+    "Cégnév adatvédelmi tájékoztatója — GDPR megfelelő adatkezelési tájékoztató.",
   openGraph: {
-    title: "Adatvédelmi Tájékoztató",
+    title: "Adatvédelmi Tájékoztató | Cégnév",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.viragepito.hu/adatvedelmi-tajekoztato",
+    url: "https://www.example.hu/adatvedelmi-tajekoztato",
   },
 };
 
+// TODO: Replace all TODO values with real company and contact data
 const sections = [
   {
     title: "1. Adatkezelő neve és elérhetőségei",
-    content: `Adatkezelő neve: Virág Gábor Építő Betéti Társaság
-Székhely: 8225 Szentkirályszabadja, Gárdonyi utca 5.
-Adószám: 29217731-2-19
-Cégjegyzékszám: 19-06-510279
-Ügyvezető: Virágné Mátyás Mónika
-Telefon: 06-30/685-7901
-E-mail: viraggabi23@gmail.com
-Weboldal: www.viragepito.hu`,
+    content: `Adatkezelő neve: TODO Cégnév (Bt. / Kft. / Zrt.)
+Székhely: TODO irányítószám Városnév, Utca neve 1.
+Adószám: TODO
+Cégjegyzékszám: TODO
+Ügyvezető: TODO Név
+Telefon: +36 XX XXX XXXX
+E-mail: info@example.hu
+Weboldal: www.example.hu`,
   },
   {
     title: "2. Kezelt adatok és az adatkezelés célja",
@@ -48,12 +49,12 @@ Weboldal: www.viragepito.hu`,
 
 • Hozzáférési jog: Kérheti a kezelt adatai másolatát.
 • Helyesbítési jog: Kérheti a pontatlan adatok javítását.
-• Törlési jog: Kérheti az adatok törlését (\"elfeledtetés joga\").
+• Törlési jog: Kérheti az adatok törlését ("elfeledtetés joga").
 • Adathordozhatósághoz való jog: Kérheti az adatok géppel olvasható formátumban való kiadását.
 • Tiltakozási jog: Tiltakozhat az adatkezelés ellen.
 • Korlátozási jog: Kérheti az adatkezelés korlátozását.
 
-Ezeket a jogait az adatkezelő e-mail (viraggabi23@gmail.com) vagy postai úton gyakorolhatja.`,
+Ezeket a jogait az adatkezelő e-mail (info@example.hu) vagy postai úton gyakorolhatja.`,
   },
   {
     title: "6. Sütikre (cookie) vonatkozó tájékoztató",
@@ -76,7 +77,7 @@ Weboldal: www.naih.hu`,
   },
   {
     title: "8. Az adatvédelmi tájékoztató módosítása",
-    content: `Az adatkezelő fenntartja a jogot a jelen tájékoztató módosítására. A módosításokat a weboldalon közzétesszük. A tájékoztató utolsó frissítésének dátuma: 2026. április 2.`,
+    content: `Az adatkezelő fenntartja a jogot a jelen tájékoztató módosítására. A módosításokat a weboldalon közzétesszük. A tájékoztató utolsó frissítésének dátuma: TODO dátum.`,
   },
 ];
 
@@ -96,7 +97,7 @@ export default function AdatvedelmiPage() {
           Adatvédelmi Tájékoztató
         </h1>
         <p className="text-sm mb-10" style={{ color: "var(--color-text-light)" }}>
-          Virág Gábor Építő Bt. · Utolsó frissítés: 2026. április 2.
+          TODO Cégnév · Utolsó frissítés: TODO dátum
         </p>
 
         <div className="flex flex-col gap-10">

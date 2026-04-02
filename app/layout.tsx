@@ -15,16 +15,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Virág Gábor Építő Bt.",
-    default: "Monolit Vasbeton Szerkezetek Veszprémben | Virág Gábor Építő Bt.",
+    template: "%s | Cégnév",
+    default: "Cégnév — Szolgáltatás Városban",
   },
-  description:
-    "Monolit vasbeton szerkezetek kivitelezése Veszprémben és a Balaton-felvidéken. Födémek, falak, koszorúk, lépcsők zsaluzása, vasalása, betonozása. Kérjen ajánlatot!",
-  metadataBase: new URL("https://www.viragepito.hu"),
+  description: "Rövid cégleírás. Szolgáltatás Városban és környékén.",
+  metadataBase: new URL("https://www.example.hu"),
   openGraph: {
     type: "website",
     locale: "hu_HU",
-    siteName: "Virág Gábor Építő Bt.",
+    siteName: "Cégnév",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   robots: {
@@ -53,12 +52,12 @@ export default function RootLayout({
         }}
       >
         <Navigation
-          siteName="Virág Gábor Építő Bt."
-          phone="06-30/685-7901"
+          siteName="Cégnév"
+          phone="+36 XX XXX XXXX"
         />
         <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingCTA phone="+36306857901" label="Hívjon most!" />
+        <FloatingCTA phone="+36XXXXXXXXX" label="Hívjon most!" />
         <CookieBanner />
       </body>
     </html>

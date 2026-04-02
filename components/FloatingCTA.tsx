@@ -24,7 +24,7 @@ export default function FloatingCTA({
         style={{
           background: "var(--color-primary)",
           color: "var(--color-text-inverse)",
-          boxShadow: "0 8px 32px rgb(212 147 42 / 0.45)",
+          boxShadow: "var(--shadow-lg)",
         }}
         aria-label={label}
       >

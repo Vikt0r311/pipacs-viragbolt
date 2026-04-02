@@ -2,38 +2,39 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ClipboardList, LayoutTemplate, GitBranch, Droplets, CheckCircle } from "lucide-react";
+import { ClipboardList, PhoneCall, FileCheck, Wrench, CheckCircle } from "lucide-react";
 
+// TODO: Replace steps with real process steps relevant to the business
 const steps = [
   {
+    icon: PhoneCall,
+    title: "Kapcsolatfelvétel",
+    description:
+      "Az ügyfél felveszi velünk a kapcsolatot telefonon, e-mailben vagy az ajánlatkérő űrlapon keresztül. Megbeszéljük az igényeket és a projekt részleteit.",
+  },
+  {
     icon: ClipboardList,
-    title: "Tervezés és egyeztetés",
+    title: "Igényfelmérés és ajánlat",
     description:
-      "Felszínre hozzuk az épület igényeit. A statikai terv alapján meghatározzuk a zsaluzat típusát, az anyagmennyiséget és a munkaidőkeretet. Mindent előre egyeztetünk.",
+      "Helyszíni vagy online felmérést végzünk, majd személyre szabott árajánlatot készítünk. Az ajánlat részletes, átlátható és kötelezettségmentes.",
   },
   {
-    icon: LayoutTemplate,
-    title: "Zsaluzás",
+    icon: FileCheck,
+    title: "Megállapodás és tervezés",
     description:
-      "Panelzsaluzattal pontosan beformázzuk a szerkezetet. Milliméteres pontossággal állítjuk be a zsaluzatot, hogy a végeredmény tökéletesen illeszkedjen az épület geometriájához.",
+      "Az ajánlat elfogadása után szerződést kötünk, és megkezdjük a részletes tervezést. Minden részletet előre egyeztetünk.",
   },
   {
-    icon: GitBranch,
-    title: "Vasalás",
+    icon: Wrench,
+    title: "Kivitelezés",
     description:
-      "A statikai terv szerinti vasalási hálót behelyezzük és rögzítjük. A vasalás szilárdsága és elrendezése meghatározza a szerkezet teherbírását és tartósságát.",
-  },
-  {
-    icon: Droplets,
-    title: "Betonozás",
-    description:
-      "Minőségi betont öntünk be a zsaluzatba, gondosan tömörítve és egyenletesen elosztva. A betonozás ütemezése az időjárási viszonyok és a szerkezet méretének függvénye.",
+      "Szakképzett csapatunk elvégzi a munkát a megbeszélt határidőre, a legszigorúbb minőségi standardok szerint. Folyamatosan tájékoztatjuk az ügyfelet.",
   },
   {
     icon: CheckCircle,
-    title: "Kizsaluzás és átadás",
+    title: "Átadás és garancia",
     description:
-      "Miután a beton elérte a szükséges szilárdságot (általában 28 nap után), eltávolítjuk a zsaluzatot. Az elkészült szerkezetet precíz ellenőrzés után adjuk át.",
+      "Az elkészült munkát közösen ellenőrizzük és átadjuk. Garanciát vállalunk az elvégzett munkákra, és elérhető maradunk a jövőbeni kérdések esetén is.",
   },
 ];
 

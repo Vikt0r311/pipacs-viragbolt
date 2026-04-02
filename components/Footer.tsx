@@ -1,16 +1,30 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { FaFacebook } from "react-icons/fa";
 
-const serviceLinks = [
-  { label: "Vasbeton födémek", href: "/szolgaltatasok" },
-  { label: "Vasbeton falak", href: "/szolgaltatasok" },
-  { label: "Koszorú készítés", href: "/szolgaltatasok" },
-  { label: "Vasbeton lépcsők", href: "/szolgaltatasok" },
-  { label: "Egyéb szerkezetek", href: "/szolgaltatasok" },
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface FooterProps {
+  companyName?: string;
+  tagline?: string;
+  phone?: string;
+  email?: string;
+  address?: string;
+  serviceLinks?: FooterLink[];
+  usefulLinks?: FooterLink[];
+}
+
+const defaultServiceLinks: FooterLink[] = [
+  { label: "Szolgáltatás 1", href: "/szolgaltatasok" },
+  { label: "Szolgáltatás 2", href: "/szolgaltatasok" },
+  { label: "Szolgáltatás 3", href: "/szolgaltatasok" },
+  { label: "Szolgáltatás 4", href: "/szolgaltatasok" },
+  { label: "Szolgáltatás 5", href: "/szolgaltatasok" },
 ];
 
-const pageLinks = [
+const defaultUsefulLinks: FooterLink[] = [
   { label: "Rólunk", href: "/rolunk" },
   { label: "Galéria", href: "/galeria" },
   { label: "Kapcsolat", href: "/kapcsolat" },
@@ -18,7 +32,15 @@ const pageLinks = [
   { label: "Impresszum", href: "/impresszum" },
 ];
 
-export default function Footer() {
+export default function Footer({
+  companyName = "Cégnév",
+  tagline = "Rövid leírás a cégről és a szolgáltatásról.",
+  phone = "+36 XX XXX XXXX",
+  email = "info@example.hu",
+  address = "1000 Városnév, Utca neve 1.",
+  serviceLinks = defaultServiceLinks,
+  usefulLinks = defaultUsefulLinks,
+}: FooterProps) {
   return (
     <footer
       style={{
@@ -27,104 +49,91 @@ export default function Footer() {
       }}
     >
       <div className="container-site py-14">
-        <div className="grid grid-cols-2 md:grid-cols-12 gap-10">
-          {/* Column 1 — Brand (5 cols) */}
-          <div className="col-span-2 md:col-span-5 flex flex-col gap-4">
+        {/* Outer grid: 1 col mobile, 3 cols desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Column 1 — Brand (full width mobile, 1 col desktop) */}
+          <div className="flex flex-col gap-4">
             <div>
               <p
                 className="text-xl font-bold mb-1"
                 style={{ color: "var(--color-text)" }}
               >
-                <span style={{ color: "var(--color-primary)" }}>Virág Gábor</span> Építő Bt.
+                <span style={{ color: "var(--color-primary)" }}>{companyName}</span>
               </p>
               <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                Monolit vasbeton szerkezetek kivitelezése Veszprémben és a Balaton-felvidéken.
+                {tagline}
               </p>
             </div>
 
             <div className="flex flex-col gap-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
               <a
-                href="tel:+36306857901"
+                href={`tel:${phone.replace(/[\s\-\/]/g, "")}`}
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
                 <Phone size={14} style={{ color: "var(--color-primary)" }} />
-                06-30/685-7901
+                {phone}
               </a>
               <a
-                href="mailto:viraggabi23@gmail.com"
+                href={`mailto:${email}`}
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
                 <Mail size={14} style={{ color: "var(--color-primary)" }} />
-                viraggabi23@gmail.com
+                {email}
               </a>
               <span className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "var(--color-primary)" }} />
-                8225 Szentkirályszabadja, Gárdonyi utca 5.
+                {address}
               </span>
             </div>
+          </div>
 
-            <div className="flex items-center gap-3 mt-1">
-              <a
-                href="https://www.facebook.com/profile.php?id=61550622090357"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-80"
-                aria-label="Facebook"
-                style={{ color: "var(--color-primary)" }}
+          {/* Two link columns — side by side on mobile (grid-cols-2), flow into 3-col grid on desktop */}
+          <div className="grid grid-cols-2 gap-10 md:contents">
+            {/* Column 2 — Services */}
+            <div>
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-4"
+                style={{ color: "var(--color-text-muted)" }}
               >
-                <FaFacebook size={20} />
-              </a>
+                Szolgáltatások
+              </p>
+              <ul className="flex flex-col gap-2">
+                {serviceLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm transition-colors hover:opacity-80"
+                      style={{ color: "var(--color-text-muted)" }}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <p className="text-xs mt-1" style={{ color: "var(--color-text-light)" }}>
-              Adószám: 29217731-2-19 · Cégjegyzékszám: 19-06-510279
-            </p>
-          </div>
-
-          {/* Column 2 — Services (3 cols) */}
-          <div className="col-span-1 md:col-span-3">
-            <p
-              className="text-xs font-semibold uppercase tracking-widest mb-4"
-              style={{ color: "var(--color-text-muted)" }}
-            >
-              Szolgáltatások
-            </p>
-            <ul className="flex flex-col gap-2">
-              {serviceLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm transition-colors hover:opacity-80"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 — Pages (4 cols) */}
-          <div className="md:col-span-4">
-            <p
-              className="text-xs font-semibold uppercase tracking-widest mb-4"
-              style={{ color: "var(--color-text-muted)" }}
-            >
-              Hasznos linkek
-            </p>
-            <ul className="flex flex-col gap-2">
-              {pageLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm transition-colors hover:opacity-80"
-                    style={{ color: "var(--color-text-muted)" }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Column 3 — Useful links */}
+            <div>
+              <p
+                className="text-xs font-semibold uppercase tracking-widest mb-4"
+                style={{ color: "var(--color-text-muted)" }}
+              >
+                Hasznos linkek
+              </p>
+              <ul className="flex flex-col gap-2">
+                {usefulLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm transition-colors hover:opacity-80"
+                      style={{ color: "var(--color-text-muted)" }}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -137,7 +146,7 @@ export default function Footer() {
       >
         <div className="container-site py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
-            © 2026 Virág Gábor Építő Bt. Minden jog fenntartva.
+            © 2026 {companyName}. Minden jog fenntartva.
           </p>
           <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
             Weboldal készítette:{" "}
