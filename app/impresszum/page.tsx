@@ -1,119 +1,83 @@
 import type { Metadata } from "next";
 
-// TODO: Replace Cégnév
 export const metadata: Metadata = {
-  title: "Impresszum | Cégnév",
-  description: "Impresszum — a weboldal üzemeltetőjének adatai.",
-  robots: { index: false },
+  title: "Impresszum",
+  description:
+    "Virág Gábor Építő Bt. impresszuma — céges adatok, tárhelyszolgáltató, ügyvezető.",
+  openGraph: {
+    title: "Impresszum",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://www.viragepito.hu/impresszum",
+  },
 };
+
+const rows = [
+  { label: "Cégnév", value: "Virág Gábor Építő Betéti Társaság" },
+  { label: "Rövid név", value: "Virág Gábor Építő Bt." },
+  { label: "Székhely", value: "8225 Szentkirályszabadja, Gárdonyi utca 5." },
+  { label: "Adószám", value: "29217731-2-19" },
+  { label: "Cégjegyzékszám", value: "19-06-510279" },
+  { label: "Bejegyző bíróság", value: "Veszprémi Törvényszék Cégbírósága" },
+  { label: "Alapítás dátuma", value: "2021. április 27." },
+  { label: "Ügyvezető", value: "Virágné Mátyás Mónika" },
+  { label: "Telefon", value: "06-30/685-7901" },
+  { label: "E-mail", value: "viraggabi23@gmail.com" },
+  { label: "TEÁOR", value: "4100 – Lakó- és nem lakóépület építése" },
+  {
+    label: "Tárhelyszolgáltató",
+    value: "Netlify Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA",
+  },
+];
 
 export default function ImpresszumPage() {
   return (
-    <div className="section-py">
-      <div className="container-site">
-        <div className="max-w-2xl">
-          <h1
-            className="text-3xl font-bold mb-8"
-            style={{ color: "var(--color-primary)" }}
-          >
-            Impresszum
-          </h1>
+    <section
+      className="section-py"
+      style={{ background: "var(--color-bg)" }}
+    >
+      <div className="container-site max-w-3xl">
+        <div className="w-8 h-0.5 mb-4" style={{ background: "var(--color-primary)" }} />
+        <h1
+          className="font-black uppercase mb-10"
+          style={{
+            fontSize: "clamp(1.75rem, 4vw, 3rem)",
+            letterSpacing: "-0.02em",
+            color: "var(--color-text)",
+          }}
+        >
+          Impresszum
+        </h1>
 
-          <div
-            className="flex flex-col gap-6 text-sm"
-            style={{ color: "var(--color-text-muted)" }}
-          >
-            <section className="flex flex-col gap-1">
-              <h2
-                className="font-semibold text-base mb-1"
+        <div
+          className="rounded-xl overflow-hidden"
+          style={{ border: "1px solid var(--color-border)" }}
+        >
+          {rows.map((row, i) => (
+            <div
+              key={i}
+              className="grid grid-cols-5 gap-4 px-6 py-4"
+              style={{
+                background: i % 2 === 0 ? "var(--color-bg)" : "var(--color-bg-subtle)",
+                borderBottom:
+                  i < rows.length - 1 ? "1px solid var(--color-border)" : "none",
+              }}
+            >
+              <span
+                className="col-span-2 text-sm font-semibold"
+                style={{ color: "var(--color-text-muted)" }}
+              >
+                {row.label}
+              </span>
+              <span
+                className="col-span-3 text-sm"
                 style={{ color: "var(--color-text)" }}
               >
-                A weboldal üzemeltetője
-              </h2>
-              <p>Cégnév: TODO</p>
-              <p>Székhely: TODO</p>
-              <p>Adószám: TODO</p>
-              <p>Cégjegyzékszám / Nyilvántartási szám: TODO</p>
-            </section>
-
-            <section className="flex flex-col gap-1">
-              <h2
-                className="font-semibold text-base mb-1"
-                style={{ color: "var(--color-text)" }}
-              >
-                Elérhetőség
-              </h2>
-              <p>
-                E-mail:{" "}
-                <a
-                  href="mailto:info@example.hu" // TODO
-                  className="underline"
-                  style={{ color: "var(--color-primary)" }}
-                >
-                  info@example.hu {/* TODO */}
-                </a>
-              </p>
-              <p>Telefon: TODO</p>
-            </section>
-
-            <section className="flex flex-col gap-1">
-              <h2
-                className="font-semibold text-base mb-1"
-                style={{ color: "var(--color-text)" }}
-              >
-                Tárhely-szolgáltató
-              </h2>
-              <p>Netlify, Inc.</p>
-              <p>512 2nd Street, Suite 200, San Francisco, CA 94107</p>
-              <p>
-                <a
-                  href="https://www.netlify.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                  style={{ color: "var(--color-primary)" }}
-                >
-                  www.netlify.com
-                </a>
-              </p>
-            </section>
-
-            <section className="flex flex-col gap-1">
-              <h2
-                className="font-semibold text-base mb-1"
-                style={{ color: "var(--color-text)" }}
-              >
-                Weboldal készítője
-              </h2>
-              <p>
-                <a
-                  href="https://cvmarketing.hu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                  style={{ color: "var(--color-primary)" }}
-                >
-                  CVMarketing
-                </a>
-              </p>
-            </section>
-
-            <section>
-              <h2
-                className="font-semibold text-base mb-1"
-                style={{ color: "var(--color-text)" }}
-              >
-                Szerzői jogok
-              </h2>
-              <p>
-                A weboldalon megjelenő tartalmak (szöveg, kép, grafika) szerzői
-                jogi védelem alatt állnak. Felhasználásuk kizárólag az
-                üzemeltető írásos engedélyével lehetséges.
-              </p>
-            </section>
-          </div>
+                {row.value}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="5" fill="#1A1A1A"/>
+  <!-- Bold V shape — two angled beams like rebar/formwork -->
+  <polygon points="4,6 10,6 16,21 22,6 28,6 19,26 13,26" fill="#D4932A"/>
+  <!-- Amber underline — ConcretePoLine signature -->
+  <rect x="4" y="28" width="24" height="2" rx="1" fill="#D4932A" opacity="0.5"/>
+</svg>

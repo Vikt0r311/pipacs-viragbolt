@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 
 const STORAGE_KEY = "cookie-consent";
 
-type ConsentValue = "all" | "necessary" | null;
-
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY) as ConsentValue;
+      const saved = localStorage.getItem(STORAGE_KEY);
       if (!saved) setVisible(true);
     } catch {
       // localStorage not available
@@ -35,26 +33,23 @@ export default function CookieBanner() {
       aria-label="Cookie hozzájárulás"
       className="fixed bottom-0 inset-x-0 z-50 p-4 sm:p-6"
     >
-      <div
-        className="container-site"
-      >
+      <div className="container-site">
         <div
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-xl shadow-lg"
+          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-xl"
           style={{
-            background: "var(--color-bg)",
+            background: "var(--color-bg-subtle)",
             border: "1px solid var(--color-border)",
-            boxShadow: "var(--shadow-lg)",
+            boxShadow: "0 -8px 40px rgb(0 0 0 / 0.6)",
           }}
         >
           <p
             className="text-sm flex-1 leading-relaxed"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Weboldalunk sütiket (cookie) használ a jobb felhasználói élmény
-            érdekében. Az{" "}
+            Weboldalunk sütiket (cookie) használ a jobb felhasználói élmény érdekében. Az{" "}
             <a
               href="/adatvedelmi-tajekoztato"
-              className="underline"
+              className="underline transition-opacity hover:opacity-80"
               style={{ color: "var(--color-primary)" }}
             >
               adatvédelmi tájékoztatóban
@@ -65,10 +60,10 @@ export default function CookieBanner() {
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={() => handleConsent("necessary")}
-              className="px-4 py-2 text-sm rounded-md font-medium border transition-colors"
+              className="px-4 py-2 text-sm rounded-md font-medium border transition-colors hover:opacity-80"
               style={{
                 color: "var(--color-text-muted)",
-                borderColor: "var(--color-border)",
+                borderColor: "var(--color-border-strong)",
                 background: "transparent",
               }}
             >
@@ -76,11 +71,7 @@ export default function CookieBanner() {
             </button>
             <button
               onClick={() => handleConsent("all")}
-              className="px-4 py-2 text-sm rounded-md font-semibold transition-colors"
-              style={{
-                background: "var(--color-primary)",
-                color: "var(--color-text-inverse)",
-              }}
+              className="px-4 py-2 text-sm rounded-md font-semibold btn-amber"
             >
               Elfogadom
             </button>

@@ -22,7 +22,9 @@ export default function ContactForm() {
       const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams(
+          data as unknown as Record<string, string>
+        ).toString(),
       });
 
       if (res.ok) {
@@ -37,31 +39,33 @@ export default function ContactForm() {
     }
   };
 
+  const inputStyle = {
+    background: "var(--color-bg)",
+    border: "1px solid var(--color-border)",
+    color: "var(--color-text)",
+    outline: "none",
+  };
+
+  const labelStyle = {
+    color: "var(--color-text)",
+  };
+
   if (state === "success") {
     return (
       <div
-        className="flex flex-col items-center gap-4 py-12 px-6 rounded-xl text-center"
-        style={{ background: "var(--color-surface)" }}
+        className="flex flex-col items-center gap-4 py-14 px-6 rounded-xl text-center"
+        style={{ background: "var(--color-surface)", border: "1px solid var(--color-border)" }}
       >
-        <CheckCircle
-          size={48}
-          style={{ color: "var(--color-success)" }}
-        />
-        <h3
-          className="text-xl font-semibold"
-          style={{ color: "var(--color-text)" }}
-        >
-          Üzenet elküldve!
+        <CheckCircle size={48} style={{ color: "#22c55e" }} />
+        <h3 className="text-xl font-bold" style={{ color: "var(--color-text)" }}>
+          Köszönjük megkeresését!
         </h3>
-        <p
-          className="text-sm"
-          style={{ color: "var(--color-text-muted)" }}
-        >
+        <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
           Hamarosan felvesszük Önnel a kapcsolatot.
         </p>
         <button
           onClick={() => setState("idle")}
-          className="mt-2 text-sm underline"
+          className="mt-2 text-sm underline transition-opacity hover:opacity-80"
           style={{ color: "var(--color-primary)" }}
         >
           Új üzenet küldése
@@ -79,7 +83,6 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="flex flex-col gap-4"
     >
-      {/* Netlify hidden fields */}
       <input type="hidden" name="form-name" value="kapcsolat" />
       <p className="hidden">
         <label>
@@ -87,13 +90,9 @@ export default function ContactForm() {
         </label>
       </p>
 
-      {/* Name */}
+      {/* Név */}
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="nev"
-          className="text-sm font-medium"
-          style={{ color: "var(--color-text)" }}
-        >
+        <label htmlFor="nev" className="text-sm font-medium" style={labelStyle}>
           Név <span aria-hidden>*</span>
         </label>
         <input
@@ -102,22 +101,14 @@ export default function ContactForm() {
           type="text"
           required
           placeholder="Kovács János"
-          className="w-full px-4 py-2.5 rounded-md border text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
-          style={{
-            background: "var(--color-bg)",
-            border: "1px solid var(--color-border)",
-            color: "var(--color-text)",
-          }}
+          className="w-full px-4 py-3 rounded-md border text-sm transition-colors"
+          style={inputStyle}
         />
       </div>
 
       {/* Email */}
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="email"
-          className="text-sm font-medium"
-          style={{ color: "var(--color-text)" }}
-        >
+        <label htmlFor="email" className="text-sm font-medium" style={labelStyle}>
           E-mail cím <span aria-hidden>*</span>
         </label>
         <input
@@ -126,22 +117,14 @@ export default function ContactForm() {
           type="email"
           required
           placeholder="pelda@email.hu"
-          className="w-full px-4 py-2.5 rounded-md border text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
-          style={{
-            background: "var(--color-bg)",
-            border: "1px solid var(--color-border)",
-            color: "var(--color-text)",
-          }}
+          className="w-full px-4 py-3 rounded-md border text-sm transition-colors"
+          style={inputStyle}
         />
       </div>
 
-      {/* Phone */}
+      {/* Telefon */}
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="telefon"
-          className="text-sm font-medium"
-          style={{ color: "var(--color-text)" }}
-        >
+        <label htmlFor="telefon" className="text-sm font-medium" style={labelStyle}>
           Telefonszám
         </label>
         <input
@@ -149,22 +132,14 @@ export default function ContactForm() {
           name="telefon"
           type="tel"
           placeholder="+36 30 123 4567"
-          className="w-full px-4 py-2.5 rounded-md border text-sm outline-none transition-colors focus:border-[var(--color-accent)]"
-          style={{
-            background: "var(--color-bg)",
-            border: "1px solid var(--color-border)",
-            color: "var(--color-text)",
-          }}
+          className="w-full px-4 py-3 rounded-md border text-sm transition-colors"
+          style={inputStyle}
         />
       </div>
 
-      {/* Message */}
+      {/* Üzenet */}
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="uzenet"
-          className="text-sm font-medium"
-          style={{ color: "var(--color-text)" }}
-        >
+        <label htmlFor="uzenet" className="text-sm font-medium" style={labelStyle}>
           Üzenet <span aria-hidden>*</span>
         </label>
         <textarea
@@ -172,17 +147,13 @@ export default function ContactForm() {
           name="uzenet"
           required
           rows={5}
-          placeholder="Írja le kérését..."
-          className="w-full px-4 py-2.5 rounded-md border text-sm outline-none transition-colors resize-y focus:border-[var(--color-accent)]"
-          style={{
-            background: "var(--color-bg)",
-            border: "1px solid var(--color-border)",
-            color: "var(--color-text)",
-          }}
+          placeholder="Írja le kérését, a munkálat típusát és helyszínét..."
+          className="w-full px-4 py-3 rounded-md border text-sm transition-colors resize-y"
+          style={inputStyle}
         />
       </div>
 
-      {/* GDPR checkbox */}
+      {/* GDPR */}
       <label className="flex items-start gap-3 cursor-pointer">
         <input
           type="checkbox"
@@ -190,16 +161,14 @@ export default function ContactForm() {
           checked={gdpr}
           onChange={(e) => setGdpr(e.target.checked)}
           required
-          className="mt-0.5 shrink-0 accent-[var(--color-primary)]"
+          className="mt-0.5 shrink-0"
+          style={{ accentColor: "var(--color-primary)" }}
         />
-        <span
-          className="text-xs leading-relaxed"
-          style={{ color: "var(--color-text-muted)" }}
-        >
+        <span className="text-xs leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
           Elolvastam és elfogadom az{" "}
           <a
             href="/adatvedelmi-tajekoztato"
-            className="underline"
+            className="underline hover:opacity-80"
             style={{ color: "var(--color-primary)" }}
             target="_blank"
             rel="noopener noreferrer"
@@ -215,13 +184,13 @@ export default function ContactForm() {
         <div
           className="flex items-center gap-2 p-3 rounded-md text-sm"
           style={{
-            background: "#fef2f2",
+            background: "rgba(239,68,68,0.1)",
             color: "var(--color-error)",
-            border: "1px solid #fecaca",
+            border: "1px solid rgba(239,68,68,0.3)",
           }}
         >
           <AlertCircle size={16} />
-          Hiba történt az üzenet küldése közben. Kérjük, próbálja újra.
+          Hiba történt. Kérjük, próbálja újra vagy hívjon minket: 06-30/685-7901
         </div>
       )}
 
@@ -229,11 +198,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state === "submitting" || !gdpr}
-        className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-sm transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-        style={{
-          background: "var(--color-primary)",
-          color: "var(--color-text-inverse)",
-        }}
+        className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-sm btn-amber disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
       >
         {state === "submitting" ? (
           "Küldés..."

@@ -1,5 +1,20 @@
 # CHANGES.md
 
+## 2026-04-02 — Teljes weboldal megépítése (Virág Gábor Építő Bt.)
+
+### Elvégzett munkák
+- `package.json` — név: `nextjs-starter-hu` → `virag-epito-hu`; `react-icons` telepítve
+- `globals.css` — teljes átírás: dark industrial paletta (#1A1A1A bg, #D4932A Rebar Amber)
+- `app/layout.tsx` — Inter font (next/font), valós metaadatok, komponens propok
+- `public/sitemap.xml` — TÖRÖLVE (ütközött volna az app/sitemap.ts-sel)
+- Új komponensek: ConcretePoLine, AnimateOnScroll, HeroSection, ProcessTimeline, StatsSection, FAQAccordion
+- Frissített komponensek: Navigation, Footer, FloatingCTA, CookieBanner, ContactForm, JsonLd
+- Oldalak teljes újraírása: főoldal, /szolgaltatasok, /rolunk, /kapcsolat, /galeria, /impresszum, /adatvedelmi-tajekoztato, /not-found
+- `app/sitemap.ts` — automata sitemap, 7 oldal
+- ⚠️ A "50+ projekt" statisztika becsült adat — ügyfél megerősítése szükséges
+
+---
+
 ## 2026-03-31 — Starter template scaffold
 
 ### Mit változtattam

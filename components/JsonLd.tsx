@@ -16,11 +16,13 @@ export interface LocalBusinessData {
     latitude: number;
     longitude: number;
   };
-  openingHours: string[];  // e.g. ["Mo-Fr 08:00-17:00", "Sa 09:00-13:00"]
-  priceRange?: string;     // e.g. "$$"
-  areaServed: string[];    // min. 5 settlements
-  sameAs?: string[];       // social URLs
+  openingHours: string[];
+  priceRange?: string;
+  areaServed: string[];
+  sameAs?: string[];
   image?: string;
+  type?: string;
+  taxID?: string;
 }
 
 export interface FaqItem {
@@ -40,7 +42,7 @@ function sanitize(obj: unknown): string {
 export default function JsonLd({ business, faq }: JsonLdProps) {
   const localBusiness = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": business.type ?? "LocalBusiness",
     name: business.name,
     description: business.description,
     url: business.url,
@@ -58,10 +60,7 @@ export default function JsonLd({ business, faq }: JsonLdProps) {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
-    openingHoursSpecification: business.openingHours.map((oh) => ({
-      "@type": "OpeningHoursSpecification",
-      description: oh,
-    })),
+    openingHours: business.openingHours,
     priceRange: business.priceRange,
     areaServed: business.areaServed.map((area) => ({
       "@type": "City",
@@ -69,6 +68,7 @@ export default function JsonLd({ business, faq }: JsonLdProps) {
     })),
     sameAs: business.sameAs ?? [],
     image: business.image,
+    taxID: business.taxID,
   };
 
   const faqSchema = faq?.length

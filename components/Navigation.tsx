@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 export interface NavItem {
   label: string;
@@ -11,11 +12,8 @@ export interface NavItem {
 }
 
 interface NavigationProps {
-  /** Site name / logo text — TODO: replace with client brand */
   siteName?: string;
-  /** Navigation links — defaults to standard HU small business nav */
   items?: NavItem[];
-  /** Optional: phone number displayed in nav on desktop */
   phone?: string;
 }
 
@@ -28,7 +26,7 @@ const defaultItems: NavItem[] = [
 ];
 
 export default function Navigation({
-  siteName = "Cégnév", // TODO: Replace with client name
+  siteName = "Virág Gábor Építő Bt.",
   items = defaultItems,
   phone,
 }: NavigationProps) {
@@ -42,12 +40,10 @@ export default function Navigation({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -57,24 +53,28 @@ export default function Navigation({
 
   return (
     <header
-      className="fixed top-0 inset-x-0 z-50 transition-shadow duration-200"
+      className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
         height: "var(--nav-height)",
-        background: "var(--color-bg)",
+        background: scrolled ? "rgba(26,26,26,0.97)" : "rgba(26,26,26,0.85)",
+        backdropFilter: "blur(12px)",
         borderBottom: scrolled
           ? "1px solid var(--color-border)"
           : "1px solid transparent",
-        boxShadow: scrolled ? "var(--shadow-sm)" : "none",
+        boxShadow: scrolled ? "0 4px 24px rgb(0 0 0 / 0.5)" : "none",
       }}
     >
       <div className="container-site h-full flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-bold text-lg shrink-0 transition-opacity hover:opacity-75"
-          style={{ color: "var(--color-primary)" }}
-        >
-          {siteName}
+        <Link href="/" className="shrink-0 transition-opacity hover:opacity-80">
+          <Image
+            src="/logo.png"
+            alt="Virág Gábor Építő Bt."
+            width={150}
+            height={100}
+            className="h-20 w-auto"
+            unoptimized
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -93,7 +93,6 @@ export default function Navigation({
                   color: isActive
                     ? "var(--color-primary)"
                     : "var(--color-text-muted)",
-                  background: isActive ? "var(--color-surface)" : "transparent",
                 }}
               >
                 {item.label}
@@ -106,22 +105,19 @@ export default function Navigation({
         <div className="hidden md:flex items-center gap-3">
           {phone && (
             <a
-              href={`tel:${phone.replace(/\s/g, "")}`}
-              className="text-sm font-medium transition-colors"
+              href={`tel:${phone.replace(/[\s\-\/]/g, "")}`}
+              className="flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
               style={{ color: "var(--color-text-muted)" }}
             >
+              <Phone size={14} />
               {phone}
             </a>
           )}
           <Link
             href="/kapcsolat"
-            className="px-4 py-2 rounded-md text-sm font-semibold transition-colors"
-            style={{
-              background: "var(--color-primary)",
-              color: "var(--color-text-inverse)",
-            }}
+            className="px-4 py-2 rounded-md text-sm font-semibold btn-amber"
           >
-            Kapcsolat
+            Ajánlatot kérek
           </Link>
         </div>
 
@@ -142,9 +138,9 @@ export default function Navigation({
         <div
           className="md:hidden absolute top-full inset-x-0 border-t py-4"
           style={{
-            background: "var(--color-bg)",
+            background: "rgba(26,26,26,0.98)",
             borderColor: "var(--color-border)",
-            boxShadow: "var(--shadow-md)",
+            boxShadow: "0 12px 40px rgb(0 0 0 / 0.6)",
           }}
         >
           <nav className="container-site flex flex-col gap-1">
@@ -157,13 +153,13 @@ export default function Navigation({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-2.5 rounded-md text-sm font-medium transition-colors"
+                  className="px-3 py-3 rounded-md text-sm font-medium transition-colors"
                   style={{
                     color: isActive
                       ? "var(--color-primary)"
                       : "var(--color-text)",
                     background: isActive
-                      ? "var(--color-surface)"
+                      ? "rgba(212,147,42,0.1)"
                       : "transparent",
                   }}
                 >
@@ -173,11 +169,15 @@ export default function Navigation({
             })}
             {phone && (
               <a
-                href={`tel:${phone.replace(/\s/g, "")}`}
-                className="px-3 py-2.5 text-sm font-medium mt-2"
-                style={{ color: "var(--color-text-muted)" }}
+                href={`tel:${phone.replace(/[\s\-\/]/g, "")}`}
+                className="flex items-center gap-2 px-3 py-3 text-sm font-medium mt-2 border-t"
+                style={{
+                  color: "var(--color-primary)",
+                  borderColor: "var(--color-border)",
+                }}
               >
-                📞 {phone}
+                <Phone size={16} />
+                {phone}
               </a>
             )}
           </nav>

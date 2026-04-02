@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large source video files
+public/hero.mp4
+public/hero-opt.webm
