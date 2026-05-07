@@ -35,13 +35,15 @@ Create or update CHANGES.md at the start of every session.
 Log every significant change: what, when, why.
 
 ## Netlify deployment
-- netlify.toml in project root
-- Contact form must use Netlify Forms:
-  - data-netlify="true"
-  - data-netlify-honeypot="bot-field"
-  - Hidden input: name="form-name"
+- netlify.toml in project root — NE tedd bele a `@netlify/plugin-nextjs` plugint (statikus exportnál elrontja a form beküldést)
+- Contact form must use Netlify Forms — natív POST + sessionStorage pattern:
+  - `method="POST"` + `action="/kapcsolat/"` a form tagen
+  - `data-netlify="true"` + `data-netlify-honeypot="bot-field"`
+  - Hidden input: `name="form-name"`
+  - `onSubmit`: csak `sessionStorage.setItem("formSent","1")`, NEM preventDefault
+  - `useEffect`: ellenőrzi sessionStorage-t, mutatja a siker üzenetet
   - GDPR checkbox required
-  - Success + error state handling
+  - ⚠️ NE használj fetch/AJAX beküldést — a ContactForm.tsx starter már a helyes pattern-t tartalmazza
 
 ## SEO/GEO (mandatory every project)
 - LocalBusiness JSON-LD complete:
