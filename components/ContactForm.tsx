@@ -1,42 +1,20 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
-
-type FormState = "idle" | "submitting" | "success" | "error";
+import { useState, useEffect } from "react";
+import { Send, CheckCircle } from "lucide-react";
 
 export default function ContactForm() {
-  const [state, setState] = useState<FormState>("idle");
-  const [gdpr, setGdpr] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!gdpr) return;
-
-    setState("submitting");
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(
-          data as unknown as Record<string, string>
-        ).toString(),
-      });
-
-      if (res.ok) {
-        setState("success");
-        form.reset();
-        setGdpr(false);
-      } else {
-        setState("error");
-      }
-    } catch {
-      setState("error");
+  useEffect(() => {
+    if (sessionStorage.getItem("formSent") === "1") {
+      sessionStorage.removeItem("formSent");
+      setShowSuccess(true);
     }
+  }, []);
+
+  const handleSubmit = () => {
+    sessionStorage.setItem("formSent", "1");
   };
 
   const inputStyle = {
@@ -50,7 +28,7 @@ export default function ContactForm() {
     color: "var(--color-text)",
   };
 
-  if (state === "success") {
+  if (showSuccess) {
     return (
       <div
         className="flex flex-col items-center gap-4 py-14 px-6 rounded-xl text-center"
@@ -64,7 +42,7 @@ export default function ContactForm() {
           Hamarosan felvesszük Önnel a kapcsolatot.
         </p>
         <button
-          onClick={() => setState("idle")}
+          onClick={() => setShowSuccess(false)}
           className="mt-2 text-sm underline transition-opacity hover:opacity-80"
           style={{ color: "var(--color-primary)" }}
         >
@@ -78,6 +56,7 @@ export default function ContactForm() {
     <form
       name="kapcsolat"
       method="POST"
+      action="/kapcsolat/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -158,8 +137,6 @@ export default function ContactForm() {
         <input
           type="checkbox"
           name="gdpr"
-          checked={gdpr}
-          onChange={(e) => setGdpr(e.target.checked)}
           required
           className="mt-0.5 shrink-0"
           style={{ accentColor: "var(--color-primary)" }}
@@ -179,35 +156,13 @@ export default function ContactForm() {
         </span>
       </label>
 
-      {/* Error state */}
-      {state === "error" && (
-        <div
-          className="flex items-center gap-2 p-3 rounded-md text-sm"
-          style={{
-            background: "rgba(239,68,68,0.1)",
-            color: "var(--color-error)",
-            border: "1px solid rgba(239,68,68,0.3)",
-          }}
-        >
-          <AlertCircle size={16} />
-          Hiba történt. Kérjük, próbálja újra vagy hívjon minket telefonon.
-        </div>
-      )}
-
       {/* Submit */}
       <button
         type="submit"
-        disabled={state === "submitting" || !gdpr}
-        className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-sm btn-amber disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        className="flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-sm btn-amber"
       >
-        {state === "submitting" ? (
-          "Küldés..."
-        ) : (
-          <>
-            <Send size={16} />
-            Üzenet küldése
-          </>
-        )}
+        <Send size={16} />
+        Üzenet küldése
       </button>
     </form>
   );
