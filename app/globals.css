@@ -1,55 +1,62 @@
 @import "tailwindcss";
 
 /* ============================================================
-   DESIGN TOKENS — Generic Starter
-   Neutral/gray palette — replace with brand colors
+   DESIGN TOKENS — Pipacs Virágbolt
+   Sötétzöld pult, pipacs-piros akcent, krém alap, fa textúra
    ============================================================ */
 :root {
-  /* Brand colors */
-  --color-primary: #2563eb;           /* Generic blue — replace with brand color */
-  --color-primary-hover: #1d4ed8;
-  --color-secondary: #1d4ed8;
-  --color-secondary-hover: #2563eb;
-  --color-accent: #2563eb;
+  /* Brand: poppy red (primary CTA) */
+  --color-primary: #8b1a1a;
+  --color-primary-hover: #6d1515;
 
-  /* Surfaces */
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f8fafc;
-  --color-surface: #f8fafc;
-  --color-surface-hover: #f1f5f9;
+  /* Brand: dark forest green (nav, footer, headings) */
+  --color-green: #1a3a2a;
+  --color-green-hover: #0f2218;
+  --color-green-light: #2a5040;
+
+  /* Brand: warm amber accent */
+  --color-warm: #c8854a;
+  --color-warm-light: #e8a870;
+
+  /* Surfaces — cream palette */
+  --color-bg: #faf6f0;
+  --color-bg-subtle: #f0ebe2;
+  --color-surface: #e8e1d6;
+  --color-surface-hover: #dfd7c8;
 
   /* Text */
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-text-light: #94a3b8;
-  --color-text-inverse: #ffffff;
+  --color-text: #1c1712;
+  --color-text-muted: #5c4e3f;
+  --color-text-light: #8a7a6a;
+  --color-text-inverse: #faf6f0;
 
   /* Borders */
-  --color-border: #e2e8f0;
-  --color-border-strong: #cbd5e1;
+  --color-border: #d8cfc4;
+  --color-border-strong: #c0b5a8;
 
   /* Status */
-  --color-success: #22c55e;
-  --color-error: #ef4444;
+  --color-success: #2e7d4f;
+  --color-error: #8b1a1a;
 
   /* Layout */
   --nav-height: 4.5rem;
   --container-max: 80rem;
-  --section-padding-y: 7.5rem;
+  --section-padding-y: 6rem;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
-  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 8px 32px rgb(0 0 0 / 0.12);
+  --shadow-sm: 0 1px 3px rgb(28 23 18 / 0.08);
+  --shadow-md: 0 4px 12px rgb(28 23 18 / 0.12);
+  --shadow-lg: 0 8px 32px rgb(28 23 18 / 0.16);
 
   /* Border radius */
   --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
 /* ============================================================
@@ -60,8 +67,6 @@
   --color-foreground: var(--color-text);
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
-  --color-secondary: var(--color-secondary);
-  --color-accent: var(--color-accent);
   --color-surface: var(--color-surface);
   --color-muted: var(--color-text-muted);
   --color-border: var(--color-border);
@@ -82,7 +87,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  data-scroll-behavior: smooth;
 }
 
 body {
@@ -135,30 +139,68 @@ body {
   scroll-margin-top: var(--nav-height);
 }
 
-/* Primary button */
+/* Primary button — poppy red */
 .btn-primary {
   background: var(--color-primary);
-  color: var(--color-text-inverse);
-  transition: background 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+  color: #faf6f0;
+  transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
 }
 
 .btn-primary:hover {
   background: var(--color-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgb(37 99 235 / 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgb(139 26 26 / 0.3);
 }
 
-/* Keep btn-amber as alias for backwards compat */
+/* Secondary button — dark green */
+.btn-green {
+  background: var(--color-green);
+  color: #faf6f0;
+  transition: background 250ms ease, transform 250ms ease;
+}
+
+.btn-green:hover {
+  background: var(--color-green-light);
+  transform: translateY(-1px);
+}
+
+/* Keep btn-amber as alias */
 .btn-amber {
   background: var(--color-primary);
-  color: var(--color-text-inverse);
-  transition: background 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+  color: #faf6f0;
+  transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
 }
 
 .btn-amber:hover {
   background: var(--color-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgb(37 99 235 / 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgb(139 26 26 / 0.3);
+}
+
+/* Outline button — cream border */
+.btn-outline {
+  background: transparent;
+  color: #faf6f0;
+  border: 1.5px solid rgba(250, 246, 240, 0.6);
+  transition: border-color 250ms ease, background 250ms ease;
+}
+
+.btn-outline:hover {
+  border-color: #faf6f0;
+  background: rgba(250, 246, 240, 0.1);
+}
+
+/* Outline on light background */
+.btn-outline-dark {
+  background: transparent;
+  color: var(--color-green);
+  border: 1.5px solid var(--color-green);
+  transition: border-color 250ms ease, background 250ms ease, color 250ms ease;
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-green);
+  color: #faf6f0;
 }
 
 /* Image hover scale */
@@ -166,12 +208,65 @@ body {
   overflow: hidden;
 }
 
-.img-hover-scale img,
-.img-hover-scale > div {
+.img-hover-scale img {
   transition: transform 500ms ease;
 }
 
-.img-hover-scale:hover img,
-.img-hover-scale:hover > div {
-  transform: scale(1.03);
+.img-hover-scale:hover img {
+  transform: scale(1.04);
+}
+
+/* Full-bleed hero overlay helpers */
+.hero-overlay-light {
+  background: linear-gradient(105deg, rgba(250,246,240,0.82) 0%, rgba(250,246,240,0.55) 50%, rgba(250,246,240,0) 100%);
+}
+
+.hero-overlay-dark {
+  background: linear-gradient(105deg, rgba(26,58,42,0.82) 0%, rgba(26,58,42,0.55) 50%, rgba(26,58,42,0) 100%);
+}
+
+/* Botanical poppy ink decoration — unique visual element */
+.poppy-ink {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+/* Serif heading helper */
+.heading-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Section divider — thin botanical line */
+.divider-botanical {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-warm);
+}
+
+.divider-botanical::before,
+.divider-botanical::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Custom icon circle */
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Glassmorphism card (for hero info panel) */
+.hero-panel {
+  background: rgba(250, 246, 240, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }

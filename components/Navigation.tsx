@@ -2,33 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 
-export interface NavItem {
-  label: string;
-  href: string;
-}
-
-interface NavigationProps {
-  siteName?: string;
-  items?: NavItem[];
-  phone?: string;
-}
-
-const defaultItems: NavItem[] = [
+const navItems = [
   { label: "Főoldal", href: "/" },
-  { label: "Szolgáltatások", href: "/szolgaltatasok" },
-  { label: "Galéria", href: "/galeria" },
-  { label: "Rólunk", href: "/rolunk" },
+  { label: "Virágaink", href: "/viragaink" },
+  { label: "Ajándék", href: "/ajandek" },
+  { label: "Alkotóműhely", href: "/alkotomuhely" },
+  { label: "Rólam", href: "/rolam" },
   { label: "Kapcsolat", href: "/kapcsolat" },
 ];
 
-export default function Navigation({
-  siteName = "Cégnév",
-  items = defaultItems,
-  phone,
-}: NavigationProps) {
+export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -55,42 +42,40 @@ export default function Navigation({
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
         height: "var(--nav-height)",
-        background: scrolled
-          ? "rgba(255,255,255,0.97)"
-          : "rgba(255,255,255,0.92)",
-        backdropFilter: "blur(12px)",
-        borderBottom: scrolled
-          ? "1px solid var(--color-border)"
-          : "1px solid transparent",
-        boxShadow: scrolled ? "var(--shadow-md)" : "none",
+        background: "var(--color-green)",
+        boxShadow: scrolled ? "0 2px 16px rgb(0 0 0 / 0.25)" : "none",
       }}
     >
       <div className="container-site h-full flex items-center justify-between gap-4">
-        {/* Logo / Site Name */}
+        {/* Logo */}
         <Link
           href="/"
-          className="shrink-0 font-bold text-lg transition-opacity hover:opacity-80"
-          style={{ color: "var(--color-text)" }}
+          className="shrink-0 transition-opacity hover:opacity-85"
+          aria-label="Pipacs Virágbolt — Főoldal"
         >
-          <span style={{ color: "var(--color-primary)" }}>{siteName}</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/logo/svg/pipacs-logo-light.svg"
+            alt="Pipacs Virágbolt"
+            width={312}
+            height={80}
+            style={{ height: "2.55rem", width: "auto" }}
+          />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {items.map((item) => {
+        <nav className="hidden lg:flex items-center gap-0.5" aria-label="Főmenü">
+          {navItems.map((item) => {
             const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+              item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 style={{
-                  color: isActive
-                    ? "var(--color-primary)"
-                    : "var(--color-text-muted)",
+                  color: isActive ? "#faf6f0" : "rgba(250,246,240,0.72)",
+                  background: isActive ? "rgba(250,246,240,0.12)" : "transparent",
                 }}
               >
                 {item.label}
@@ -100,84 +85,66 @@ export default function Navigation({
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          {phone && (
-            <a
-              href={`tel:${phone.replace(/[\s\-\/]/g, "")}`}
-              className="flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--color-text-muted)" }}
-            >
-              <Phone size={14} />
-              {phone}
-            </a>
-          )}
-          <Link
-            href="/kapcsolat"
-            className="px-4 py-2 rounded-md text-sm font-semibold btn-primary"
+        <div className="hidden lg:flex items-center">
+          <a
+            href="tel:+36203443448"
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all btn-primary"
           >
-            Ajánlatot kérek
-          </Link>
+            <Phone size={14} />
+            Hívj most
+          </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-2 rounded-md transition-colors"
-          style={{ color: "var(--color-text)" }}
-          aria-label={menuOpen ? "Menü bezárása" : "Menü megnyitása"}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((v) => !v)}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile: phone pill + hamburger */}
+        <div className="lg:hidden flex items-center gap-2">
+          <a
+            href="tel:+36203443448"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold btn-primary"
+            aria-label="Telefonhívás"
+          >
+            <Phone size={13} />
+            <span className="hidden sm:inline">Hívj</span>
+          </a>
+          <button
+            className="p-2 rounded-md transition-colors"
+            style={{ color: "#faf6f0" }}
+            aria-label={menuOpen ? "Menü bezárása" : "Menü megnyitása"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="md:hidden absolute top-full inset-x-0 border-t py-4"
+          className="lg:hidden absolute top-full inset-x-0 border-t"
           style={{
-            background: "rgba(255,255,255,0.98)",
-            borderColor: "var(--color-border)",
-            boxShadow: "var(--shadow-lg)",
+            background: "var(--color-green)",
+            borderColor: "rgba(250,246,240,0.15)",
+            boxShadow: "0 8px 32px rgb(0 0 0 / 0.3)",
           }}
         >
-          <nav className="container-site flex flex-col gap-1">
-            {items.map((item) => {
+          <nav className="container-site flex flex-col py-4 gap-1" aria-label="Mobilmenü">
+            {navItems.map((item) => {
               const isActive =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+                item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-3 rounded-md text-sm font-medium transition-colors"
+                  className="px-4 py-3 rounded-md text-sm font-medium transition-colors"
                   style={{
-                    color: isActive
-                      ? "var(--color-primary)"
-                      : "var(--color-text)",
-                    background: isActive
-                      ? "rgba(37,99,235,0.08)"
-                      : "transparent",
+                    color: isActive ? "#faf6f0" : "rgba(250,246,240,0.75)",
+                    background: isActive ? "rgba(250,246,240,0.12)" : "transparent",
                   }}
                 >
                   {item.label}
                 </Link>
               );
             })}
-            {phone && (
-              <a
-                href={`tel:${phone.replace(/[\s\-\/]/g, "")}`}
-                className="flex items-center gap-2 px-3 py-3 text-sm font-medium mt-2 border-t"
-                style={{
-                  color: "var(--color-primary)",
-                  borderColor: "var(--color-border)",
-                }}
-              >
-                <Phone size={16} />
-                {phone}
-              </a>
-            )}
           </nav>
         </div>
       )}

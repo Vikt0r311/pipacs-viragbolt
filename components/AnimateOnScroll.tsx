@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface AnimateOnScrollProps {
   children: React.ReactNode;
@@ -16,17 +15,13 @@ export function AnimateOnScroll({
   className,
   style,
   delay = 0,
-  once = true,
 }: AnimateOnScrollProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once, margin: "-80px" });
-
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "9999px 9999px 9999px 9999px" }}
+      transition={{ duration: 0.55, delay, ease: "easeOut" }}
       className={className}
       style={style}
     >
@@ -41,19 +36,16 @@ interface StaggerContainerProps {
 }
 
 export function StaggerContainer({ children, className }: StaggerContainerProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true, margin: "9999px 9999px 9999px 9999px" }}
       variants={{
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.15,
+            staggerChildren: 0.12,
           },
         },
       }}

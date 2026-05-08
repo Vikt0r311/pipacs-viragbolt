@@ -1,0 +1,39 @@
+{
+  "brand": "Pipacs Virágbolt",
+  "slug": "pipacs-viragbolt",
+  "industry_type": "home",
+  "decision_timing": "impulziv",
+  "design_strategy": {
+    "site_archetype": "community_local_shop",
+    "hero_archetype": "product_environment",
+    "section_rhythm": [
+      "local availability anchor — bolt neve, cím, nyitvatartás, telefon azonnal",
+      "service paths — virág / ajándék / alkotóműhely három irányban",
+      "personal story hook — Klára és a bolt eredete, röviden",
+      "booking friction removal — telefon + Messenger CTA közel a tartalomhoz"
+    ],
+    "visual_story": "A Pipacs nem egy szürke szupermarket-virágos — egy tervezett, személyes tér Pécel közepén, ahol a virág, az ajándék és az alkotás ugyanott él; a vizuális élmény a bolt melegségét és kézzel-csinált karakterét kell, hogy tükrözze.",
+    "conversion_logic": "Impulzív vásárló — az oldalnak el kell mondania: ITT VAGYOK (lokáció + nyitvatartás), EZT KÍNÁLOM (hármas profil gyorsan átláthatóan), HÍVJ (telefon kiemelten). Nem kell hosszan meggyőzni — a meleg vizuál és a közvetlen, konkrét szöveg dönt.",
+    "avoid_patterns": [
+      "három egyforma service-card grid generikus ikonokkal — elvész a hármas profil karaktere",
+      "teljeskép-hős bal szöveg / jobb kép sablon — túl generikus ehhez a meleg, közösségi tematikához",
+      "fehér-minimál steril design — a bolt melegségét és kézzel-csinált karakterét nem tükrözi",
+      "trust-bar logósorral — nincs partner/brand logo itt, üres lenne"
+    ],
+    "evidence": [
+      "00-alapkutatas.md: boltot Erdős Ibolya és Madarász Péter tervezte — vizuálisan különleges tér, nem sablon",
+      "celkozonseg/osszefoglalo.md: Impulzív + Rövid mérlegelés → a bolt megtalálásán és eligazításon van a hangsúly, nem hosszú meggyőzésen",
+      "versenytars-elemzes/szintezis.md: senki nem kommunikálja a hármas profilt vagy a személyes karaktert — ez az angle",
+      "pozicionalas.md: Pécel sarokboltja, kézzel-csinált jelleg, személyes tulajdonos — nem franchise",
+      "szoveg/foooldal.md: kínálat három kártya (virág/ajándék/alkotóműhely) és közvetlen telefon CTA"
+    ]
+  },
+  "dials": {
+    "DESIGN_VARIANCE": 9,
+    "MOTION_INTENSITY": 7,
+    "VISUAL_DENSITY": 5,
+    "BRAND_TRUST_LEVEL": 4,
+    "IMAGE_USAGE_PRIORITY": 9,
+    "LOCAL_BUSINESS_CLARITY": 9
+  }
+}

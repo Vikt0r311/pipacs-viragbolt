@@ -1,0 +1,27 @@
+{
+  "skill_version": "1.0",
+  "slug": "pipacs-viragbolt",
+  "company": "Pipacs Virágbolt",
+  "input": {
+    "company": "Pipacs Virágbolt",
+    "owner": "Posnyák Klára",
+    "email": "info@novenyvilag.hu",
+    "phone": "06-20/344-3448",
+    "facebook_url": "https://www.facebook.com/pipacsviragbolt",
+    "old_website_url": "https://www.novenyvilag.hu/",
+    "notes": "Ajándéküzlet és Kézműves Alkotóműhely. Bejárat a Fáy utca felőli kapun. Szondi utca 53., Pécel."
+  },
+  "mode": "full",
+  "created_at": "2026-05-07T15:04:39Z",
+  "current_phase": null,
+  "current_phase_started_at": null,
+  "last_phase": "build",
+  "last_success_at": "2026-05-08T16:04:13Z",
+  "blockers": [],
+  "notes": [
+    {
+      "message": "Mode updated to full by user request after content phase completed",
+      "created_at": "2026-05-07T17:26:42.568089"
+    }
+  ]
+}

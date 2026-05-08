@@ -1,28 +1,24 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impresszum | Cégnév",
-  description: "Cégnév impresszuma — céges adatok, tárhelyszolgáltató, ügyvezető.",
+  title: "Impresszum | Pipacs Virágbolt",
+  description:
+    "Pipacs Virágbolt impresszuma — Posnyák Klára egyéni vállalkozó, 2119 Pécel, Szondi utca 53.",
   openGraph: {
-    title: "Impresszum | Cégnév",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.example.hu/impresszum",
+    title: "Impresszum | Pipacs Virágbolt",
+    url: "https://pipacsviragbolt.hu/impresszum",
   },
+  robots: { index: false, follow: false },
 };
 
-// TODO: Replace all TODO values with real company data
 const rows = [
-  { label: "Cégnév", value: "TODO Betéti Társaság / Kft. / Zrt." },
-  { label: "Rövid név", value: "TODO Bt. / Kft." },
-  { label: "Székhely", value: "TODO irányítószám Városnév, Utca neve 1." },
-  { label: "Adószám", value: "TODO-TODO-TODO" },
-  { label: "Cégjegyzékszám", value: "TODO-TODO-TODO" },
-  { label: "Bejegyző bíróság", value: "TODO Törvényszék Cégbírósága" },
-  { label: "Alapítás dátuma", value: "TODO" },
-  { label: "Ügyvezető", value: "TODO Név" },
-  { label: "Telefon", value: "+36 XX XXX XXXX" },
-  { label: "E-mail", value: "info@example.hu" },
-  { label: "TEÁOR", value: "TODO – TODO tevékenység neve" },
+  { label: "Üzlet neve", value: "Pipacs Virágbolt" },
+  { label: "Tulajdonos", value: "Posnyák Klára" },
+  { label: "Székhely / üzlet", value: "2119 Pécel, Szondi utca 53." },
+  { label: "Bejárat", value: "Fáy utca felőli kapu" },
+  { label: "Telefon", value: "06-20/344-3448" },
+  { label: "E-mail", value: "info@novenyvilag.hu" },
+  { label: "Facebook", value: "facebook.com/pipacsviragbolt" },
   {
     label: "Tárhelyszolgáltató",
     value: "Netlify Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA",
@@ -31,22 +27,22 @@ const rows = [
 
 export default function ImpresszumPage() {
   return (
-    <section
-      className="section-py"
-      style={{ background: "var(--color-bg)" }}
-    >
+    <section className="section-py" style={{ background: "var(--color-bg)" }}>
       <div className="container-site max-w-3xl">
         <div className="w-8 h-0.5 mb-4" style={{ background: "var(--color-primary)" }} />
         <h1
-          className="font-black uppercase mb-10"
+          className="font-bold mb-3"
           style={{
+            fontFamily: "var(--font-serif)",
             fontSize: "clamp(1.75rem, 4vw, 3rem)",
-            letterSpacing: "-0.02em",
-            color: "var(--color-text)",
+            color: "var(--color-green)",
           }}
         >
           Impresszum
         </h1>
+        <p className="text-sm mb-10" style={{ color: "var(--color-text-light)" }}>
+          Pipacs Virágbolt · 2119 Pécel, Szondi utca 53.
+        </p>
 
         <div
           className="rounded-xl overflow-hidden"

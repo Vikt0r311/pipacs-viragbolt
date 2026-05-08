@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://www.example.hu";
+const BASE_URL = "https://pipacsviragbolt.hu";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-04-02");
+  const lastModified = new Date("2026-05-08");
 
   return [
     {
@@ -15,19 +15,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/szolgaltatasok`,
+      url: `${BASE_URL}/viragaink`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/galeria`,
+      url: `${BASE_URL}/ajandek`,
       lastModified,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
-      url: `${BASE_URL}/rolunk`,
+      url: `${BASE_URL}/alkotomuhely`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/rolam`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.7,
@@ -36,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/kapcsolat`,
       lastModified,
       changeFrequency: "yearly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/adatvedelmi-tajekoztato`,
