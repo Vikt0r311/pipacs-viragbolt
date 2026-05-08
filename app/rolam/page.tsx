@@ -143,7 +143,7 @@ export default function RolamPage() {
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
                 A bolt terét nem én terveztem egyedül. Erdős Ibolya belsőépítész és Madarász Péter
-                asztalosmunkái adják azt a hangulatot, ami az első pillanattól különlegesnek érzi a
+                asztalosmunkái adják azt a hangulatot, ami az első pillanattól különlegessé teszi a
                 teret.
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
