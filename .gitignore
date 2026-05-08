@@ -43,3 +43,11 @@ next-env.d.ts
 # Large source video files
 public/hero.mp4
 public/hero-opt.webm
+
+# Local Netlify folder
+.netlify
+
+# Build work artifacts (QA logs, screenshots, vision compare)
+assets/work/
+work/
+public/assets/work/
