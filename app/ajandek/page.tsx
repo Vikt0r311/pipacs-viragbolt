@@ -40,7 +40,7 @@ const categories = [
     iconAlt: "Ajándéktárgy ikon",
   },
   {
-    title: "Virágszállás gyertyával, kézzel",
+    title: "Virág szálas gyertya, kézzel készítve",
     body: "Egyedi ajándéktárgyak gondosan összeválogatott különlegességekből — kézzel, nem gyárilag.",
     image: "/assets/images/ajandek-gyertya.png",
     icon: "/assets/icons/svg/icon-candle-flower.svg",
@@ -105,7 +105,7 @@ export default function AjandekPage() {
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
               Ha valami különlegeset keresel — olyasmit, ami kézzel készült és nem kapható minden
-              sarkon —, jó helyen jársz. Pécelben, a Pipacsban.
+              sarkon —, jó helyen jársz. Pécelen, a Pipacsban.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -317,7 +317,7 @@ export default function AjandekPage() {
                   Nézz körül személyesen
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
-                  Az ajándékok a boltra várnak — fotózni nehéz lenne mindent. Gyere be, körülnézünk együtt.
+                  Az ajándékok a boltban várnak, nem a boltra.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">

@@ -129,7 +129,7 @@ export default function KapcsolatPage() {
             </h1>
 
             <p className="text-base mb-6 leading-relaxed max-w-md" style={{ color: "var(--color-text-muted)" }}>
-              Pécelről elérhetsz telefonon, Messengeren, vagy egyszerűen betérhetsz a Szondi utcán.
+              Elérhetsz telefonon, Messengeren, vagy egyszerűen betérhetsz Pécelen a Szondi utcában lévő virágüzletembe.
               Ha sürgős, a leggyorsabb a telefon.
             </p>
 
@@ -199,7 +199,7 @@ export default function KapcsolatPage() {
               Kapcsolatfelvétel módja
             </h2>
             <p className="mt-3 text-base max-w-xl mx-auto" style={{ color: "var(--color-text-muted)" }}>
-              Ha csokrot szeretnél, kérdésed van a workshopról, vagy csak körülnéznél — egyforma szívesen várlak.
+              Ha csokrot szeretnél, kérdésed van a workshopról, vagy csak körülnéznél — egyformán szívesen várlak.
             </p>
           </AnimateOnScroll>
 

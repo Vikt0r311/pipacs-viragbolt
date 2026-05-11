@@ -79,7 +79,7 @@ const servicePaths = [
   {
     slug: "viragaink",
     title: "Csokorkötés, ahogy kell",
-    body: "Alkalmi csokrok (születésnapi, ballagási, anyák napi), menyasszonyi csokor, kegyeleti koszorú, asztaldísz — és az a 'csak úgy' csokor, ami magától értetődő ajándék. Ha nem tudod, mit kérj, elmondom, mi illik mire.",
+    body: "Alkalmi csokrok (születésnapi, ballagási, anyák napi), menyasszonyi csokor, kegyeleti koszorú, asztaldísz — és az a 'csak úgy' csokor, ami magától értetődő ajándék. Ha nem tudod, mit kérj — elmondom, mi illik az adott alkalomra.",
     cta: "Hívj most",
     ctaHref: "tel:+36203443448",
     image: "/assets/images/kinalat-virag.png",
@@ -216,7 +216,7 @@ export default function HomePage() {
 
             <p
               className="text-base md:text-lg mb-8 leading-relaxed max-w-lg"
-              style={{ color: "var(--color-text-muted)" }}
+              style={{ color: "#111" }}
             >
               A Pipacsban csokrot kötök, kézzel készített ajándékot választhatsz, és saját kezeddel is
               alkothatsz. Minden alkalomra — személyesen.
@@ -225,7 +225,7 @@ export default function HomePage() {
             {/* Trust bar */}
             <div
               className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 text-sm"
-              style={{ color: "var(--color-text-muted)" }}
+              style={{ color: "#111" }}
             >
               <span className="flex items-center gap-1.5">
                 <Clock size={14} style={{ color: "var(--color-green)" }} />
@@ -316,24 +316,6 @@ export default function HomePage() {
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 60vw, 100vw"
-                  />
-                </div>
-                {/* Icon medallion — large cream OVAL at bottom-left (Virágkötészet) */}
-                <div
-                  className="absolute bottom-4 left-5 flex items-center justify-center shadow-xl"
-                  style={{
-                    width: "88px",
-                    height: "96px",
-                    borderRadius: "44px 44px 44px 44px",
-                    background: "rgba(250,246,240,0.97)",
-                    border: "3px solid rgba(200,133,74,0.35)",
-                  }}
-                >
-                  <Image
-                    src={servicePaths[0].icon}
-                    alt={servicePaths[0].iconAlt}
-                    width={52}
-                    height={52}
                   />
                 </div>
                 {/* Text */}
@@ -559,22 +541,20 @@ export default function HomePage() {
                   lineHeight: 1.2,
                 }}
               >
-                Klára vagyok — és ez a Pipacsot jelent
+                Klára vagyok — a Pipacs Virágbolt megálmodója
               </h2>
 
               <p
                 className="text-base leading-relaxed mb-4"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                A Pipacs nem egy átlagos virágos. A boltot szeretett szakemberek tervezték, kézzel rakták
-                össze — Erdős Ibolya belsőépítész és Madarász Péter asztalos munkája látszik minden
-                sarokból. Én magam gondozom a virágokat, kötöm a csokrokat és teszem ki az ajándékokat.
+                A Pipacs Virágbolt a virágok és a kreativitás találkozásának helye. Egyedi virágkötészeti alkotásokat készítünk, legyen szó alkalmakról, ajándékokról vagy dekorációról.
               </p>
               <p
                 className="text-base leading-relaxed mb-7"
                 style={{ color: "var(--color-text-muted)" }}
               >
-                Ha bejössz, engem találsz.
+                Kézzel készített ajándékaink személyessé és különlegessé teszik a meglepetéseket, workshopjainkon pedig bárki kipróbálhatja a virágkötés és alkotás örömét – akár kezdőként is.
               </p>
 
               <Link

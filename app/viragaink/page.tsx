@@ -76,7 +76,7 @@ const faqItems = [
   {
     question: "Milyen áron dolgozol?",
     answer:
-      "Az árat az alkalom, a virágok és a méret befolyásolja. Ha előre tudni szeretnéd, hívj — percek alatt megegyezünk.",
+      "Az árat az alkalom, a virágok és a méret befolyásolja. Ha előre tudni szeretnéd, hívj — percek alatt megbeszéljük.",
   },
   {
     question: "Kiszállítasz Pécelre?",
@@ -119,7 +119,7 @@ export default function ViragainkPage() {
                 className="text-xs font-semibold uppercase tracking-widest"
                 style={{ color: "var(--color-warm-light)" }}
               >
-                Virágkötészet Pécelből
+                Virágkötészet Pécelen
               </span>
             </div>
             <h1
@@ -131,11 +131,11 @@ export default function ViragainkPage() {
                 lineHeight: 1.15,
               }}
             >
-              Csokorkötés, ahogy kell —<br />Pécelből
+              Csokorkötés, ahogy kell —<br />Pécelen
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
               Minden alkalom más. Születésnap, ballagás, esküvő, búcsú — mindegyikhez más kell.
-              Elmondom, mi illik mire, és kötöm azt, amire szükséged van.
+              Elmondom, mi illik az adott alkalomra és megkötöm azt, amire szükséged van.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -183,13 +183,10 @@ export default function ViragainkPage() {
                 Virág, ami rólad szól
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Virágkötéssel foglalkozom — ez azt jelenti, hogy nemcsak megveszed a virágot, hanem én
-                összerakom azt, ami az adott alkalomhoz illik. Nincs kész sablon, amibe belegyömöszölöm,
-                hanem az alkalom és a kért stílus alapján kötöm.
+                Virágkötéssel foglalkozom — ez azt jelenti, hogy nem csak megveszed a virágot, hanem én összerakom azt, ami az adott alkalomhoz illik. Nincs kész sablon, hanem az alkalom és a kért stílus alapján kötöm meg az egyedi virágcsokrot, amire vágysz.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Ha bizonytalan vagy bármelyik részletben — stílus, méret, ár — hívj. Percek alatt
-                megegyezünk. Így is lehet virágot venni Pécelből.
+                Ha bizonytalan vagy bármelyik részletben — stílus, méret, ár — hívj. Percek alatt megbeszéljük. Így is lehet virágot venni Pécelen.
               </p>
             </AnimateOnScroll>
           </div>
@@ -336,7 +333,7 @@ export default function ViragainkPage() {
                 color: "var(--color-green)",
               }}
             >
-              Gyakran kérdezed
+              Gyakran kérdezitek
             </h2>
           </AnimateOnScroll>
           <FAQAccordion items={faqItems} />

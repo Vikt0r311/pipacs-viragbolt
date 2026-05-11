@@ -27,8 +27,8 @@ const differentiators = [
   {
     icon: "/assets/icons/svg/icon-designed-interior.svg",
     iconAlt: "Tervezett belső tér ikon",
-    title: "Tervezett, lakott tér",
-    body: "Erdős Ibolya és Madarász Péter munkája látszik a bolt minden részletében. Sétálni is érdemes.",
+    title: "Tervezett, látványos tér",
+    body: "Erdős Ibolya és Madarász Péter munkája látszik a bolt minden részletében. Szétnézni is érdemes.",
   },
   {
     icon: "/assets/icons/svg/icon-handmade-selection.svg",
@@ -151,7 +151,7 @@ export default function RolamPage() {
                 érdemes betérni akkor is, ha nem terveztél csokrot venni.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                A virágkötészet mellett az ajándékokat és a kézműves alkotókat is fontosnak tartottam.
+                A virágkötészet mellett az ajándékokat és a kézműves alkotásokat is fontosnak tartottam.
                 Mert az ünnepek nem mindig csokrot kívánnak — néha egy kézzel készített tárgy, egy szép
                 csomagolás, egy meglepő ajándék ér többet.
               </p>

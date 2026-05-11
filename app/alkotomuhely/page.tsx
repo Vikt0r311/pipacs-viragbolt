@@ -173,8 +173,7 @@ export default function AlkotomuhelyPage() {
                 jársz, hanem alkotsz. Kötetlenebb — megmutatom, hogyan kell, és te csinálod.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Egyedül vagy barátnőddel, gyerekkel, csoportban — ez a tér arra való. Minden alkalomra
-                próbáld ki saját kezed.
+                Egyedül vagy barátnőddel, gyerekkel, csoportban — Mindig szuper kikapcsolódás alkotni.
               </p>
               <p
                 className="mt-4 text-sm italic"
