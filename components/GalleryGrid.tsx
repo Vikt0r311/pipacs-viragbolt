@@ -58,7 +58,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           >
             <Image
               src={src}
-              alt={`Vasbeton szerkezet Veszprémben — ${i + 1}. kép`}
+              alt={`Pipacs Virágbolt alkotás — ${i + 1}. kép`}
               width={600}
               height={400}
               className="w-full h-auto block"
@@ -124,7 +124,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             >
               <Image
                 src={images[lightboxIndex]}
-                alt={`Vasbeton szerkezet Veszprémben — ${lightboxIndex + 1}. kép`}
+                alt={`Pipacs Virágbolt alkotás — ${lightboxIndex + 1}. kép`}
                 width={1200}
                 height={900}
                 className="rounded-md object-contain"

@@ -11,6 +11,7 @@ const navItems = [
   { label: "Virágaink", href: "/viragaink" },
   { label: "Ajándék", href: "/ajandek" },
   { label: "Alkotóműhely", href: "/alkotomuhely" },
+  { label: "Galéria", href: "/galeria" },
   { label: "Rólam", href: "/rolam" },
   { label: "Kapcsolat", href: "/kapcsolat" },
 ];
@@ -50,16 +51,24 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="shrink-0 transition-opacity hover:opacity-85"
+          className="shrink-0 flex items-center gap-1.5 sm:gap-2 transition-opacity hover:opacity-85"
           aria-label="Pipacs Virágbolt — Főoldal"
         >
+          <div className="flex flex-col leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
+            <span style={{ fontSize: "clamp(0.95rem, 3.5vw, 1.25rem)", fontWeight: 600, color: "#faf6f0", lineHeight: 1.15 }}>
+              Pipacs Virágbolt
+            </span>
+            <span style={{ fontSize: "clamp(0.65rem, 2.5vw, 0.78rem)", fontStyle: "italic", color: "rgba(250,246,240,0.75)", lineHeight: 1.3 }}>
+              &bdquo;Ha valami szépre vágysz!&rdquo;
+            </span>
+          </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/logo/svg/pipacs-logo-light.svg"
-            alt="Pipacs Virágbolt"
-            width={312}
-            height={80}
-            style={{ height: "2.55rem", width: "auto" }}
+            src="/logo-crop.png"
+            alt=""
+            width={466}
+            height={687}
+            className="h-9 sm:h-12 w-auto"
           />
         </Link>
 

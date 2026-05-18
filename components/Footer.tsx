@@ -32,14 +32,18 @@ export default function Footer() {
 
           {/* Col 1 — Brand + Contact */}
           <div className="lg:col-span-1 flex flex-col gap-5">
-            <Link href="/" aria-label="Pipacs Virágbolt — Főoldal">
+            <Link href="/" className="flex items-center gap-2" aria-label="Pipacs Virágbolt — Főoldal">
               {/* eslint-disable-next-line @next/next/no-img-element */}
+              <div className="flex flex-col leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
+                <span style={{ fontSize: "1.2rem", fontWeight: 600, color: "#faf6f0", lineHeight: 1.15 }}>Pipacs Virágbolt</span>
+                <span style={{ fontSize: "0.75rem", fontStyle: "italic", color: "rgba(250,246,240,0.7)", lineHeight: 1.3 }}>&bdquo;Ha valami szépre vágysz!&rdquo;</span>
+              </div>
               <img
-                src="/assets/logo/svg/pipacs-logo-light.svg"
-                alt="Pipacs Virágbolt"
-                width={312}
-                height={80}
-                style={{ height: "2.4rem", width: "auto" }}
+                src="/logo-crop.png"
+                alt=""
+                width={466}
+                height={687}
+                style={{ height: "3rem", width: "auto" }}
               />
             </Link>
 

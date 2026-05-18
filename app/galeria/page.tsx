@@ -6,24 +6,29 @@ import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata: Metadata = {
-  title: "Galéria | Cégnév",
+  title: "Virágaink Galériája | Pipacs Virágbolt Pécel",
   description:
-    "Munkáink galériája — elvégzett projektek képei. Cégnév, Városnév.",
+    "Csokraink, dekorációink és virágkötészeti alkotásaink galériája. Pipacs Virágbolt, Pécel.",
   openGraph: {
-    title: "Galéria | Cégnév",
-    description: "Munkáink galériája — elvégzett projektek képei.",
+    title: "Virágaink Galériája | Pipacs Virágbolt Pécel",
+    description: "Csokraink, dekorációink és virágkötészeti alkotásaink galériája.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.example.hu/galeria",
+    url: "https://www.novenyvilag.hu/galeria",
   },
 };
 
 function getGalleryImages(): string[] {
   try {
-    const galeriaDir = join(process.cwd(), "public", "galeria");
-    const files = readdirSync(galeriaDir);
+    const dir = join(process.cwd(), "public", "referencia");
+    const files = readdirSync(dir);
     return files
       .filter((f) => /\.(webp|jpg|jpeg|png)$/i.test(f))
-      .map((f) => `/galeria/${f}`);
+      .sort((a, b) => {
+        const na = parseInt(a.replace(/\D/g, ""), 10);
+        const nb = parseInt(b.replace(/\D/g, ""), 10);
+        return na - nb;
+      })
+      .map((f) => `/referencia/${f}`);
   } catch {
     return [];
   }
@@ -54,13 +59,11 @@ export default function GaleriaPage() {
               lineHeight: 1.05,
             }}
           >
-            Munkáink{" "}
-            <span style={{ color: "var(--color-primary)" }}>Galériája</span>
+            Elkészült{" "}
+            <span style={{ color: "var(--color-primary)" }}>Alkotásaim</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            {images.length > 0
-              ? `${images.length} kép elvégzett munkáinkról.`
-              : "Képek hamarosan — a galéria feltöltése folyamatban."}
+            Elkészült alkotásaim galériája — csokrok, dekorációk és egyedi virágkötészeti munkák a Pipacs Virágboltból.
           </p>
         </div>
       </section>
@@ -81,9 +84,6 @@ export default function GaleriaPage() {
               <p className="text-base font-semibold" style={{ color: "var(--color-text-muted)" }}>
                 Még nincsenek galéria képek
               </p>
-              <p className="text-sm" style={{ color: "var(--color-text-light)" }}>
-                Adjon hozzá képeket a <code>/public/galeria/</code> mappához.
-              </p>
             </div>
           )}
         </div>
@@ -102,22 +102,22 @@ export default function GaleriaPage() {
                 lineHeight: 1.1,
               }}
             >
-              Érdekli egy{" "}
-              <span style={{ color: "var(--color-primary)" }}>hasonló projekt?</span>
+              Szeretne hasonló{" "}
+              <span style={{ color: "var(--color-primary)" }}>virágdíszt?</span>
             </h2>
             <p className="text-base mb-8" style={{ color: "var(--color-text-muted)" }}>
-              Városban és a környező területeken vállalunk munkákat. Kérjen ingyenes ajánlatot!
+              Pécelről és a környező településekről is várjuk megrendeléseit. Vegye fel velünk a kapcsolatot!
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
-                Ajánlatot kérek
+                Kapcsolatfelvétel
               </Link>
               <Link
-                href="/szolgaltatasok"
+                href="/viragaink"
                 className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                 style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}
               >
-                Szolgáltatásaink
+                Virágaink
               </Link>
             </div>
           </AnimateOnScroll>
