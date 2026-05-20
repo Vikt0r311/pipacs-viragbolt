@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Virágaink Galériája | Pipacs Virágbolt Pécel",
     description: "Csokraink, dekorációink és virágkötészeti alkotásaink galériája.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.novenyvilag.hu/galeria",
+    images: [{ url: "/assets/images/viragaink-hero.png", width: 1200, height: 630 }],
+    url: "https://pipacsviragbolt.hu/galeria",
   },
 };
 

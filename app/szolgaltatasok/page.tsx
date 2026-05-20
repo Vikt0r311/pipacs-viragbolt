@@ -1,92 +1,103 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Szolgáltatások Városban | Cégnév",
+  title: "Szolgáltatások Pécelen | Pipacs Virágbolt",
   description:
-    "Cégnév szolgáltatásai Városban és környékén. TODO: Rövid leírás a főbb szolgáltatásokról.",
+    "Virágkötészet, kézműves ajándékok, díszcsomagolás és alkotóműhely Pécelen, a Pipacs Virágboltban.",
   openGraph: {
-    title: "Szolgáltatások | Cégnév",
-    description: "TODO: Rövid leírás a főbb szolgáltatásokról.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
-    url: "https://www.example.hu/szolgaltatasok",
+    title: "Szolgáltatások | Pipacs Virágbolt Pécel",
+    description:
+      "Virágkötészet, ajándékok és alkotóműhely Pécelen, személyes egyeztetéssel.",
+    images: [{ url: "/assets/images/viragaink-hero.png", width: 1200, height: 630 }],
+    url: "https://pipacsviragbolt.hu/szolgaltatasok",
   },
 };
 
-// TODO: Replace with real services
 const services = [
   {
-    id: "szolgaltatas-1",
-    title: "Szolgáltatás 1 neve",
-    subtitle: "Altípus · Kulcsszó · Kulcsszó",
+    id: "alkalmi-csokrok",
+    title: "Alkalmi csokrok",
+    subtitle: "Születésnap · Névnap · Ballagás · Anyák napja",
     paragraphs: [
-      "TODO: Első bekezdés a szolgáltatásról. Mi ez, hogyan működik, mikor van rá szükség.",
-      "TODO: Második bekezdés — mik az előnyök, miért érdemes ezt választani, mi különbözteti meg a versenytársaktól.",
+      "Friss, az alkalomhoz illő csokrokat készítünk születésnapra, névnapra, ballagásra, anyák napjára vagy egyszerűen csak úgy.",
+      "Ha nem tudod pontosan, milyen stílus, méret vagy ár lenne jó, telefonon gyorsan egyeztethetjük a lehetőségeket.",
     ],
     specs: [
-      "Jellemző / előny 1",
-      "Jellemző / előny 2",
-      "Jellemző / előny 3",
-      "Jellemző / előny 4",
+      "Személyes egyeztetés",
+      "Alkalomhoz illő összeállítás",
+      "Napi készlethez igazodó javaslatok",
+      "Átvétel Pécelen, a Szondi utcában",
     ],
+    image: "/assets/images/viragaink-alkalmak.png",
+    imageAlt: "Alkalmi csokrok a Pipacs Virágboltban",
   },
   {
-    id: "szolgaltatas-2",
-    title: "Szolgáltatás 2 neve",
-    subtitle: "Altípus · Kulcsszó · Kulcsszó",
+    id: "eskuvoi-viragok",
+    title: "Esküvői virágok és dekoráció",
+    subtitle: "Menyasszonyi csokor · Kitűző · Asztaldísz",
     paragraphs: [
-      "TODO: Első bekezdés a szolgáltatásról.",
-      "TODO: Második bekezdés.",
+      "Esküvőre menyasszonyi csokrot, kitűzőt, autódíszt, asztaldíszt és térdekorációt is készítünk.",
+      "Az esküvői virágoknál előzetes egyeztetés szükséges, hogy a színek, mennyiségek és határidők időben összeálljanak.",
     ],
     specs: [
-      "Jellemző / előny 1",
-      "Jellemző / előny 2",
-      "Jellemző / előny 3",
-      "Jellemző / előny 4",
+      "Előzetes időpont-egyeztetés",
+      "Stílushoz és helyszínhez igazított virágok",
+      "Menyasszonyi csokor és kiegészítők",
+      "Rendezvényi asztaldíszek",
     ],
+    image: "/assets/images/viragaink-eskuvo.png",
+    imageAlt: "Esküvői virágdekoráció a Pipacs Virágboltból",
   },
   {
-    id: "szolgaltatas-3",
-    title: "Szolgáltatás 3 neve",
-    subtitle: "Altípus · Kulcsszó · Kulcsszó",
+    id: "kegyeleti-viragok",
+    title: "Kegyeleti koszorú és csokor",
+    subtitle: "Koszorú · Sírcsokor · Diszkrét egyeztetés",
     paragraphs: [
-      "TODO: Első bekezdés a szolgáltatásról.",
-      "TODO: Második bekezdés.",
+      "Kegyeleti alkalmakra koszorút és csokrot készítünk visszafogott, az alkalomhoz méltó összeállításban.",
+      "Ilyenkor a gyors, egyértelmű egyeztetés számít a legtöbbet, ezért érdemes telefonon keresni minket.",
     ],
     specs: [
-      "Jellemző / előny 1",
-      "Jellemző / előny 2",
-      "Jellemző / előny 3",
+      "Koszorúk és kegyeleti csokrok",
+      "Feliratszalag egyeztetéssel",
+      "Telefonos pontosítás",
     ],
+    image: "/assets/images/viragaink-kegyeleti.png",
+    imageAlt: "Kegyeleti virágok és koszorúk",
   },
   {
-    id: "szolgaltatas-4",
-    title: "Szolgáltatás 4 neve",
-    subtitle: "Altípus · Kulcsszó · Kulcsszó",
+    id: "kezmuves-ajandekok",
+    title: "Kézműves ajándékok és díszcsomagolás",
+    subtitle: "Ajándék · Lakásdekoráció · Csomagolás",
     paragraphs: [
-      "TODO: Első bekezdés a szolgáltatásról.",
-      "TODO: Második bekezdés.",
+      "A virágok mellett kézzel készített lakásdekorációkat, ajándéktárgyakat és gondosan válogatott különlegességeket találsz a boltban.",
+      "Ha virágot vagy ajándékot szeretnél szépen átadni, díszcsomagolásban is segítünk.",
     ],
     specs: [
-      "Jellemző / előny 1",
-      "Jellemző / előny 2",
-      "Jellemző / előny 3",
+      "Helyben válogatható ajándékok",
+      "Kézzel készített dekorációk",
+      "Egyedi díszcsomagolás",
     ],
+    image: "/assets/images/ajandek-termekek.png",
+    imageAlt: "Kézműves ajándékok a Pipacs Virágboltban",
   },
   {
-    id: "szolgaltatas-5",
-    title: "Szolgáltatás 5 neve",
-    subtitle: "Altípus · Kulcsszó · Kulcsszó",
+    id: "alkotomuhely",
+    title: "Alkotóműhely",
+    subtitle: "Workshop · Kézműves foglalkozás · Közös készítés",
     paragraphs: [
-      "TODO: Első bekezdés a szolgáltatásról.",
-      "TODO: Második bekezdés.",
+      "A Pipacs alkotóműhelyében kézműves foglalkozásokon lehet részt venni, egyéni érdeklődőknek és kisebb csoportoknak is.",
+      "Az aktuális témákról, időpontokról és férőhelyekről telefonon vagy Messengeren érdemes érdeklődni.",
     ],
     specs: [
-      "Jellemző / előny 1",
-      "Jellemző / előny 2",
-      "Jellemző / előny 3",
+      "Kézműves témák",
+      "Kisebb csoportos alkalmak",
+      "Előzetes érdeklődés alapján",
     ],
+    image: "/assets/images/alkotomuhely-csoport.png",
+    imageAlt: "Alkotóműhely a Pipacs Virágboltban",
   },
 ];
 
@@ -114,10 +125,11 @@ export default function SzolgaltatasokPage() {
             }}
           >
             Szolgáltatásaink{" "}
-            <span style={{ color: "var(--color-primary)" }}>Városban</span>
+            <span style={{ color: "var(--color-primary)" }}>Pécelen</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--color-text-muted)" }}>
-            TODO: Rövid leírás a főbb szolgáltatásokról és a szolgáltatási területről.
+            Virágkötészet, kézműves ajándékok, díszcsomagolás és alkotóműhely a Pipacs
+            Virágboltban, Pécelen.
           </p>
         </div>
       </section>
@@ -175,22 +187,25 @@ export default function SzolgaltatasokPage() {
                 </div>
               </AnimateOnScroll>
 
-              {/* Image placeholder — 5 cols */}
               <AnimateOnScroll
                 className={`md:col-span-5 ${i % 2 === 1 ? "md:order-1" : ""}`}
                 delay={0.15}
               >
                 <div
-                  className="w-full rounded-md flex items-center justify-center"
+                  className="relative w-full rounded-md overflow-hidden"
                   style={{
                     aspectRatio: "4/3",
                     background: "var(--color-bg-subtle)",
                     border: "1px solid var(--color-border)",
                   }}
                 >
-                  <p className="text-xs" style={{ color: "var(--color-text-light)" }}>
-                    Kép helye — /public/galeria/
-                  </p>
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 42vw, 100vw"
+                  />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -221,22 +236,19 @@ export default function SzolgaltatasokPage() {
                 }}
               >
                 Tervezzen velünk —{" "}
-                <span style={{ color: "var(--color-primary)" }}>Kérjen ajánlatot!</span>
+                <span style={{ color: "var(--color-primary)" }}>egyeztessünk!</span>
               </h2>
               <p className="text-base mb-8 max-w-xl" style={{ color: "var(--color-text-muted)" }}>
-                Városban és a környező területeken vállalunk munkákat.
+                Csokor, esküvői virág, kegyeleti koszorú, ajándék vagy workshop kapcsán telefonon
+                tudunk a leggyorsabban egyeztetni.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
-                  Ajánlatot kérek
-                </Link>
-                <a
-                  href="tel:+36XXXXXXXXX"
-                  className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-                  style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}
-                >
-                  +36 XX XXX XXXX
+                <a href="tel:+36203443448" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
+                  Hívj most
                 </a>
+                <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]" style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}>
+                  Kapcsolat
+                </Link>
               </div>
             </div>
           </AnimateOnScroll>

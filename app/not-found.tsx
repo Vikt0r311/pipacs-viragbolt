@@ -34,7 +34,7 @@ export default function NotFound() {
           className="font-black mb-4 select-none"
           style={{
             fontSize: "clamp(5rem, 18vw, 10rem)",
-            color: "rgba(26,58,42,0.08)",
+            color: "rgba(61,107,82,0.08)",
             letterSpacing: "-0.05em",
             lineHeight: 1,
             fontFamily: "var(--font-serif)",

@@ -2,27 +2,27 @@
 
 /* ============================================================
    DESIGN TOKENS — Pipacs Virágbolt
-   Sötétzöld pult, pipacs-piros akcent, krém alap, fa textúra
+   Pasztell zsálya, pipacs-rózsa akcent, krém alap
    ============================================================ */
 :root {
-  /* Brand: poppy red (primary CTA) */
-  --color-primary: #8b1a1a;
-  --color-primary-hover: #6d1515;
+  /* Brand: dusty poppy rose (primary CTA) */
+  --color-primary: #c25a70;
+  --color-primary-hover: #a84a5e;
 
-  /* Brand: dark forest green (nav, footer, headings) */
-  --color-green: #1a3a2a;
-  --color-green-hover: #0f2218;
-  --color-green-light: #2a5040;
+  /* Brand: sage green (nav, footer, headings) */
+  --color-green: #3d6b52;
+  --color-green-hover: #2f5340;
+  --color-green-light: #5a8a6a;
 
-  /* Brand: warm amber accent */
-  --color-warm: #c8854a;
-  --color-warm-light: #e8a870;
+  /* Brand: warm peach accent */
+  --color-warm: #d4916a;
+  --color-warm-light: #e8b090;
 
-  /* Surfaces — cream palette */
-  --color-bg: #faf6f0;
-  --color-bg-subtle: #f0ebe2;
-  --color-surface: #e8e1d6;
-  --color-surface-hover: #dfd7c8;
+  /* Surfaces — semi-transparent so hatter.webp shows through subtly */
+  --color-bg: rgba(250,246,240,0.72);
+  --color-bg-subtle: rgba(240,235,226,0.69);
+  --color-surface: rgba(232,225,214,0.76);
+  --color-surface-hover: rgba(223,215,200,0.80);
 
   /* Text */
   --color-text: #1c1712;
@@ -90,7 +90,11 @@ html {
 }
 
 body {
-  background: var(--color-bg);
+  background-color: #faf6f0;
+  background-image: url('/assets/hatter.webp');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.6;

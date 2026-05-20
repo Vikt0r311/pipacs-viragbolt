@@ -43,32 +43,24 @@ export default function Navigation() {
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
         height: "var(--nav-height)",
-        background: "var(--color-green)",
-        boxShadow: scrolled ? "0 2px 16px rgb(0 0 0 / 0.25)" : "none",
+        background: "#faf6f0",
+        borderBottom: "1px solid var(--color-border)",
+        boxShadow: scrolled ? "0 2px 12px rgb(61 107 82 / 0.10)" : "none",
       }}
     >
       <div className="container-site h-full flex items-center justify-between gap-4">
         {/* Logo */}
         <Link
           href="/"
-          className="shrink-0 flex items-center gap-1.5 sm:gap-2 transition-opacity hover:opacity-85"
+          className="shrink-0 flex items-center transition-opacity hover:opacity-80"
           aria-label="Pipacs Virágbolt — Főoldal"
         >
-          <div className="flex flex-col leading-none" style={{ fontFamily: "var(--font-cormorant), serif" }}>
-            <span style={{ fontSize: "clamp(0.95rem, 3.5vw, 1.25rem)", fontWeight: 600, color: "#faf6f0", lineHeight: 1.15 }}>
-              Pipacs Virágbolt
-            </span>
-            <span style={{ fontSize: "clamp(0.65rem, 2.5vw, 0.78rem)", fontStyle: "italic", color: "rgba(250,246,240,0.75)", lineHeight: 1.3 }}>
-              &bdquo;Ha valami szépre vágysz!&rdquo;
-            </span>
-          </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-crop.png"
-            alt=""
-            width={466}
-            height={687}
-            className="h-9 sm:h-12 w-auto"
+            src="/logo.png"
+            alt="Pipacs Virágbolt"
+            height={48}
+            style={{ height: "clamp(38px, 5vw, 52px)", width: "auto" }}
           />
         </Link>
 
@@ -83,8 +75,9 @@ export default function Navigation() {
                 href={item.href}
                 className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 style={{
-                  color: isActive ? "#faf6f0" : "rgba(250,246,240,0.72)",
-                  background: isActive ? "rgba(250,246,240,0.12)" : "transparent",
+                  color: isActive ? "var(--color-green)" : "var(--color-text-muted)",
+                  background: isActive ? "rgba(61,107,82,0.08)" : "transparent",
+                  fontWeight: isActive ? 600 : 500,
                 }}
               >
                 {item.label}
@@ -116,7 +109,7 @@ export default function Navigation() {
           </a>
           <button
             className="p-2 rounded-md transition-colors"
-            style={{ color: "#faf6f0" }}
+            style={{ color: "var(--color-green)" }}
             aria-label={menuOpen ? "Menü bezárása" : "Menü megnyitása"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
@@ -131,9 +124,9 @@ export default function Navigation() {
         <div
           className="lg:hidden absolute top-full inset-x-0 border-t"
           style={{
-            background: "var(--color-green)",
-            borderColor: "rgba(250,246,240,0.15)",
-            boxShadow: "0 8px 32px rgb(0 0 0 / 0.3)",
+            background: "#faf6f0",
+            borderColor: "var(--color-border)",
+            boxShadow: "0 8px 32px rgb(61 107 82 / 0.15)",
           }}
         >
           <nav className="container-site flex flex-col py-4 gap-1" aria-label="Mobilmenü">
@@ -146,8 +139,9 @@ export default function Navigation() {
                   href={item.href}
                   className="px-4 py-3 rounded-md text-sm font-medium transition-colors"
                   style={{
-                    color: isActive ? "#faf6f0" : "rgba(250,246,240,0.75)",
-                    background: isActive ? "rgba(250,246,240,0.12)" : "transparent",
+                    color: isActive ? "var(--color-green)" : "var(--color-text-muted)",
+                    background: isActive ? "rgba(61,107,82,0.08)" : "transparent",
+                    fontWeight: isActive ? 600 : 500,
                   }}
                 >
                   {item.label}

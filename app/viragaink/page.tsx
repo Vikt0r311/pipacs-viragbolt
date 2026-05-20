@@ -107,7 +107,7 @@ export default function ViragainkPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.58) 0%, rgba(26,58,42,0.38) 45%, rgba(26,58,42,0.1) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.58) 0%, rgba(61,107,82,0.38) 45%, rgba(61,107,82,0.1) 100%)",
             }}
           />
         </div>
@@ -355,7 +355,7 @@ export default function ViragainkPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.28) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.55) 0%, rgba(61,107,82,0.28) 100%)",
             }}
           />
         </div>

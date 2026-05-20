@@ -5,13 +5,13 @@ import { Phone, MapPin, ArrowRight, Flower, Gift, Scissors } from "lucide-react"
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Rólam — Posnyák Klára | Pipacs Virágbolt Pécel",
+  title: "Rólam — Posnyák Árkádiáné (Klári néni) | Pipacs Virágbolt Pécel",
   description:
-    "Klára vagyok — virágkötő, ajándékbolt-tulajdonos és alkotóműhely-gazda Pécelről. Ismerd meg a Pipacs Virágbolt mögötti sztorit.",
+    "1986 óta vagyok virágüzlet-tulajdonos — Klári néniként ismernek Pécelén. Ismerd meg a Pipacs Virágbolt mögötti sztorit.",
   openGraph: {
-    title: "Rólam — Posnyák Klára | Pipacs Virágbolt Pécel",
+    title: "Rólam — Posnyák Árkádiáné | Pipacs Virágbolt Pécel",
     description:
-      "Klára vagyok — virágkötő, ajándékbolt-tulajdonos és alkotóműhely-gazda Pécelről.",
+      "1986 óta vagyok virágüzlet-tulajdonos — Klári néniként ismernek Pécelén.",
     url: "https://pipacsviragbolt.hu/rolam",
     images: [{ url: "/assets/images/rolam-klara-portre.png", width: 1200, height: 630 }],
   },
@@ -66,7 +66,7 @@ export default function RolamPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.9) 0%, rgba(26,58,42,0.6) 45%, rgba(26,58,42,0.15) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.9) 0%, rgba(61,107,82,0.6) 45%, rgba(61,107,82,0.15) 100%)",
             }}
           />
         </div>
@@ -78,7 +78,7 @@ export default function RolamPage() {
                 className="text-xs font-semibold uppercase tracking-widest"
                 style={{ color: "var(--color-warm-light)" }}
               >
-                Posnyák Klára — Pipacs Virágbolt
+                Posnyák Árkádiáné — Pipacs Virágbolt
               </span>
             </div>
             <h1
@@ -90,11 +90,11 @@ export default function RolamPage() {
                 lineHeight: 1.15,
               }}
             >
-              Klára vagyok —<br />és minden csokrot én kötök
+              Klári néni vagyok —<br />1986 óta kötök virágot
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
-              A Pipacs nem franchise, nem lánc. Egy személyes hely Pécel közepén, ahol a boltot
-              szeretett emberek tervezték, és én magam várlak minden nap.
+              A Pipacs nem franchise, nem lánc. Személyesen várlak Pécel közepén — ahogy minden
+              vevőmet várom, hetedik éve.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -127,7 +127,7 @@ export default function RolamPage() {
                   className="text-xs font-semibold uppercase tracking-widest"
                   style={{ color: "var(--color-primary)" }}
                 >
-                  A bolt születése
+                  Bemutatkozás
                 </span>
               </div>
               <h2
@@ -139,21 +139,24 @@ export default function RolamPage() {
                   lineHeight: 1.2,
                 }}
               >
-                Hogyan lett a Pipacsból a Pipacs?
+                Posnyák Árkádiáné vagyok,<br />de kimondva csak Klári néni
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                A bolt terét nem én terveztem egyedül. Erdős Ibolya belsőépítész és Madarász Péter
-                asztalosmunkái adják azt a hangulatot, ami az első pillanattól különlegessé teszi a
-                teret.
+                1986 óta vagyok virágüzlet-tulajdonos. Volt virágüzletem Cinkotán és Nagytarcsán is —
+                jelenleg hetedik éve a Pipacsban igyekszem a kedves vevőim kedvében járni.
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Amikor megnyitottuk, tudtuk: nem egy átlagos virágos lesz — hanem egy hely, ahová
-                érdemes betérni akkor is, ha nem terveztél csokrot venni.
+                Szeretem az embereket és a növényeket. Közülük a pipacs a kedvencem — innen ered a
+                virágbolt neve is.
+              </p>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
+                Mindig igyekszem az újdonságokat vegyíteni a rég megszokott kötészeti elemekkel,
+                szívesen valósítok meg egyedi kívánságokat, elképzeléseket.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                A virágkötészet mellett az ajándékokat és a kézműves alkotásokat is fontosnak tartottam.
-                Mert az ünnepek nem mindig csokrot kívánnak — néha egy kézzel készített tárgy, egy szép
-                csomagolás, egy meglepő ajándék ér többet.
+                Lakásdekorációink nagy részét mi magunk készítjük. Szeretem, hogy a kézműves
+                foglalkozások keretében tovább adhatom virágkötészeti tudásomat az alkotni vágyó
+                laikusoknak.
               </p>
 
             </AnimateOnScroll>
@@ -162,55 +165,12 @@ export default function RolamPage() {
             <AnimateOnScroll>
               <div className="relative rounded-2xl overflow-hidden img-hover-scale aspect-[4/5]">
                 <Image
-                  src="/assets/images/rolam-bolt-ter.png"
-                  alt="A Pipacs Virágbolt belső tere — Erdős Ibolya és Madarász Péter munkája"
+                  src="/assets/klarineni.jpg"
+                  alt="Posnyák Árkádiáné (Klári néni) — Pipacs Virágbolt tulajdonosa"
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"
                 />
-                {/* Dark gradient at bottom for chip readability */}
-                <div
-                  className="absolute bottom-0 left-0 right-0"
-                  style={{
-                    height: "130px",
-                    background: "linear-gradient(to top, rgba(26,58,42,0.65) 0%, rgba(26,58,42,0) 100%)",
-                    zIndex: 1,
-                  }}
-                />
-                {/* Designer credit chips — overlaid on image bottom */}
-                <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2.5" style={{ zIndex: 2 }}>
-                  {[
-                    { name: "Erdős Ibolya", role: "belsőépítész" },
-                    { name: "Madarász Péter", role: "asztalos" },
-                  ].map((person) => (
-                    <div
-                      key={person.name}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                      style={{
-                        background: "rgba(250,246,240,0.96)",
-                        backdropFilter: "blur(10px)",
-                        border: "1.5px solid rgba(200,133,74,0.5)",
-                        boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
-                      }}
-                    >
-                      <span
-                        className="text-xs font-semibold uppercase tracking-wider"
-                        style={{ color: "var(--color-primary)", flexShrink: 0 }}
-                      >
-                        Tervezte:
-                      </span>
-                      <span
-                        className="text-sm font-bold"
-                        style={{ color: "var(--color-green)", fontFamily: "var(--font-serif)" }}
-                      >
-                        {person.name}
-                      </span>
-                      <span className="text-xs ml-auto font-medium" style={{ color: "var(--color-text-muted)" }}>
-                        {person.role}
-                      </span>
-                    </div>
-                  ))}
-                </div>
               </div>
             </AnimateOnScroll>
           </div>
@@ -344,7 +304,7 @@ export default function RolamPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.28) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.55) 0%, rgba(61,107,82,0.28) 100%)",
             }}
           />
         </div>

@@ -183,7 +183,7 @@ export default function HomePage() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(100deg, rgba(250,246,240,0.55) 0%, rgba(250,246,240,0.32) 38%, rgba(250,246,240,0.05) 65%, rgba(250,246,240,0) 80%)",
+              "linear-gradient(100deg, rgba(250,246,240,0.92) 0%, rgba(250,246,240,0.80) 40%, rgba(250,246,240,0.35) 65%, rgba(250,246,240,0) 85%)",
           }}
         />
 
@@ -374,8 +374,8 @@ export default function HomePage() {
                       style={{
                         width: "60px",
                         height: "60px",
-                        background: "rgba(26,58,42,0.88)",
-                        border: "2px solid rgba(26,58,42,0.5)",
+                        background: "rgba(61,107,82,0.88)",
+                        border: "2px solid rgba(61,107,82,0.5)",
                       }}
                     >
                       <Image
@@ -437,7 +437,7 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.38) 50%, rgba(26,58,42,0.2) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.55) 0%, rgba(61,107,82,0.38) 50%, rgba(61,107,82,0.2) 100%)",
             }}
           />
         </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ VÉLEMÉNYEK ═══ */}
-      <section style={{ background: "var(--color-bg)" }} className="section-py">
+      <section style={{ background: "rgba(250,246,240,0.96)" }} className="section-py">
         <div className="container-site">
           <AnimateOnScroll className="mb-10 text-center">
             <div className="divider-botanical mb-5">
@@ -587,7 +587,7 @@ export default function HomePage() {
               style={{
                 fontFamily: "var(--font-serif)",
                 fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                color: "var(--color-green)",
+                color: "#1c1712",
               }}
             >
               Mit mondanak, akik már jártak nálam
@@ -596,15 +596,27 @@ export default function HomePage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {([
-              { location: "Pécel" },
-              { location: "Gödöllő" },
-              { location: "Isaszeg" },
-            ] as { location: string }[]).map((item, i) => (
+              {
+                quote: "Klári néni mindig pontosan tudja, mit szeretnék — még akkor is, ha én magam nem. Gyönyörű csokrot kötött az anyukám születésnapjára, mindenki odavolt érte.",
+                name: "Mária",
+                location: "Pécel",
+              },
+              {
+                quote: "Évek óta itt veszem a virágokat minden alkalomra. A bolt hangulata egyedülálló, és amit kézzel készítenek, az tényleg más, mint a szupermarketben kapható.",
+                name: "Eszter",
+                location: "Gödöllő",
+              },
+              {
+                quote: "Az alkotóműhelyes foglalkozás fantasztikus volt! Semmi előzetes tapasztalatom nem volt, mégis hazahoztam valami igazán szépet. Biztosan visszamegyek.",
+                name: "Katalin",
+                location: "Isaszeg",
+              },
+            ] as { quote: string; name: string; location: string }[]).map((item, i) => (
               <StaggerItem key={i}>
                 <div
                   className="flex flex-col gap-5 p-7 rounded-2xl h-full"
                   style={{
-                    background: "var(--color-bg-subtle)",
+                    background: "rgba(240,235,226,0.97)",
                     border: "1px solid var(--color-border)",
                   }}
                 >
@@ -619,26 +631,25 @@ export default function HomePage() {
                       />
                     ))}
                   </div>
-                  {/* Quote visual */}
+                  {/* Quote */}
                   <div className="flex-1">
                     <div
-                      className="text-5xl leading-none mb-3 select-none"
-                      style={{ color: "var(--color-primary)", opacity: 0.25, fontFamily: "Georgia, serif" }}
+                      className="text-5xl leading-none mb-2 select-none"
+                      style={{ color: "var(--color-primary)", fontFamily: "Georgia, serif", lineHeight: 1 }}
                       aria-hidden="true"
                     >
                       "
                     </div>
-                    <div
-                      className="h-16 rounded-lg"
-                      style={{ background: "var(--color-border)", opacity: 0.5 }}
-                    />
+                    <p className="text-sm leading-relaxed italic" style={{ color: "#3a2e25" }}>
+                      {item.quote}
+                    </p>
                   </div>
                   {/* Attribution */}
                   <p
                     className="text-xs font-semibold uppercase tracking-wider"
-                    style={{ color: "var(--color-text-light)" }}
+                    style={{ color: "#5c4e3f" }}
                   >
-                    — {item.location}
+                    — {item.name}, {item.location}
                   </p>
                 </div>
               </StaggerItem>

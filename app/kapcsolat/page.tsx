@@ -220,7 +220,7 @@ export default function KapcsolatPage() {
                   >
                     <div
                       className="icon-circle w-14 h-14"
-                      style={{ background: "rgba(26,58,42,0.09)" }}
+                      style={{ background: "rgba(61,107,82,0.09)" }}
                     >
                       <Icon size={24} style={{ color: "var(--color-green)" }} />
                     </div>
@@ -547,7 +547,7 @@ export default function KapcsolatPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(100deg, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.38) 50%, rgba(26,58,42,0.2) 100%)",
+                "linear-gradient(100deg, rgba(61,107,82,0.55) 0%, rgba(61,107,82,0.38) 50%, rgba(61,107,82,0.2) 100%)",
             }}
           />
         </div>
