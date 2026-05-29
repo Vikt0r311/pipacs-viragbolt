@@ -6,7 +6,7 @@
 
 **1. Helyes telefonszám?**
 
-A megadott 06-20/344-3448 és az evepla.com-on szereplő +36 20 447 4328 eltér. Melyik az aktuális, aktív szám?
+A megadott 06-20/447-4328 és az evepla.com-on szereplő +36 20 447 4328 eltér. Melyik az aktuális, aktív szám?
 
 *Ha megválaszolják:* A telefon-CTA, a footer és a kapcsolat oldal frissül az összes oldalon.
 

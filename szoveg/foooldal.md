@@ -8,7 +8,7 @@
 ## SEO Metadata
 
 **Title:** Pipacs Virágbolt Pécel — Virágkötészet, Ajándék, Alkotóműhely  
-**Description:** Csokrot keresel, egyedi ajándékot, vagy alkotni szeretnél? Pécelben a Pipacs Virágboltban mindezt megtalálod — Klára várja a Szondi utca 53. alatt. Hívj: 06-20/344-3448  
+**Description:** Csokrot keresel, egyedi ajándékot, vagy alkotni szeretnél? Pécelben a Pipacs Virágboltban mindezt megtalálod — Klára várja a Szondi utca 53. alatt. Hívj: 06-20/447-4328  
 **Kulcsszó-csoportok:**
 - Virágbolt Pécel, virágkötészet Pécel, virágküldés Pécel
 - Ajándékbolt Pécel, kézműves ajándék Pécel
@@ -23,7 +23,7 @@
 **Alcím:** A Pipacsban csokrot kötök, kézzel készített ajándékot választhatsz, és saját kezeddel is alkothatsz. Minden alkalomra — személyesen.
 
 **Elsődleges CTA gomb:** Hívj most  
-**Link:** tel:+36203443448  
+**Link:** tel:+36204474328  
 **Másodlagos CTA:** Merre találsz meg  
 **Link:** /kapcsolat
 
@@ -44,7 +44,7 @@ Pécel, Szondi utca 53. · Kedd–Péntek 9:00–19:00 · Szombat–Vasárnap 9:
 **Ikon:** virágcsokor  
 **Cím:** Csokorkötés, ahogy kell  
 **Szöveg:** Alkalmi csokrok (születésnapi, ballagási, anyák napi), menyasszonyi csokor, kegyeleti koszorú, asztaldísz — és az a "csak úgy" csokor, ami magától értetődő ajándék. Ha nem tudod, mit kérj, elmondom, mi illik mire.  
-**CTA:** Hívj most · tel:+36203443448
+**CTA:** Hívj most · tel:+36204474328
 
 **Kártya 2 — Ajándék & Kézművesség**  
 **Ikon:** ajándékdoboz / kézzel készítve  
@@ -71,7 +71,7 @@ Pécel, Szondi utca 53. · Kedd–Péntek 9:00–19:00 · Szombat–Vasárnap 9:
 
 **Szöveg:** Ha sürgős, ha nem tudod még pontosan mit kérsz, ha csak körül akarsz nézni — hívj és megbeszéljük. Pécelen vagyok, személyesen várlak.
 
-**CTA gomb 1:** Hívj most · tel:+36203443448  
+**CTA gomb 1:** Hívj most · tel:+36204474328  
 **CTA gomb 2:** Írj Messengeren · https://m.me/pipacsviragbolt
 
 ---
@@ -115,7 +115,7 @@ _„[Ügyfélvélemény szövege]"_
 Pipacs Virágbolt  
 2119 Pécel, Szondi utca 53.  
 Bejárat: Fáy utca felőli kapu  
-Tel: 06-20/344-3448  
+Tel: 06-20/447-4328  
 Email: info@novenyvilag.hu
 
 **Középső oszlop — Nyitvatartás:**  

@@ -5,7 +5,7 @@
 ## SEO Metadata
 
 **Title:** Alkotóműhely Pécel — Kézműves Workshop | Pipacs Virágbolt  
-**Description:** Kézműves alkotófoglalkozások Pécelről — a Pipacs Virágboltban nem csak vásárolni, hanem alkotni is lehet. [HIÁNYZÓ ADAT: workshop típusa és időpontok] Hívj: 06-20/344-3448  
+**Description:** Kézműves alkotófoglalkozások Pécelről — a Pipacs Virágboltban nem csak vásárolni, hanem alkotni is lehet. [HIÁNYZÓ ADAT: workshop típusa és időpontok] Hívj: 06-20/447-4328  
 **Kulcsszavak:** alkotóműhely Pécel, kézműves workshop Pécel, virágkötő workshop, kreatív foglalkozás Pécel
 
 ---
@@ -16,7 +16,7 @@
 
 **Alcím:** A Pipacs alkotóműhelye azoknak szól, akik nem csak megvenni, hanem saját kezükkel létrehozni is szeretnének valamit. [HIÁNYZÓ ADAT: rövid workshop-leírás, ami ide kerülhet]
 
-**CTA:** Foglalj helyet a workshopra · [HIÁNYZÓ ADAT: foglalási link vagy tel:+36203443448]
+**CTA:** Foglalj helyet a workshopra · [HIÁNYZÓ ADAT: foglalási link vagy tel:+36204474328]
 
 **Képek:**
 - `alkotomuhely-hero.jpg` — alkotás közben: kezek, anyagok, virágok, természetes fény
@@ -42,7 +42,7 @@ Mikor: [HIÁNYZÓ ADAT]
 Kiknek: [HIÁNYZÓ ADAT]  
 Mit csinálunk: [HIÁNYZÓ ADAT]  
 Ára: [HIÁNYZÓ ADAT]  
-Jelentkezés: Hívj most · tel:+36203443448
+Jelentkezés: Hívj most · tel:+36204474328
 
 ---
 
@@ -67,7 +67,7 @@ Nem. Megmutatom lépésről lépésre — ha soha nem csináltad, akkor is ott l
 [HIÁNYZÓ ADAT: foglalkozás ára]
 
 **Hogyan jelentkezem?**  
-Hívj a 06-20/344-3448-as számon, és megbeszéljük a részleteket.
+Hívj a 06-20/447-4328-as számon, és megbeszéljük a részleteket.
 
 ---
 
@@ -77,7 +77,7 @@ Hívj a 06-20/344-3448-as számon, és megbeszéljük a részleteket.
 
 **Szöveg:** Ha nem egyértelmű, milyen foglalkozás van éppen, mikor, mennyibe kerül — hívj. Percek alatt megbeszéljük.
 
-**CTA gomb:** Hívj most · tel:+36203443448
+**CTA gomb:** Hívj most · tel:+36204474328
 
 ---
 

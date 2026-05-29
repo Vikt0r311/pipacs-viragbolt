@@ -6,11 +6,11 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Kapcsolat — Pipacs Virágbolt Pécel | Szondi utca 53.",
   description:
-    "Hívj: 06-20/344-3448 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14, Hétfőn 12-től · Bejárat: Fáy utca felőli kapu",
+    "Telefon: 06-20/447-4328 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14, Hétfőn 12-től · Bejárat: Fáy utca felőli kapu",
   openGraph: {
     title: "Kapcsolat — Pipacs Virágbolt Pécel",
     description:
-      "Hívj: 06-20/344-3448 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14",
+      "Telefon: 06-20/447-4328 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14",
     url: "https://pipacsviragbolt.hu/kapcsolat",
     images: [{ url: "/assets/images/kapcsolat-hero.png", width: 1200, height: 630 }],
   },
@@ -29,16 +29,24 @@ const openingHours = [
 const contactMethods = [
   {
     icon: Phone,
-    title: "Telefon",
+    title: "Telefon (mobil)",
     body: "Ha sürgős, a leggyorsabb a telefon.",
-    detail: "06-20/344-3448",
-    href: "tel:+36203443448",
+    detail: "06-20/447-4328",
+    href: "tel:+36204474328",
+    external: false,
+  },
+  {
+    icon: Phone,
+    title: "Telefon (vezéték)",
+    body: "Üzleti vonal, nyitvatartás alatt.",
+    detail: "06-28/740-068",
+    href: "tel:+3628740068",
     external: false,
   },
   {
     icon: MessageCircle,
     title: "Messenger",
-    body: "Írj Messengeren.",
+    body: "Üzenet Messengeren.",
     detail: "Pipacs Virágbolt",
     href: "https://m.me/pipacsviragbolt",
     external: true,
@@ -54,7 +62,7 @@ const contactMethods = [
   {
     icon: Store,
     title: "Személyesen",
-    body: "Gyere be — a legszebb virágokat néha csak személyesen lehet kiválasztani.",
+    body: "A legszebb virágokat néha csak személyesen lehet kiválasztani.",
     detail: "Pécel, Szondi utca 53.",
     href: "#terkep",
     external: false,
@@ -68,11 +76,11 @@ const benefits = [
   },
   {
     icon: HeartHandshake,
-    text: "Megbeszéljük, mi illik az alkalmadhoz — fotókra várni nem kell",
+    text: "Telefonon gyorsan egyeztethető, mi illik az alkalomhoz — fotókra várni nem kell",
   },
   {
     icon: Flower,
-    text: "Ha sürgős, meg tudom mondani, mikor jöhetsz azonnal",
+    text: "Sürgős esetben gyorsan kiderül, mikor lehetséges az átvétel",
   },
 ];
 
@@ -125,11 +133,11 @@ export default function KapcsolatPage() {
                 lineHeight: 1.1,
               }}
             >
-              Hívj —<br />megoldom
+              Telefonos<br />egyeztetés
             </h1>
 
             <p className="text-base mb-6 leading-relaxed max-w-md" style={{ color: "var(--color-text-muted)" }}>
-              Elérhetsz telefonon, Messengeren, vagy egyszerűen betérhetsz Pécelen a Szondi utcában lévő virágüzletembe.
+              Elérhető telefonon, Messengeren, vagy személyesen Pécelen, a Szondi utcában lévő virágüzletben.
               Ha sürgős, a leggyorsabb a telefon.
             </p>
 
@@ -137,7 +145,11 @@ export default function KapcsolatPage() {
             <div className="flex flex-col gap-2.5 mb-7 text-sm">
               <span className="flex items-center gap-2.5">
                 <Phone size={15} style={{ color: "var(--color-primary)", flexShrink: 0 }} />
-                <strong style={{ color: "var(--color-text)", fontSize: "1rem" }}>06-20/344-3448</strong>
+                <strong style={{ color: "var(--color-text)", fontSize: "1rem" }}>06-20/447-4328</strong>
+              </span>
+              <span className="flex items-center gap-2.5" style={{ color: "var(--color-text-muted)" }}>
+                <Phone size={15} style={{ color: "var(--color-primary)", flexShrink: 0 }} />
+                06-28/740-068 (vezéték)
               </span>
               <span className="flex items-center gap-2.5" style={{ color: "var(--color-text-muted)" }}>
                 <MapPin size={15} style={{ color: "var(--color-green)", flexShrink: 0 }} />
@@ -151,11 +163,11 @@ export default function KapcsolatPage() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={14} />
-                Hívj most
+                Telefonos egyeztetés
               </a>
               <a
                 href="https://m.me/pipacsviragbolt"
@@ -164,7 +176,7 @@ export default function KapcsolatPage() {
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline-dark"
               >
                 <MessageCircle size={14} />
-                Írj Messengeren
+                Messenger üzenet
               </a>
             </div>
           </div>
@@ -199,7 +211,7 @@ export default function KapcsolatPage() {
               Kapcsolatfelvétel módja
             </h2>
             <p className="mt-3 text-base max-w-xl mx-auto" style={{ color: "var(--color-text-muted)" }}>
-              Ha csokrot szeretnél, kérdésed van a workshopról, vagy csak körülnéznél — egyformán szívesen várlak.
+              Csokor, workshop vagy személyes válogatás kapcsán egyaránt szívesen fogadjuk a megkeresést.
             </p>
           </AnimateOnScroll>
 
@@ -258,7 +270,7 @@ export default function KapcsolatPage() {
                 color: "var(--color-green)",
               }}
             >
-              Miért érdemes inkább hívni?
+              Mikor érdemes telefonon egyeztetni?
             </h2>
           </AnimateOnScroll>
 
@@ -365,11 +377,11 @@ export default function KapcsolatPage() {
                       Telefon
                     </p>
                     <a
-                      href="tel:+36203443448"
+                      href="tel:+36204474328"
                       className="text-sm font-medium transition-opacity hover:opacity-80"
                       style={{ color: "var(--color-text)" }}
                     >
-                      06-20/344-3448
+                      06-20/447-4328
                     </a>
                   </div>
                 </div>
@@ -563,19 +575,19 @@ export default function KapcsolatPage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Hívj — megoldom
+                  Telefonos egyeztetés
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
-                  Csokrot keresel? Ajándékot? Alkotófoglalkozás érdekel? Hívj, percek alatt megbeszéljük.
+                  Csokor, ajándék vagy alkotófoglalkozás kapcsán telefonon gyorsan egyeztethetők a részletek.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <Phone size={15} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
                 <a
                   href="https://m.me/pipacsviragbolt"
@@ -584,7 +596,7 @@ export default function KapcsolatPage() {
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline"
                 >
                   <MessageCircle size={15} />
-                  Írj Messengeren
+                  Messenger üzenet
                 </a>
               </div>
             </div>

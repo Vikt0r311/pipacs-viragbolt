@@ -16,7 +16,8 @@ const rows = [
   { label: "Tulajdonos", value: "Posnyák Klára" },
   { label: "Székhely / üzlet", value: "2119 Pécel, Szondi utca 53." },
   { label: "Bejárat", value: "Fáy utca felőli kapu" },
-  { label: "Telefon", value: "06-20/344-3448" },
+  { label: "Telefon (mobil)", value: "06-20/447-4328" },
+  { label: "Telefon (vezéték)", value: "06-28/740-068" },
   { label: "E-mail", value: "info@novenyvilag.hu" },
   { label: "Facebook", value: "facebook.com/pipacsviragbolt" },
   {

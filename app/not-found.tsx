@@ -70,11 +70,11 @@ export default function NotFound() {
             <ArrowRight size={14} />
           </Link>
           <a
-            href="tel:+36203443448"
+            href="tel:+36204474328"
             className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline-dark"
           >
             <Phone size={14} />
-            Hívj most
+            Hívás indítása
           </a>
           <Link
             href="/viragaink"

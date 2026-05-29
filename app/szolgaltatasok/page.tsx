@@ -23,7 +23,7 @@ const services = [
     subtitle: "Születésnap · Névnap · Ballagás · Anyák napja",
     paragraphs: [
       "Friss, az alkalomhoz illő csokrokat készítünk születésnapra, névnapra, ballagásra, anyák napjára vagy egyszerűen csak úgy.",
-      "Ha nem tudod pontosan, milyen stílus, méret vagy ár lenne jó, telefonon gyorsan egyeztethetjük a lehetőségeket.",
+      "Ha a stílus, méret vagy ár még nem egyértelmű, telefonon gyorsan egyeztethetők a lehetőségek.",
     ],
     specs: [
       "Személyes egyeztetés",
@@ -72,8 +72,8 @@ const services = [
     title: "Kézműves ajándékok és díszcsomagolás",
     subtitle: "Ajándék · Lakásdekoráció · Csomagolás",
     paragraphs: [
-      "A virágok mellett kézzel készített lakásdekorációkat, ajándéktárgyakat és gondosan válogatott különlegességeket találsz a boltban.",
-      "Ha virágot vagy ajándékot szeretnél szépen átadni, díszcsomagolásban is segítünk.",
+      "A virágok mellett kézzel készített lakásdekorációk, ajándéktárgyak és gondosan válogatott különlegességek is megtalálhatók a boltban.",
+      "Virág vagy ajándék szép átadásához díszcsomagolásban is segítünk.",
     ],
     specs: [
       "Helyben válogatható ajándékok",
@@ -243,8 +243,8 @@ export default function SzolgaltatasokPage() {
                 tudunk a leggyorsabban egyeztetni.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="tel:+36203443448" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
-                  Hívj most
+                <a href="tel:+36204474328" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
+                  Telefonos egyeztetés
                 </a>
                 <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]" style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}>
                   Kapcsolat

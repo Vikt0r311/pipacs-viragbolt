@@ -4,7 +4,7 @@
 
 | Forrás | Szám |
 |---|---|
-| Felhasználó által megadott | 06-20/344-3448 |
+| Felhasználó által megadott | 06-20/447-4328 |
 | evepla.com listing | +36 20 447 4328 (és +36 28 740 068) |
 
 **Eltérés van.** A weboldalon a felhasználó által megadott szám szerepel, de megerősítés szükséges, hogy melyik a helyes/aktuális.
@@ -133,7 +133,7 @@ Mielőtt élesítenénk és átkötnénk egy saját domainre, néhány adatra m�
 
 **1. Telefonszám pontosítás**
 
-A weboldalon az általad megadott 06-20/344-3448 szerepel. Egy külső listázó oldalon (evepla.com) a +36 20 447 4328 szám szerepel. Melyik a helyes, jelenleg aktív telefonszám?
+A weboldalon az általad megadott 06-20/447-4328 szerepel. Egy külső listázó oldalon (evepla.com) a +36 20 447 4328 szám szerepel. Melyik a helyes, jelenleg aktív telefonszám?
 
 ---
 

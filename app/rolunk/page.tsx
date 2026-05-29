@@ -7,7 +7,7 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Rólunk | Pipacs Virágbolt Pécel",
   description:
-    "Ismerd meg a Pipacs Virágboltot Pécelen: virágkötészet, kézműves ajándékok és alkotóműhely a Szondi utca 53. alatt.",
+    "Pipacs Virágbolt Pécelen: virágkötészet, kézműves ajándékok és alkotóműhely a Szondi utca 53. alatt.",
   openGraph: {
     title: "Rólunk | Pipacs Virágbolt Pécel",
     description:
@@ -31,7 +31,7 @@ const values = [
   {
     icon: HeartHandshake,
     title: "Helyi, közvetlen hang",
-    description: "Telefonon vagy személyesen gyorsan egyeztethető, mire van szükséged és mi érhető el éppen.",
+    description: "Telefonon vagy személyesen gyorsan egyeztethető, mire van szükség és mi érhető el éppen.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function RolunkPage() {
                     { label: "Helyszín", value: "Pécel" },
                     { label: "Cím", value: "Szondi utca 53." },
                     { label: "Profil", value: "Virág és ajándék" },
-                    { label: "Elérés", value: "06-20/344-3448" },
+                    { label: "Elérés", value: "06-20/447-4328" },
                   ].map((fact, i) => (
                     <div key={i}>
                       <div className="text-xs" style={{ color: "var(--color-text-light)" }}>
@@ -240,8 +240,8 @@ export default function RolunkPage() {
                 leggyorsabban egyeztetni.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="tel:+36203443448" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
-                  Hívj most
+                <a href="tel:+36204474328" className="px-7 py-3.5 rounded-md font-semibold text-sm btn-primary">
+                  Telefonos egyeztetés
                 </a>
                 <Link href="/kapcsolat" className="px-7 py-3.5 rounded-md font-semibold text-sm border transition-all hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]" style={{ color: "var(--color-text-muted)", borderColor: "var(--color-border-strong)" }}>
                   Kapcsolat

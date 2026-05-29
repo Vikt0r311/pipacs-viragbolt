@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, MapPin, Truck, ArrowRight, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Truck, ArrowRight } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/AnimateOnScroll";
 
 export const metadata: Metadata = {
   title: "Virágkötészet Pécel — Csokrok, Koszorúk, Esküvői Virágok | Pipacs",
   description:
-    "Alkalmi csokroktól esküvői dekorációig, kegyeleti koszorútól asztaldíszig — Pécelben a Pipacsban kötöm, te megkapod. Hívj: 06-20/344-3448",
+    "Alkalmi csokroktól esküvői dekorációig, kegyeleti koszorútól asztaldíszig — virágkötészet Pécelen, a Pipacs Virágboltban. Telefon: 06-20/447-4328",
   openGraph: {
     title: "Virágkötészet Pécel — Csokrok, Koszorúk, Esküvői Virágok | Pipacs",
     description:
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 const categories = [
   {
     title: "Alkalmi csokrok",
-    body: "Születésnap, névnap, anyák napja, ballagás, évforduló, 'csak úgy' ajándék — bármilyen alkalomra. Ha bizonytalan vagy a méretben, árban, stílusban, hívj és megbeszéljük.",
+    body: "Születésnap, névnap, anyák napja, ballagás, évforduló, 'csak úgy' ajándék — bármilyen alkalomra. Méret, ár vagy stílus kérdésében telefonon gyorsan egyeztethető a megfelelő irány.",
     image: "/assets/images/viragaink-alkalmak.png",
     icon: "/assets/icons/svg/icon-occasion-bouquet.svg",
     iconAlt: "Alkalmi csokor ikon",
-    cta: "Hívj, megbeszéljük",
-    ctaHref: "tel:+36203443448",
+    cta: "Telefonos egyeztetés",
+    ctaHref: "tel:+36204474328",
   },
   {
     title: "Menyasszonyi csokor és esküvői virágdekoráció",
@@ -34,36 +34,36 @@ const categories = [
     image: "/assets/images/viragaink-eskuvo.png",
     icon: "/assets/icons/svg/icon-wedding-rings.svg",
     iconAlt: "Esküvői virágok ikon",
-    cta: "Írj Messengeren",
+    cta: "Messenger üzenet",
     ctaHref: "https://m.me/pipacsviragbolt",
     ctaExternal: true,
   },
   {
     title: "Kegyeleti koszorú és csokor",
-    body: "Diszkrét, gyors. Ha sürgős, szólj — megoldom.",
+    body: "Diszkrét, gyors egyeztetés. Sürgős esetben telefonon érdemes pontosítani a lehetőségeket.",
     image: "/assets/images/viragaink-kegyeleti.png",
     icon: "/assets/icons/svg/icon-memorial-wreath.svg",
     iconAlt: "Kegyeleti koszorú ikon",
-    cta: "Hívj most",
-    ctaHref: "tel:+36203443448",
+    cta: "Telefonos egyeztetés",
+    ctaHref: "tel:+36204474328",
   },
   {
     title: "Asztaldísz és rendezvényi dekoráció",
-    body: "Rendezvények, céges események, termek díszítése. Egyeztetés előre szükséges — hívj és megbeszéljük a részleteket.",
+    body: "Rendezvények, céges események, termek díszítése. Előzetes telefonos egyeztetés szükséges a részletek pontosításához.",
     image: "/assets/images/viragaink-rendezveny.png",
     icon: "/assets/icons/svg/icon-table-floral.svg",
     iconAlt: "Asztaldísz ikon",
-    cta: "Hívj most",
-    ctaHref: "tel:+36203443448",
+    cta: "Telefonos egyeztetés",
+    ctaHref: "tel:+36204474328",
   },
   {
     title: "Kirakatrendezés",
-    body: "Hívj, és megbeszéljük a részleteket.",
+    body: "A részletek telefonon egyeztethetők.",
     image: "/assets/images/viragaink-kirakat.png",
     icon: "/assets/icons/svg/icon-shop-window.svg",
     iconAlt: "Kirakatrendezés ikon",
-    cta: "Érdeklődjél",
-    ctaHref: "tel:+36203443448",
+    cta: "Érdeklődés telefonon",
+    ctaHref: "tel:+36204474328",
   },
 ];
 
@@ -71,17 +71,17 @@ const faqItems = [
   {
     question: "Előre kell rendelni?",
     answer:
-      "Sürgős esetben is segítek — hívj és megbeszéljük, mi van éppen készleten. Különleges alkalmakra (esküvő, rendezvény) előre egyeztetés szükséges.",
+      "Sürgős esetben is érdemes telefonon egyeztetni az aktuális készletről. Különleges alkalmakra (esküvő, rendezvény) előre egyeztetés szükséges.",
   },
   {
     question: "Milyen áron dolgozol?",
     answer:
-      "Az árat az alkalom, a virágok és a méret befolyásolja. Ha előre tudni szeretnéd, hívj — percek alatt megbeszéljük.",
+      "Az árat az alkalom, a virágok és a méret befolyásolja. Előzetes árképhez telefonos egyeztetés javasolt.",
   },
   {
     question: "Kiszállítasz Pécelre?",
     answer:
-      "Igen, Pécel területén vállalok virágküldést és házhozszállítást. A részletekért hívj a 06-20/344-3448-as számon.",
+      "Igen, Pécel területén vállalok virágküldést és házhozszállítást. A részletek telefonon egyeztethetők: 06-20/447-4328.",
   },
 ];
 
@@ -135,19 +135,19 @@ export default function ViragainkPage() {
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
               Minden alkalom más. Születésnap, ballagás, esküvő, búcsú — mindegyikhez más kell.
-              Elmondom, mi illik az adott alkalomra és megkötöm azt, amire szükséged van.
+              Telefonon egyeztethető, mi illik az adott alkalomra, és milyen csokor vagy virágdísz készülhet.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={14} />
-                Hívj, megbeszéljük
+                Telefonos egyeztetés
               </a>
               <span className="flex items-center gap-1.5 text-sm" style={{ color: "rgba(250,246,240,0.7)" }}>
                 <MapPin size={13} />
-                Pécel · 06-20/344-3448
+                Pécel · 06-20/447-4328
               </span>
             </div>
           </div>
@@ -183,10 +183,10 @@ export default function ViragainkPage() {
                 Virág, ami rólad szól
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Virágkötéssel foglalkozom — ez azt jelenti, hogy nem csak megveszed a virágot, hanem én összerakom azt, ami az adott alkalomhoz illik. Nincs kész sablon, hanem az alkalom és a kért stílus alapján kötöm meg az egyedi virágcsokrot, amire vágysz.
+                Virágkötéssel foglalkozom — ez azt jelenti, hogy nem csak kész virág kerül a kézbe, hanem az alkalomhoz illő összeállítás. Nincs kész sablon, az alkalom és a kért stílus alapján készül az egyedi virágcsokor.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Ha bizonytalan vagy bármelyik részletben — stílus, méret, ár — hívj. Percek alatt megbeszéljük. Így is lehet virágot venni Pécelen.
+                Bizonytalanság esetén — stílus, méret, ár — telefonon gyorsan egyeztethetők a részletek. Így is lehet virágot venni Pécelen.
               </p>
             </AnimateOnScroll>
           </div>
@@ -306,15 +306,15 @@ export default function ViragainkPage() {
                   Házhozszállítás Pécelre
                 </h3>
                 <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                  Virágküldést és házhozszállítást vállalok Pécel területén. A részletekért hívj.
+                  Virágküldést és házhozszállítást vállalok Pécel területén. A részletek telefonon egyeztethetők.
                 </p>
               </div>
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold btn-primary shrink-0"
               >
                 <Phone size={13} />
-                Hívj most
+                Telefonos egyeztetés
               </a>
             </div>
           </AnimateOnScroll>
@@ -371,19 +371,19 @@ export default function ViragainkPage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Csokrot keresel? Hívj most.
+                  Csokor rendelése telefonos egyeztetéssel
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
-                  Pécelről vállalom — hívj, és megbeszéljük, mi illik az alkalmadhoz.
+                  Pécelről vállalom — telefonon gyorsan egyeztethető, mi illik az alkalomhoz.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <Phone size={14} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
               </div>
             </div>

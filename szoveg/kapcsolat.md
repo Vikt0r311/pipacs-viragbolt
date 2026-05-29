@@ -5,7 +5,7 @@
 ## SEO Metadata
 
 **Title:** Kapcsolat — Pipacs Virágbolt Pécel | Szondi utca 53.  
-**Description:** Hívj: 06-20/344-3448 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14, Hétfőn 12-től · Bejárat: Fáy utca felőli kapu
+**Description:** Hívj: 06-20/447-4328 · Pécel, Szondi utca 53. · Kedd–Péntek 9–19, Szombat–Vasárnap 9–14, Hétfőn 12-től · Bejárat: Fáy utca felőli kapu
 
 ---
 
@@ -45,7 +45,7 @@ Ha csokrot szeretnél, kérdésed van a workshopról, vagy csak körülnéznél 
 | Szombat | 09:00–14:00 |
 | Vasárnap | 09:00–14:00 |
 
-**Telefon:** 06-20/344-3448  
+**Telefon:** 06-20/447-4328  
 **Email:** info@novenyvilag.hu  
 **Facebook / Messenger:** https://www.facebook.com/pipacsviragbolt
 

@@ -5,7 +5,7 @@
 ## SEO Metadata
 
 **Title:** Virágkötészet Pécel — Csokrok, Koszorúk, Esküvői Virágok | Pipacs  
-**Description:** Alkalmi csokroktól esküvői dekorációig, kegyeleti koszorútól asztaldíszig — Pécelben a Pipacsban kötöm, te megkapod. Hívj: 06-20/344-3448  
+**Description:** Alkalmi csokroktól esküvői dekorációig, kegyeleti koszorútól asztaldíszig — Pécelben a Pipacsban kötöm, te megkapod. Hívj: 06-20/447-4328  
 **Kulcsszavak:** virágkötészet Pécel, csokorkötés Pécel, esküvői virág Pécel, kegyeleti koszorú Pécel, ballagási csokor Pécel
 
 ---
@@ -16,7 +16,7 @@
 
 **Alcím:** Minden alkalom más. Születésnap, ballagás, esküvő, búcsú — mindegyikhez más kell. Elmondom, mi illik mire, és kötöm azt, amire szükséged van.
 
-**CTA:** Hívj, megbeszéljük · tel:+36203443448
+**CTA:** Hívj, megbeszéljük · tel:+36204474328
 
 **Képek:**
 - `viragaink-hero.jpg` — frissen kötött csokrok, természetes háttér, levegős kompozíció
@@ -80,7 +80,7 @@ Igen, Pécel területén. [HIÁNYZÓ ADAT: részletek megerősítése]
 
 **Szöveg:** Pécelről vállalom — hívj, és megbeszéljük, mi illik az alkalmadhoz.
 
-**CTA gomb:** Hívj most · tel:+36203443448
+**CTA gomb:** Hívj most · tel:+36204474328
 
 ---
 

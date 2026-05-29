@@ -7,7 +7,7 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Kézműves Ajándék Pécel — Egyedi Ajándéktárgyak | Pipacs",
   description:
-    "Nem tömegáru — kézzel készített lakásdekoráció, egyedi ajándéktárgyak és díszcsomagolás Pécelről. Látogasd meg a Pipacs Virágboltot: Szondi utca 53.",
+    "Nem tömegáru — kézzel készített lakásdekoráció, egyedi ajándéktárgyak és díszcsomagolás Pécelről. Pipacs Virágbolt, Szondi utca 53.",
   openGraph: {
     title: "Kézműves Ajándék Pécel — Egyedi Ajándéktárgyak | Pipacs",
     description:
@@ -27,14 +27,14 @@ const categories = [
   },
   {
     title: "Egyedi díszcsomagolás",
-    body: "Ha virágot vagy ajándékot vásárolsz és szeretnéd csomagolva átadni — megoldom. Egyedi, nem dobozos.",
+    body: "Virág vagy ajándék vásárlásához egyedi díszcsomagolás is kérhető. Egyedi, nem dobozos.",
     image: "/assets/images/ajandek-csomagolas.png",
     icon: "/assets/icons/svg/icon-ribbon-wrap.svg",
     iconAlt: "Díszcsomagolás ikon",
   },
   {
     title: "Ajándéktárgyak különleges alkalmakra",
-    body: "Olyasmi, ami nem kapható minden sarkon. Ha különlegeset keresel születésnapra, névnapra, karácsonyra — jó helyen jársz.",
+    body: "Olyasmi, ami nem kapható minden sarkon. Különleges alkalmakra, születésnapra, névnapra vagy karácsonyra is érdemes körülnézni.",
     image: "/assets/images/ajandek-csomagolas.png",
     icon: "/assets/icons/svg/icon-occasion-gift.svg",
     iconAlt: "Ajándéktárgy ikon",
@@ -49,10 +49,10 @@ const categories = [
 ];
 
 const whenToVisit = [
-  "Ha születésnapra valami egyedibb kell, mint egy sima csokor",
-  "Ha nem tudod pontosan, mit kérsz — de tudod, hogy különlegeset szeretnél",
-  "Ha a csomagolás is számít",
-  "Ha helyi kézműves munkát szeretnél, nem importált tömegárut",
+  "Születésnapra, amikor valami egyedibb kell, mint egy sima csokor",
+  "Amikor még nem pontos az elképzelés, de különleges ajándék lenne jó",
+  "Amikor a csomagolás is számít",
+  "Helyi kézműves munkához, nem importált tömegáruhoz",
 ];
 
 export default function AjandekPage() {
@@ -104,8 +104,7 @@ export default function AjandekPage() {
               Ajándék, ami nem tömegáru
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
-              Ha valami különlegeset keresel — olyasmit, ami kézzel készült és nem kapható minden
-              sarkon —, jó helyen jársz. Pécelen, a Pipacsban.
+              Különleges, kézzel készült és nem minden sarkon kapható ajándékok Pécelen, a Pipacsban.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -113,11 +112,11 @@ export default function AjandekPage() {
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <MapPin size={14} />
-                Merre találsz meg
+                Cím és nyitvatartás
               </Link>
               <span className="flex items-center gap-1.5 text-sm" style={{ color: "rgba(250,246,240,0.7)" }}>
                 <Phone size={13} />
-                06-20/344-3448
+                06-20/447-4328
               </span>
             </div>
           </div>
@@ -142,7 +141,7 @@ export default function AjandekPage() {
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
                 A Pipacs nem csak virágbolt. A polcokon kézzel készített lakásdekorációkat, egyedi
-                ajándéktárgyakat és gondosan összeválogatott különlegességeket találsz.
+                ajándéktárgyakat és gondosan összeválogatott különlegességeket tartunk.
               </p>
               <p className="text-base leading-relaxed mb-6" style={{ color: "var(--color-text-muted)" }}>
                 Minden, ami itt van, azért van itt, mert én magam is szépnek tartom.
@@ -151,7 +150,7 @@ export default function AjandekPage() {
                 className="text-sm font-medium"
                 style={{ color: "var(--color-primary)", fontStyle: "italic" }}
               >
-                Pipacs Virágbolt — ajándékok, amiket nem kapsz meg a bevásárlóközpontban.
+                Pipacs Virágbolt — ajándékok, amelyek nem bevásárlóközponti tömegáruk.
               </p>
             </AnimateOnScroll>
             {/* Image right */}
@@ -314,7 +313,7 @@ export default function AjandekPage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Nézz körül személyesen
+                  Személyes válogatás a boltban
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
                   Az ajándékok a boltban várnak, nem a boltra.
@@ -326,14 +325,14 @@ export default function AjandekPage() {
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <MapPin size={14} />
-                  Merre találsz meg
+                  Cím és nyitvatartás
                 </Link>
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline"
                 >
                   <Phone size={14} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
               </div>
             </div>
@@ -346,8 +345,8 @@ export default function AjandekPage() {
         <div className="container-site">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { label: "Virágaink — ha mellé csokrot is szeretnél", href: "/viragaink" },
-              { label: "Alkotóműhely — ha saját kezeddel alkotnál", href: "/alkotomuhely" },
+              { label: "Virágaink — csokrok az ajándék mellé", href: "/viragaink" },
+              { label: "Alkotóműhely — saját készítésű alkalmak", href: "/alkotomuhely" },
               { label: "Kapcsolat — nyitvatartás és térkép", href: "/kapcsolat" },
             ].map((link) => (
               <Link

@@ -8,13 +8,13 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Alkotóműhely Pécel — Kézműves Workshop | Pipacs Virágbolt",
   description:
-    "Kézműves alkotófoglalkozások Pécelből — a Pipacs Virágboltban nem csak vásárolni, hanem alkotni is lehet. Hívj: 06-20/344-3448",
+    "Kézműves alkotófoglalkozások Pécelen — a Pipacs Virágboltban nem csak vásárolni, hanem alkotni is lehet. Telefon: 06-20/447-4328",
   openGraph: {
     title: "Alkotóműhely Pécel — Kézműves Workshop | Pipacs Virágbolt",
     description:
       "Kézműves alkotófoglalkozások Pécelből — a Pipacs Virágboltban nem csak vásárolni, hanem alkotni is lehet.",
     url: "https://pipacsviragbolt.hu/alkotomuhely",
-    images: [{ url: "/assets/images/alkotomuhely-folyamat.png", width: 1200, height: 630 }],
+    images: [{ url: "/alkotoi_workshop.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -22,20 +22,20 @@ const programs = [
   {
     title: "Koszorúkötés",
     body: "Megmutatom, hogyan kell — te csinálod.",
-    image: "/assets/images/alkotomuhely-folyamat.png",
+    image: "/assets/images/kinalat-workshop.webp",
     icon: "/assets/icons/svg/icon-wreath-workshop.svg",
     iconAlt: "Koszorúkötés ikon",
   },
   {
     title: "Virágkötő foglalkozás",
     body: "Csokorkötés, az alapoktól. Alkalomra, saját kezűleg — megmutatom, hogyan csináljuk.",
-    image: "/assets/images/alkotomuhely-folyamat.png",
+    image: "/assets/images/alkotomuhely-folyamat.webp",
     icon: "/assets/icons/svg/icon-flower-workshop.svg",
     iconAlt: "Virágkötő foglalkozás ikon",
   },
   {
     title: "Díszcsomagolás és ajándékkészítés",
-    body: "Saját kezű munka — hívj a 06-20/344-3448-as számon, és megbeszéljük a részleteket.",
+    body: "Saját kezű munka — az aktuális lehetőségek telefonon egyeztethetők.",
     image: "/assets/images/alkotomuhely-csoport.png",
     icon: "/assets/icons/svg/icon-gift-workshop.svg",
     iconAlt: "Ajándékkészítés ikon",
@@ -59,22 +59,22 @@ const faqItems = [
   {
     question: "Kell előzetes tapasztalat?",
     answer:
-      "Nem. Megmutatom lépésről lépésre — ha soha nem csináltad, akkor is ott leszek melletted.",
+      "Nem. A foglalkozások kezdők számára is követhetők, lépésről lépésre vezetéssel.",
   },
   {
     question: "Hány fő vehet részt egyszerre?",
     answer:
-      "A csoportlétszám és az aktuális foglalkozások részleteiért hívj a 06-20/344-3448-as számon.",
+      "A csoportlétszám és az aktuális foglalkozások részletei telefonon egyeztethetők: 06-20/447-4328.",
   },
   {
     question: "Mennyibe kerül?",
     answer:
-      "A foglalkozás árát az alkalom típusa és a szükséges anyagok befolyásolják. A pontos részletekért hívj.",
+      "A foglalkozás árát az alkalom típusa és a szükséges anyagok befolyásolják. A pontos részletek telefonon egyeztethetők.",
   },
   {
     question: "Hogyan jelentkezem?",
     answer:
-      "Hívj a 06-20/344-3448-as számon, és megbeszéljük a részleteket. Nincs bonyolult foglalási folyamat.",
+      "Jelentkezés telefonon: 06-20/447-4328. Nincs bonyolult foglalási folyamat.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default function AlkotomuhelyPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/alkotomuhely-folyamat.png"
+            src="/alkotoi_workshop.webp"
             alt="Kézműves alkotás a Pipacs Virágbolt műhelyében — Pécel"
             fill
             priority
@@ -124,7 +124,7 @@ export default function AlkotomuhelyPage() {
                 lineHeight: 1.15,
               }}
             >
-              Gyere alkotni —<br />nem csak vásárolni
+              Alkotóműhely —<br />nem csak vásárlás
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
               A Pipacs alkotóműhelye azoknak szól, akik nem csak megvenni, hanem saját kezükkel
@@ -132,11 +132,11 @@ export default function AlkotomuhelyPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={14} />
-                Foglalj helyet a workshopra
+                Foglalás telefonon
               </a>
               <div className="flex flex-col gap-1">
                 <span className="flex items-center gap-1.5 text-sm" style={{ color: "rgba(250,246,240,0.7)" }}>
@@ -169,11 +169,11 @@ export default function AlkotomuhelyPage() {
                 Alkoss velünk egy különleges helyen!
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-text-muted)" }}>
-                Az Alkotóműhely a Pipacs Virágboltban egy különleges tér, ahol nem egy tanfolyamra
-                jársz, hanem alkotsz. Kötetlenebb — megmutatom, hogyan kell, és te csinálod.
+                Az Alkotóműhely a Pipacs Virágboltban egy különleges tér: nem hagyományos tanfolyam,
+                hanem közös alkotás. Kötetlenebb, lépésről lépésre vezetett foglalkozás.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "var(--color-text-muted)" }}>
-                Egyedül vagy barátnőddel, gyerekkel, csoportban — Mindig szuper kikapcsolódás alkotni.
+                Egyéni, baráti, családi vagy csoportos alkalomként is szuper kikapcsolódás alkotni.
               </p>
               <p
                 className="mt-4 text-sm italic"
@@ -185,7 +185,7 @@ export default function AlkotomuhelyPage() {
             <AnimateOnScroll delay={0.12}>
               <div className="relative rounded-2xl overflow-hidden img-hover-scale aspect-[4/3]">
                 <Image
-                  src="/assets/images/alkotomuhely-folyamat.png"
+                  src="/alkotoi_workshop.webp"
                   alt="Alkotás a Pipacs Virágbolt műhelyében"
                   fill
                   className="object-cover object-center"
@@ -212,7 +212,7 @@ export default function AlkotomuhelyPage() {
               Milyen foglalkozások vannak?
             </h2>
             <p className="mt-3 text-sm max-w-xl mx-auto" style={{ color: "var(--color-text-muted)" }}>
-              Hívj, és megbeszéljük, mi van éppen, mi kell, és mikor gyere.
+              Az aktuális alkalmak, szükséges anyagok és időpontok telefonon egyeztethetők.
             </p>
           </AnimateOnScroll>
 
@@ -262,12 +262,12 @@ export default function AlkotomuhelyPage() {
                       {prog.body}
                     </p>
                     <a
-                      href="tel:+36203443448"
+                      href="tel:+36204474328"
                       className="inline-flex items-center gap-1 text-sm font-semibold transition-opacity hover:opacity-75 mt-auto"
                       style={{ color: "var(--color-primary)" }}
                     >
                       <Phone size={12} />
-                      Érdeklődjél
+                      Érdeklődés telefonon
                     </a>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function AlkotomuhelyPage() {
               }}
             >
               <Heart size={14} style={{ color: "var(--color-warm)" }} />
-              Az aktuális foglalkozások időpontjaiért és áráért hívj: 06-20/344-3448
+              Aktuális foglalkozások időpontja és ára: 06-20/447-4328
             </div>
           </AnimateOnScroll>
         </div>
@@ -384,20 +384,19 @@ export default function AlkotomuhelyPage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Kíváncsi vagy? Kérdezz bátran.
+                  Részletek telefonon
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
-                  Ha nem egyértelmű, milyen foglalkozás van éppen, mikor, mennyibe kerül — hívj. Percek
-                  alatt megbeszéljük.
+                  Az aktuális foglalkozásokról, időpontokról és árakról telefonon gyorsan adható pontos információ.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <Phone size={14} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
               </div>
             </div>
@@ -412,7 +411,7 @@ export default function AlkotomuhelyPage() {
             {[
               { label: "Ajándék & Kézművesség — alkotóink termékei", href: "/ajandek" },
               { label: "Rólam — ki vezeti az alkotóműhelyt", href: "/rolam" },
-              { label: "Kapcsolat — hogyan találsz meg minket", href: "/kapcsolat" },
+              { label: "Kapcsolat — cím és nyitvatartás", href: "/kapcsolat" },
             ].map((link) => (
               <Link
                 key={link.href}

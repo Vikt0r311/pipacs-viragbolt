@@ -67,7 +67,7 @@ Ha virágot vagy ajándékot vásárolsz és szeretnéd csomagolva átadni — m
 
 **CTA gomb:** Merre találsz meg · /kapcsolat
 
-Vagy ha kérdeznél valamit előre: **Hívj most** · tel:+36203443448
+Vagy ha kérdeznél valamit előre: **Hívj most** · tel:+36204474328
 
 ---
 

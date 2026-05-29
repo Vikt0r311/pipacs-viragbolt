@@ -8,11 +8,11 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Pipacs Virágbolt Pécel — Virágkötészet, Ajándék, Alkotóműhely",
   description:
-    "Csokrot keresel, egyedi ajándékot, vagy alkotni szeretnél? Pécelben a Pipacs Virágboltban mindezt megtalálod — Klára várja a Szondi utca 53. alatt. Hívj: 06-20/344-3448",
+    "Virágkötészet, egyedi ajándékok és alkotóműhely Pécelen, a Pipacs Virágboltban — Posnyák Klára várja a Szondi utca 53. alatt. Telefon: 06-20/447-4328",
   openGraph: {
     title: "Pipacs Virágbolt Pécel — Virágkötészet, Ajándék, Alkotóműhely",
     description:
-      "Csokrot keresel, egyedi ajándékot, vagy alkotni szeretnél? Pécelben a Pipacs Virágboltban mindezt megtalálod.",
+      "Virágkötészet, egyedi ajándékok és alkotóműhely Pécelen, a Pipacs Virágboltban.",
     url: "https://pipacsviragbolt.hu",
     images: [
       { url: "/assets/images/hero-bolt-belso.png", width: 1200, height: 630 },
@@ -27,7 +27,7 @@ const businessData = {
   description:
     "Virágkötészet, kézműves ajándékok és alkotóműhely Pécelben. Posnyák Klára személyesen fogad a Szondi utca 53. alatt.",
   url: "https://pipacsviragbolt.hu",
-  telephone: "+36203443448",
+  telephone: "+36204474328",
   email: "info@novenyvilag.hu",
   address: {
     streetAddress: "Szondi utca 53.",
@@ -56,12 +56,12 @@ const faqData = [
   {
     question: "Kell-e előre rendelni csokrot?",
     answer:
-      "Sürgős esetben is segítek — hívj és megbeszéljük, mi van éppen készleten. Különleges alkalmakra (esküvő, rendezvény, kegyeleti megrendelés) előre egyeztetés szükséges.",
+      "Sürgős esetben is érdemes telefonon egyeztetni az aktuális készletről. Különleges alkalmakra (esküvő, rendezvény, kegyeleti megrendelés) előre egyeztetés szükséges.",
   },
   {
     question: "Vállal-e a Pipacs házhozszállítást Pécelre?",
     answer:
-      "Igen, virágküldést és házhozszállítást vállalok Pécel területén. A részletekért hívj a 06-20/344-3448-as számon.",
+      "Igen, virágküldést és házhozszállítást vállalok Pécel területén. A részletek telefonon egyeztethetők: 06-20/447-4328.",
   },
   {
     question: "Milyen alkalmakra kötnek csokrot?",
@@ -71,7 +71,7 @@ const faqData = [
   {
     question: "Van-e alkotóműhely a Pipacsban?",
     answer:
-      "Igen! A Pipacs alkotóműhelyében kézműves foglalkozásokon vehetsz részt. Nem kell előzetes tapasztalat — megmutatom lépésről lépésre. A részletekért hívj, vagy látogass el az Alkotóműhely oldalra.",
+      "Igen. A Pipacs alkotóműhelyében kézműves foglalkozások indulnak kezdőknek is. Az aktuális témák és időpontok az Alkotóműhely oldalon, illetve telefonon egyeztethetők.",
   },
 ];
 
@@ -79,9 +79,9 @@ const servicePaths = [
   {
     slug: "viragaink",
     title: "Csokorkötés, ahogy kell",
-    body: "Alkalmi csokrok (születésnapi, ballagási, anyák napi), menyasszonyi csokor, kegyeleti koszorú, asztaldísz — és az a 'csak úgy' csokor, ami magától értetődő ajándék. Ha nem tudod, mit kérj — elmondom, mi illik az adott alkalomra.",
-    cta: "Hívj most",
-    ctaHref: "tel:+36203443448",
+    body: "Alkalmi csokrok (születésnapi, ballagási, anyák napi), menyasszonyi csokor, kegyeleti koszorú, asztaldísz — és az a 'csak úgy' csokor, ami magától értetődő ajándék. Bizonytalanság esetén telefonon egyeztethető, mi illik az adott alkalomra.",
+    cta: "Telefonos egyeztetés",
+    ctaHref: "tel:+36204474328",
     image: "/assets/images/kinalat-virag.png",
     icon: "/assets/icons/svg/icon-bouquet.svg",
     iconAlt: "Csokorkötés ikon",
@@ -90,8 +90,8 @@ const servicePaths = [
   {
     slug: "ajandek",
     title: "Ajándék, ami nem tömegáru",
-    body: "Kézzel készített lakásdekoráció, egyedi díszcsomagolás, apró kézműves tárgyak — olyasmi, amit nem kapsz meg a bevásárlóközpontban. Ha különlegeset keresel, jó helyen jársz.",
-    cta: "Merre találsz meg",
+    body: "Kézzel készített lakásdekoráció, egyedi díszcsomagolás, apró kézműves tárgyak — olyasmi, ami nem bevásárlóközponti tömegáru. Különleges ajándékhoz érdemes személyesen körülnézni.",
+    cta: "Cím és nyitvatartás",
     ctaHref: "/kapcsolat",
     image: "/assets/images/kinalat-ajandek.png",
     icon: "/assets/icons/svg/icon-handmade-gift.svg",
@@ -100,9 +100,9 @@ const servicePaths = [
   },
   {
     slug: "alkotomuhely",
-    title: "Gyere alkotni is",
-    body: "A Pipacsban nem csak vásárolni, hanem alkotni is lehet. Hozd a barátnődet, hozd a gyereket — megmutatom, hogyan csináljuk.",
-    cta: "Foglalj helyet a workshopra",
+    title: "Alkotás a műhelyben",
+    body: "A Pipacsban nem csak vásárolni, hanem alkotni is lehet. Baráti, családi vagy kisebb csoportos foglalkozásokhoz telefonos egyeztetés javasolt.",
+    cta: "Workshop információk",
     ctaHref: "/alkotomuhely",
     image: "/assets/images/kinalat-workshop.png",
     icon: "/assets/icons/svg/icon-workshop-hands.svg",
@@ -237,25 +237,25 @@ export default function HomePage() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Phone size={14} style={{ color: "var(--color-green)" }} />
-                06-20/344-3448
+                06-20/447-4328
               </span>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={15} />
-                Hívj most
+                Telefonos egyeztetés
               </a>
               <Link
                 href="/kapcsolat"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline-dark"
               >
                 <MapPin size={15} />
-                Merre találsz meg
+                Cím és nyitvatartás
               </Link>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function HomePage() {
                 color: "var(--color-green)",
               }}
             >
-              Mit találsz a Pipacsban?
+              Mi vár a Pipacsban?
             </h2>
           </AnimateOnScroll>
 
@@ -453,20 +453,20 @@ export default function HomePage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Csokrot keresel? Hívj most.
+                  Csokor rendelése telefonos egyeztetéssel
                 </h2>
                 <p className="text-base max-w-lg" style={{ color: "rgba(250,246,240,0.8)" }}>
-                  Ha sürgős, ha nem tudod még pontosan mit kérsz, ha csak körül akarsz nézni — hívj
-                  és megbeszéljük. Pécelen vagyok, személyesen várlak.
+                  Sürgős rendelésnél vagy bizonytalan elképzelésnél telefonon gyorsan egyeztethető,
+                  mi érhető el éppen. A bolt Pécelen, személyesen várja a vásárlókat.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <Phone size={15} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
                 <a
                   href="https://m.me/pipacsviragbolt"
@@ -475,7 +475,7 @@ export default function HomePage() {
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline"
                 >
                   <MessageCircle size={15} />
-                  Írj Messengeren
+                  Messenger üzenet
                 </a>
               </div>
             </div>
@@ -638,7 +638,7 @@ export default function HomePage() {
                       style={{ color: "var(--color-primary)", fontFamily: "Georgia, serif", lineHeight: 1 }}
                       aria-hidden="true"
                     >
-                      "
+                      &quot;
                     </div>
                     <p className="text-sm leading-relaxed italic" style={{ color: "#3a2e25" }}>
                       {item.quote}

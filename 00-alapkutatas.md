@@ -7,7 +7,7 @@
 | Cégnév | Pipacs Virágbolt |
 | Tulajdonos | Posnyák Klára |
 | Email | info@novenyvilag.hu |
-| Telefon | 06-20/344-3448 |
+| Telefon | 06-20/447-4328 |
 | Cím | Szondi utca 53., Pécel |
 | Facebook | https://www.facebook.com/pipacsviragbolt |
 | Régi weboldal | https://www.novenyvilag.hu/ |
@@ -83,7 +83,7 @@ A "Pipacs" brand meleg, természetes, közösségi hangvételre utal.
 
 | Csatorna | Státusz |
 |---|---|
-| Telefon | TÉNY (06-20/344-3448) |
+| Telefon | TÉNY (06-20/447-4328) |
 | Email | TÉNY (info@novenyvilag.hu) |
 | Facebook | TÉNY (oldal létezik, aktivitás TIPP) |
 | Facebook Messenger | TIPP (FB aktív, de posztok nem ellenőrizhetők) |

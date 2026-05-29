@@ -52,7 +52,7 @@ Alkalmi csokroktól az esküvői dekorációig, kegyeleti koszorútól az asztal
 
 Ha nem tudod, mit kérsz — hívj. Megbeszéljük.
 
-**CTA:** Hívj most · tel:+36203443448
+**CTA:** Hívj most · tel:+36204474328
 
 ---
 

@@ -10,8 +10,8 @@
 | Cégnév (rövid / copy-ban használt) | Pipacs |
 | Tulajdonos (teljes név) | Posnyák Klára |
 | Megszólítási forma copy-ban | "Klára" |
-| Telefonszám (kijelzett) | 06-20/344-3448 |
-| Telefonszám (tel: link) | tel:+36203443448 |
+| Telefonszám (kijelzett) | 06-20/447-4328 |
+| Telefonszám (tel: link) | tel:+36204474328 |
 | Email (kijelzett) | info@novenyvilag.hu |
 | Email (mailto: link) | mailto:info@novenyvilag.hu |
 | Facebook URL | https://www.facebook.com/pipacsviragbolt |
@@ -22,7 +22,7 @@
 | Megközelítés megjegyzés | Bejárat a Fáy utca felőli kapun |
 | Szolgáltatási terület | Pécel, [HIÁNYZÓ ADAT: kiszállítás hatókör megerősítendő] |
 
-> **Megjegyzés — telefonszám eltérés:** Az evepla.com listán +36 20 447 4328 szerepel, a user-megadott szám 06-20/344-3448. A user által megadott szám számít authoritative forrásnak — megerősítésre vár.
+> **Megjegyzés — telefonszám eltérés:** Az evepla.com listán +36 20 447 4328 szerepel, a user-megadott szám 06-20/447-4328. A user által megadott szám számít authoritative forrásnak — megerősítésre vár.
 
 ## Nyitvatartás
 
@@ -46,7 +46,7 @@
 
 | Szerep | Gomb-szöveg | Link |
 |---|---|---|
-| Elsődleges CTA | Hívj most | tel:+36203443448 |
+| Elsődleges CTA | Hívj most | tel:+36204474328 |
 | Másodlagos CTA | Írj Messengeren | https://m.me/pipacsviragbolt |
 | Bolti látogatás | Merre találsz meg | /kapcsolat |
 | Alkotóműhely | Foglalj helyet a workshopra | /alkotomuhely |
@@ -66,7 +66,7 @@ A copy NEM állíthatja ezeket — nincs rá megerősített adat:
 
 ## Megerősítendő adatok
 
-- [ ] Telefonszám pontosítás: user-megadott 06-20/344-3448 vs. evepla.com +36 20 447 4328
+- [ ] Telefonszám pontosítás: user-megadott 06-20/447-4328 vs. evepla.com +36 20 447 4328
 - [ ] Nyitvatartás megerősítése (evepla.com forrásból valószínű)
 - [ ] Facebook aktivitás — posztol-e, elérhetők-e Messengeren?
 - [ ] Instagram URL (van-e Instagram?)

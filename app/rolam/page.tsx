@@ -7,7 +7,7 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/Ani
 export const metadata: Metadata = {
   title: "Rólam — Posnyák Árkádiáné (Klári néni) | Pipacs Virágbolt Pécel",
   description:
-    "1986 óta vagyok virágüzlet-tulajdonos — Klári néniként ismernek Pécelén. Ismerd meg a Pipacs Virágbolt mögötti sztorit.",
+    "1986 óta virágüzlet-tulajdonos — Klári néniként ismerik Pécelen. A Pipacs Virágbolt története és személyes háttere.",
   openGraph: {
     title: "Rólam — Posnyák Árkádiáné | Pipacs Virágbolt Pécel",
     description:
@@ -93,23 +93,23 @@ export default function RolamPage() {
               Klári néni vagyok —<br />1986 óta kötök virágot
             </h1>
             <p className="text-base md:text-lg mb-7" style={{ color: "rgba(250,246,240,0.85)" }}>
-              A Pipacs nem franchise, nem lánc. Személyesen várlak Pécel közepén — ahogy minden
-              vevőmet várom, hetedik éve.
+              A Pipacs nem franchise, nem lánc. Személyes virágbolt Pécel közepén — ahogy minden
+              vevőt várunk, hetedik éve.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={14} />
-                Hívj most
+                Telefonos egyeztetés
               </a>
               <Link
                 href="/kapcsolat"
                 className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-outline"
               >
                 <MapPin size={14} />
-                Merre találsz meg
+                Cím és nyitvatartás
               </Link>
             </div>
           </div>
@@ -262,14 +262,14 @@ export default function RolamPage() {
                 van alkalom, van hozzá megoldás. Az alkotóműhelyben foglalkozásokat is tartok.
               </p>
               <p className="text-base mb-7" style={{ color: "var(--color-text-muted)" }}>
-                Ha nem tudod, mit kérsz — hívj. Megbeszéljük.
+                Bizonytalanság esetén telefonon gyorsan egyeztethető, mi illik az adott alkalomhoz.
               </p>
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
               >
                 <Phone size={14} />
-                Hívj most · 06-20/344-3448
+                Telefonos egyeztetés · 06-20/447-4328
               </a>
             </AnimateOnScroll>
 
@@ -320,19 +320,19 @@ export default function RolamPage() {
                     color: "#faf6f0",
                   }}
                 >
-                  Hívj most — megbeszéljük
+                  Telefonos egyeztetés
                 </h2>
                 <p style={{ color: "rgba(250,246,240,0.8)" }} className="text-base max-w-md">
-                  Csokrot keresel? Ajándékot? Alkotófoglalkozás érdekel? Egy hívás elég — megbeszéljük.
+                  Csokor, ajándék vagy alkotófoglalkozás kapcsán telefonon gyorsan egyeztethetők a részletek.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
-                  href="tel:+36203443448"
+                  href="tel:+36204474328"
                   className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm btn-primary"
                 >
                   <Phone size={14} />
-                  Hívj most
+                  Telefonos egyeztetés
                 </a>
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function RolamPage() {
                 icon: Flower,
               },
               {
-                label: "Ajándék & Kézművesség — mit találsz a polcokon",
+                label: "Ajándék & Kézművesség — kínálat a polcokon",
                 href: "/ajandek",
                 icon: Gift,
               },

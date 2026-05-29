@@ -16,7 +16,7 @@ const sections = [
     title: "1. Adatkezelő neve és elérhetőségei",
     content: `Adatkezelő neve: Posnyák Klára (Pipacs Virágbolt)
 Székhely / üzlet: 2119 Pécel, Szondi utca 53.
-Telefon: 06-20/344-3448
+Telefon: 06-20/447-4328 · 06-28/740-068
 E-mail: info@novenyvilag.hu
 Weboldal: pipacsviragbolt.hu`,
   },
@@ -50,7 +50,7 @@ Weboldal: pipacsviragbolt.hu`,
 • Tiltakozási jog: Tiltakozhat az adatkezelés ellen.
 • Korlátozási jog: Kérheti az adatkezelés korlátozását.
 
-Ezeket a jogait az adatkezelő e-mail (info@novenyvilag.hu) vagy telefon (06-20/344-3448) útján gyakorolhatja.`,
+Ezeket a jogait az adatkezelő e-mail (info@novenyvilag.hu) vagy telefon (06-20/447-4328 · 06-28/740-068) útján gyakorolhatja.`,
   },
   {
     title: "6. Sütikre (cookie) vonatkozó tájékoztató",

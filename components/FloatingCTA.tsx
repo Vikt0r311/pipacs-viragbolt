@@ -11,7 +11,7 @@ interface FloatingCTAProps {
 
 export default function FloatingCTA({
   phone,
-  label = "Hívjon most!",
+  label = "Telefonos egyeztetés",
   href,
 }: FloatingCTAProps) {
   const target = href ?? (phone ? `tel:${phone.replace(/[\s\-\/]/g, "")}` : "/kapcsolat");

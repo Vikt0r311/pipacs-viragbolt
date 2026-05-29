@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { FaFacebook } from "react-icons/fa";
 
@@ -43,12 +42,20 @@ export default function Footer() {
 
             <div className="flex flex-col gap-2.5 text-sm" style={{ color: "rgba(250,246,240,0.75)" }}>
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2.5 hover:opacity-100 transition-opacity"
                 style={{ color: "rgba(250,246,240,0.9)" }}
               >
                 <Phone size={14} style={{ color: "var(--color-warm-light)", flexShrink: 0 }} />
-                06-20/344-3448
+                06-20/447-4328
+              </a>
+              <a
+                href="tel:+3628740068"
+                className="flex items-center gap-2.5 hover:opacity-100 transition-opacity"
+                style={{ color: "rgba(250,246,240,0.7)" }}
+              >
+                <Phone size={14} style={{ color: "var(--color-warm-light)", flexShrink: 0 }} />
+                06-28/740-068
               </a>
               <a
                 href="mailto:info@novenyvilag.hu"
@@ -136,11 +143,19 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+36203443448"
+                href="tel:+36204474328"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold btn-primary w-fit"
               >
                 <Phone size={13} />
-                06-20/344-3448
+                06-20/447-4328
+              </a>
+              <a
+                href="tel:+3628740068"
+                className="flex items-center gap-2 text-sm transition-opacity hover:opacity-100"
+                style={{ color: "rgba(250,246,240,0.7)" }}
+              >
+                <Phone size={13} />
+                06-28/740-068
               </a>
               <a
                 href="https://m.me/pipacsviragbolt"
@@ -149,7 +164,7 @@ export default function Footer() {
                 className="text-sm transition-opacity hover:opacity-100"
                 style={{ color: "rgba(250,246,240,0.7)" }}
               >
-                Írj Messengeren →
+                Messenger üzenet →
               </a>
             </div>
             <div className="flex flex-col gap-1.5 mt-2">

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Pipacs Virágbolt Pécel — Virágkötészet, Ajándék, Alkotóműhely",
   },
   description:
-    "Csokrot keresel, egyedi ajándékot, vagy alkotni szeretnél? Pécelben a Pipacs Virágboltban mindezt megtalálod — Klára várja a Szondi utca 53. alatt. Hívj: 06-20/344-3448",
+    "Virágkötészet, egyedi ajándékok és alkotóműhely Pécelen, a Pipacs Virágboltban — Posnyák Klára várja a Szondi utca 53. alatt. Telefon: 06-20/447-4328",
   metadataBase: new URL("https://pipacsviragbolt.hu"),
   openGraph: {
     type: "website",
@@ -70,7 +70,7 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
-        <FloatingCTA phone="+36203443448" label="Hívj most" />
+        <FloatingCTA phone="+36204474328" label="Telefonos egyeztetés" />
         <CookieBanner />
       </body>
     </html>

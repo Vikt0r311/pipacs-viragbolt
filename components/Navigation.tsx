@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -26,10 +25,6 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -89,23 +84,23 @@ export default function Navigation() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
           <a
-            href="tel:+36203443448"
+            href="tel:+36204474328"
             className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all btn-primary"
           >
             <Phone size={14} />
-            Hívj most
+            Telefonos egyeztetés
           </a>
         </div>
 
         {/* Mobile: phone pill + hamburger */}
         <div className="lg:hidden flex items-center gap-2">
           <a
-            href="tel:+36203443448"
+            href="tel:+36204474328"
             className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold btn-primary"
             aria-label="Telefonhívás"
           >
             <Phone size={13} />
-            <span className="hidden sm:inline">Hívj</span>
+            <span className="hidden sm:inline">Telefon</span>
           </a>
           <button
             className="p-2 rounded-md transition-colors"
@@ -137,6 +132,7 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setMenuOpen(false)}
                   className="px-4 py-3 rounded-md text-sm font-medium transition-colors"
                   style={{
                     color: isActive ? "var(--color-green)" : "var(--color-text-muted)",
